@@ -3,6 +3,7 @@
 	desc = "A wad of crystalline monofilament."
 	icon = 'mods/species/ascent/icons/razorweb.dmi'
 	icon_state = "wad"
+	material = /decl/material/solid/quartz
 	var/web_type = /obj/effect/razorweb
 
 /obj/item/razorweb/throw_impact(var/atom/hit_atom)
@@ -32,8 +33,7 @@
 	var/image/web
 	var/static/species_immunity_list = list(
 		SPECIES_MANTID_ALATE   = TRUE,
-		SPECIES_MANTID_GYNE    = TRUE,
-		SPECIES_SERPENTID      = TRUE
+		SPECIES_MANTID_GYNE    = TRUE
 	)
 
 /obj/effect/razorweb/Destroy()
@@ -135,7 +135,7 @@
 
 	var/severed = FALSE
 	var/armour_prob = prob(100 * L.get_blocked_ratio(null, BRUTE, damage = ARMOR_MELEE_RESISTANT))
-	if(H && prob(35))
+	if(H?.species && prob(35))
 		var/obj/item/organ/external/E
 		var/list/limbs = H.get_external_organs()
 		if(limbs)
@@ -143,12 +143,7 @@
 		for(var/obj/item/organ/external/limb in shuffle(limbs))
 			if(!istype(limb) || !(limb.limb_flags & ORGAN_FLAG_CAN_AMPUTATE))
 				continue
-			var/is_vital = FALSE
-			for(var/obj/item/organ/internal/I in limb.internal_organs)
-				if(H.species?.is_vital_organ(H, I))
-					is_vital = TRUE
-					break
-			if(!is_vital)
+			if(!limb.is_vital_to_owner())
 				E = limb
 				break
 		if(E && !armour_prob)

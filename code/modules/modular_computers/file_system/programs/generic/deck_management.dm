@@ -15,6 +15,7 @@
 	size = 18
 	available_on_network = 1
 	requires_network = 1
+	requires_network_feature = NET_FEATURE_DECK
 	category = PROG_SUPPLY
 
 /datum/nano_module/deck_management
@@ -264,7 +265,7 @@
 			if(href_list["flight_plan"])
 				prog_state = DECK_REPORT_EDIT
 				if(selected_mission.flight_plan)
-					selected_report = selected_mission.flight_plan.clone()//We always make a new one to buffer changes until submitted.
+					selected_report = selected_mission.flight_plan.Clone()//We always make a new one to buffer changes until submitted.
 				else
 					selected_report = create_report(/datum/computer_file/report/flight_plan, selected_shuttle)
 			else
@@ -277,9 +278,9 @@
 				prog_state = DECK_REPORT_EDIT
 				var/datum/computer_file/report/old_report = locate(prototype.type) in selected_mission.other_reports
 				if(old_report)
-					selected_report = old_report.clone()
+					selected_report = old_report.Clone()
 				else
-					var/datum/computer_file/report/recipient/shuttle/new_report = prototype.clone()
+					var/datum/computer_file/report/recipient/shuttle/new_report = prototype.Clone()
 					new_report.shuttle.set_value(selected_shuttle.name)
 					new_report.mission.set_value(selected_mission.name)
 					selected_report = new_report

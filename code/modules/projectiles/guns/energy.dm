@@ -52,6 +52,7 @@ var/global/list/registered_cyborg_weapons = list()
 /obj/item/gun/energy/Destroy()
 	if(self_recharge)
 		STOP_PROCESSING(SSobj, src)
+	QDEL_NULL(power_supply)
 	return ..()
 
 /obj/item/gun/energy/get_cell()
@@ -110,7 +111,7 @@ var/global/list/registered_cyborg_weapons = list()
 		if(power_supply.charge < charge_cost)
 			ratio = 0
 		else
-			ratio = Clamp(round(ratio, 25), 25, 100)
+			ratio = clamp(round(ratio, 25), 25, 100)
 		return ratio
 
 /obj/item/gun/energy/on_update_icon()

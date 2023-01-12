@@ -5,6 +5,8 @@
 	icon_state = "0"
 	layer = PLATING_LAYER
 	open_turf_type = /turf/exterior/open
+	turf_flags = TURF_FLAG_BACKGROUND
+	var/base_color
 	var/diggable = 1
 	var/dirt_color = "#7c5e42"
 	var/possible_states = 0
@@ -22,7 +24,10 @@
 
 /turf/exterior/Initialize(mapload, no_update_icon = FALSE)
 
-	color = null
+	if(base_color)
+		color = base_color
+	else
+		color = null
 
 	if(possible_states > 0)
 		icon_state = "[rand(0, possible_states)]"
@@ -31,7 +36,6 @@
 		owner = null
 	else
 		//Must be done here, as light data is not fully carried over by ChangeTurf (but overlays are).
-		set_light(owner.lightlevel)
 		if(owner.planetary_area && istype(loc, world.area))
 			ChangeArea(src, owner.planetary_area)
 
@@ -44,13 +48,12 @@
 	if (no_update_icon)
 		return
 
-	if (mapload)	// If this is a mapload, then our neighbors will be updating their own icons too -- doing it for them is rude.
+	// If this is a mapload, then our neighbors will be updating their own icons too -- doing it for them is rude.
+	if(mapload)
 		update_icon()
 	else
 		for (var/turf/T in RANGE_TURFS(src, 1))
-			if (T == src)
-				continue
-			if (TICK_CHECK)	// not CHECK_TICK -- only queue if the server is overloaded
+			if(TICK_CHECK) // not CHECK_TICK -- only queue if the server is overloaded
 				T.queue_icon_update()
 			else
 				T.update_icon()
@@ -64,23 +67,6 @@
 	if(istype(ext))
 		ext.affecting_heat_sources = last_affecting_heat_sources
 	return ext
-
-/turf/exterior/initialize_ambient_light(var/mapload)
-	update_ambient_light(mapload)
-
-/turf/exterior/update_ambient_light(var/mapload)
-	if(is_outside())
-		if(owner) // Exoplanets do their own lighting shenanigans.
-			//Must be done here, as light data is not fully carried over by ChangeTurf (but overlays are).
-			set_light(owner.lightlevel)
-			return
-		if(config.starlight)
-			var/area/A = get_area(src)
-			if(A.show_starlight)
-				set_light(config.starlight, 0.75, l_color = SSskybox.background_color)
-				return
-	if(!mapload)
-		set_light(0)
 
 /turf/exterior/is_plating()
 	return !density
@@ -120,12 +106,10 @@
 
 /turf/exterior/attackby(obj/item/C, mob/user)
 
-	if(diggable && istype(C,/obj/item/shovel))
-		visible_message(SPAN_NOTICE("\The [user] starts digging at \the [src]."))
-		if(do_after(user, 50))
-			to_chat(user, SPAN_NOTICE("You dig a deep pit."))
+	if(diggable && IS_SHOVEL(C))
+		if(C.do_tool_interaction(TOOL_SHOVEL, user, src, 5 SECONDS))
 			new /obj/structure/pit(src)
-			diggable = 0
+			diggable = FALSE
 		else
 			to_chat(user, SPAN_NOTICE("You stop shoveling."))
 		return TRUE
@@ -141,7 +125,7 @@
 	SHOULD_CALL_PARENT(FALSE)
 	if(!istype(src, get_base_turf_by_area(src)) && (severity == 1 || (severity == 2 && prob(40))))
 		ChangeTurf(get_base_turf_by_area(src))
-	
+
 /turf/exterior/on_update_icon()
 	. = ..() // Recalc AO and flooding overlay.
 	cut_overlays()

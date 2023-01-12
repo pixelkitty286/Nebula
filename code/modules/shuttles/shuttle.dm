@@ -46,7 +46,7 @@
 		if(!islist(shuttle_area))
 			shuttle_area = list(shuttle_area)
 		for(var/T in shuttle_area)
-			if(istype(T, /area)) // If the shuttle area is already a type, it does not need to be located. 
+			if(istype(T, /area)) // If the shuttle area is already a type, it does not need to be located.
 				areas += T
 				continue
 			var/area/A
@@ -163,9 +163,9 @@
 		testing("Moving [A]")
 		translation += get_turf_translation(get_turf(current_location), get_turf(destination), A.contents)
 	var/obj/effect/shuttle_landmark/old_location = current_location
-	events_repository.raise_event(/decl/observ/shuttle_pre_move, src, old_location, destination)
+	RAISE_EVENT(/decl/observ/shuttle_pre_move, src, old_location, destination)
 	shuttle_moved(destination, translation)
-	events_repository.raise_event(/decl/observ/shuttle_moved, src, old_location, destination)
+	RAISE_EVENT_REPEAT(/decl/observ/shuttle_moved, src, old_location, destination)
 	if(istype(old_location))
 		old_location.shuttle_departed(src)
 	destination.shuttle_arrived(src)
@@ -186,9 +186,9 @@
 		testing("Moving [A]")
 		translation += get_turf_translation(get_turf(current_location), get_turf(destination), A.contents)
 	var/obj/effect/shuttle_landmark/old_location = current_location
-	events_repository.raise_event(/decl/observ/shuttle_pre_move, src, old_location, destination)
+	RAISE_EVENT(/decl/observ/shuttle_pre_move, src, old_location, destination)
 	shuttle_moved(destination, translation)
-	events_repository.raise_event(/decl/observ/shuttle_moved, src, old_location, destination)
+	RAISE_EVENT_REPEAT(/decl/observ/shuttle_moved, src, old_location, destination)
 	if(istype(old_location))
 		old_location.shuttle_departed(src)
 	destination.shuttle_arrived(src)
@@ -239,7 +239,7 @@
 		var/datum/shuttle_log/s_log = SSshuttle.shuttle_logs[src]
 		s_log.handle_move(current_location, destination)
 
-	var/list/new_turfs = translate_turfs(turf_translation, current_location.base_area, current_location.base_turf)
+	var/list/new_turfs = translate_turfs(turf_translation, current_location.base_area, current_location.base_turf, TRUE)
 	current_location = destination
 
 	// if there's a zlevel above our destination, paint in a ceiling on it so we retain our air
@@ -264,7 +264,7 @@
 
 // Remove all powernets and pipenets that were affected, and rebuild them.
 /datum/shuttle/proc/handle_pipes_and_power_on_move(var/list/new_turfs)
-	var/list/powernets = list()	
+	var/list/powernets = list()
 	var/list/cables = list()
 	var/list/pipes = list()
 
@@ -291,9 +291,9 @@
 			var/datum/powernet/NewPN = new()
 			NewPN.add_cable(C)
 			propagate_network(C,C.powernet)
-	for(var/obj/machinery/atmospherics/pipe AS_ANYTHING in pipes)
+	for(var/obj/machinery/atmospherics/pipe as anything in pipes)
 		pipe.atmos_init() // this will clear pipenet/pipeline
-	for(var/obj/machinery/atmospherics/pipe AS_ANYTHING in pipes)
+	for(var/obj/machinery/atmospherics/pipe as anything in pipes)
 		pipe.build_network()
 
 //returns 1 if the shuttle has a valid arrive time

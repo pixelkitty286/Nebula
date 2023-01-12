@@ -33,7 +33,6 @@
 	var/next_alarm_notice
 	var/list/datum/alarm/queued_alarms = new()
 
-	var/list/access_rights
 	var/obj/item/card/id/idcard = /obj/item/card/id/synthetic
 	// Various machinery stock parts used by stuff like OS (should be merged with above at some point)
 	var/list/stock_parts = list()
@@ -73,8 +72,10 @@
 	global.silicon_mob_list -= src
 	QDEL_NULL(silicon_radio)
 	QDEL_NULL(silicon_camera)
+	QDEL_NULL(idcard)
 	for(var/datum/alarm_handler/AH in SSalarm.all_handlers)
 		AH.unregister_alarm(src)
+	QDEL_NULL_LIST(stock_parts)
 	return ..()
 
 /mob/living/silicon/fully_replace_character_name(new_name)
@@ -270,7 +271,7 @@
 	flavor_text =  sanitize(input(usr, "Please enter your new flavour text.", "Flavour text", null)  as text)
 
 /mob/living/silicon/binarycheck()
-	return 1
+	return TRUE
 
 /mob/living/silicon/explosion_act(severity)
 	..()
@@ -400,7 +401,7 @@
 		return TRUE
 
 /mob/living/silicon/proc/try_stock_parts_removal(obj/item/W, mob/user)
-	if(!isCrowbar(W) || user.a_intent == I_HURT)
+	if(!IS_CROWBAR(W) || user.a_intent == I_HURT)
 		return
 	if(!length(stock_parts))
 		to_chat(user, SPAN_WARNING("No parts left to remove"))
@@ -445,3 +446,10 @@
 	var/datum/extension/interactive/os = get_extension(src, /datum/extension/interactive/os)
 	if(os)
 		os.Process()
+
+/mob/living/silicon/handle_flashed(var/obj/item/flash/flash, var/flash_strength)
+	SET_STATUS_MAX(src, STAT_WEAK, flash_strength)
+	return TRUE
+
+/mob/living/silicon/get_speech_bubble_state_modifier()
+	return "synth"

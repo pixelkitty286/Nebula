@@ -18,7 +18,7 @@
 
 /decl/material/proc/generate_recipes(var/reinforce_material)
 
-	if(phase_at_stp() != MAT_PHASE_SOLID)
+	if(phase_at_temperature() != MAT_PHASE_SOLID)
 		return list()
 
 	. = list()
@@ -48,6 +48,7 @@
 			. += new/datum/stack_recipe/furniture/pew(src)
 			. += new/datum/stack_recipe/furniture/pew_left(src)
 			. += new/datum/stack_recipe/furniture/closet(src)
+			. += new/datum/stack_recipe/furniture/tank_dispenser(src)
 			. += new/datum/stack_recipe/furniture/coffin(src)
 			. += new/datum/stack_recipe/furniture/chair(src) //NOTE: the wood material has it's own special chair recipe
 			. += new/datum/stack_recipe/furniture/chair/padded(src)
