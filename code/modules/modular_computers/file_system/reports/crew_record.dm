@@ -260,6 +260,9 @@ FIELD_LONG("Employment Record", employment_record, access_bridge, access_bridge,
 FIELD_SHORT("Home System", homeSystem, access_bridge, access_change_ids, FALSE, TRUE)
 FIELD_SHORT("Faction", faction, access_bridge, access_bridge, FALSE, TRUE)
 FIELD_LONG("Qualifications", skillset, access_bridge, access_bridge, TRUE)
+//Borealis Additions start
+FIELD_SHORT("Citizenship", citizenship, access_bridge, access_change_ids, FALSE, TRUE)
+//Borealis Additions end
 
 // ANTAG RECORDS
 FIELD_LONG("Exploitable Information", antag_record, access_hacked, access_hacked, FALSE)
