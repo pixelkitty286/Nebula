@@ -3752,5 +3752,7 @@
 #include "maps\~mapsystem\maps_unit_testing.dm"
 #include "maps\~unit_tests\unit_testing.dm"
 #include "mods\_modpack.dm"
+#include "modular_borealis\code\modules\culture_descriptor\citizenship\_citizenship.dm"
+#include "modular_borealis\code\modules\culture_descriptor\citizenship\citizenships_human.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE

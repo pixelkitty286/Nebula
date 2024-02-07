@@ -21,6 +21,10 @@
 
 	var/decl/cultural_info/culture = H.get_cultural_value(TAG_HOMEWORLD)
 	var/pob = culture ? culture.name : "Unset"
+	//Borealis changes start
+	var/decl/cultural_info/citizenship = H.get_cultural_value(TAG_CITIZENSHIP)
+	var/citz = citizenship ? citizenship.name : "Unset"
+	//Borealis end
 
 	culture = H.get_cultural_value(TAG_RELIGION)
 	var/religion = culture ? culture.name : "Unset"
@@ -30,5 +34,6 @@
 	owner_branch = H.char_branch && H.char_branch.name
 
 	badge_string = pob
+	badge_string = citz //Boriealis addition
 
 	desc = "[initial(desc)]\nName: [H.real_name] ([H.get_species_name()])[H.char_branch ? "\nBranch: [H.char_branch.name]" : ""]\nReligion: [religion]\nBlood type: [H.get_blood_type()]"
