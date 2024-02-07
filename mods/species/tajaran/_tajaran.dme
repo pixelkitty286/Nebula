@@ -1,0 +1,18 @@
+// TODO: Put a normal religion in and possibly add factions in the future
+#ifndef MODPACK_TAJARAN
+#define MODPACK_TAJARAN
+#include "_tajaran.dm"
+#include "datum/accessory.dm"
+#include "datum/culture.dm"
+#include "datum/emotes.dm"
+#include "datum/blood.dm"
+#include "datum/language.dm"
+#include "datum/species.dm"
+#include "datum/species_bodytypes.dm"
+//#include "datum/faction.dm"
+//#include "datum/religion.dm"
+#include "datum/citizenship.dm"
+#include "datum/location.dm"
+#include "clothing.dm"
+#include "organs/organs_internal.dm"
+#endif

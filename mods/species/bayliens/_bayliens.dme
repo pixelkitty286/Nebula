@@ -36,6 +36,8 @@
 #include "skrell\turfs\flooring.dm"
 #include "skrell\gear\ammo.dm"
 #include "skrell\gear\fabrication_designs.dm"
+//Borealis removal - Replaced with Aurora.3 tajara sprites
+/*
 #include "tajaran\_tajaran.dm"
 #include "tajaran\datum\accessory.dm"
 #include "tajaran\datum\culture.dm"
@@ -45,6 +47,7 @@
 #include "tajaran\datum\species.dm"
 #include "tajaran\datum\species_bodytypes.dm"
 #include "tajaran\machinery\suit_cycler.dm"
+*/
 #include "tritonian\_tritonian.dm"
 #include "tritonian\datum\species.dm"
 #include "tritonian\datum\species_bodytypes.dm"
