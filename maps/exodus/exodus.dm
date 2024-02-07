@@ -18,6 +18,7 @@
 	#include "../../mods/species/serpentid/_serpentid.dme"
 	#include "../../mods/species/utility_frames/_utility_frames.dme"
 	#include "../../mods/species/bayliens/_bayliens.dme"
+	#include "../../mods/species/tajaran/_tajaran.dme"
 
 	#include "../random_ruins/exoplanet_ruins/playablecolony/playablecolony.dm"
 

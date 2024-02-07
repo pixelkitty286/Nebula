@@ -16,9 +16,6 @@
 	name_plural = "Tajara"
 	base_prosthetics_model = null
 
-	low_light_vision_effectiveness = 0.15
-	low_light_vision_adjustment_speed = 0.3
-
 	description = "The Tajara are a race of humanoids that possess markedly felinoid traits that include \
 	 a semi-prehensile tail, a body covered in fur of varying shades, and padded, digitigrade feet. \
  	 They are a naturally superstitious species with the new generations growing up with tales of \
@@ -38,7 +35,7 @@
 
 	preview_outfit = /decl/hierarchy/outfit/job/generic/engineer
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED //Whitelisted because you MUST have a basic understanding on the lore
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
 
 	blood_types = list(
 		/decl/blood_type/feline/mplus,
@@ -55,9 +52,8 @@
 
 	organs_icon = 'mods/species/tajaran/icons/organs.dmi'
 
-	darksight_range = 7
+
 	snow_slowdown_mod = -1
-	flash_mod = 2
 
 	hunger_factor = DEFAULT_HUNGER_FACTOR * 1.2
 	gluttonous = GLUT_TINY
@@ -73,22 +69,6 @@
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
-	cold_level_1 = 200
-	cold_level_2 = 140
-	cold_level_3 = 80
-
-	heat_level_1 = 330
-	heat_level_2 = 380
-	heat_level_3 = 800
-
-	heat_discomfort_level = 294
-	cold_discomfort_level = 230
-
-	heat_discomfort_strings = list(
-		"Your fur prickles in the heat.",
-		"You feel uncomfortably warm.",
-		"Your overheated skin itches."
-	)
 
 	available_cultural_info = list(
 		TAG_CULTURE = list(
@@ -148,5 +128,7 @@
 		LANGUAGE_AKHANI
 	)
 
+/*
 /decl/species/tajaran/handle_additional_hair_loss(var/mob/living/carbon/human/H, var/defer_body_update = TRUE)
 	. = H && H.change_skin_color(rgb(189, 171, 143))
+*/

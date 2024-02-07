@@ -356,6 +356,6 @@
 	icon_state = "taj_heterochromia-eyes"
 	species_allowed = list(SPECIES_TAJARA)
 	mask_to_bodypart = FALSE
-	blend = ICON_MULTIPLY
+	//blend = ICON_MULTIPLY
 
 //Skin
