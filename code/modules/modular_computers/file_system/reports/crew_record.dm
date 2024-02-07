@@ -113,7 +113,9 @@ var/global/arrest_security_status =  "Arrest"
 	set_homeSystem(H ? html_decode(H.get_cultural_value(TAG_HOMEWORLD)) : "Unset")
 	set_faction(H ?    html_decode(H.get_cultural_value(TAG_FACTION)) :   "Unset")
 	set_religion(H ?   html_decode(H.get_cultural_value(TAG_RELIGION)) :  "Unset")
-
+	//Borealis Additions start
+	set_citizenship(H ? html_decode(H.get_cultural_value(TAG_CITIZENSHIP)) : "Unset")
+	//Borealis Additions end
 	if(H)
 		var/skills = list()
 		for(var/decl/hierarchy/skill/S in global.skills)
