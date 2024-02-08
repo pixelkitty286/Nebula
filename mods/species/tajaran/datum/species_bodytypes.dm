@@ -24,9 +24,15 @@
 
 
 	has_organ = list(
+		BP_STOMACH =  /obj/item/organ/internal/stomach,
+		BP_HEART =    /obj/item/organ/internal/heart,
+		BP_LUNGS =    /obj/item/organ/internal/lungs,
+		BP_LIVER =    /obj/item/organ/internal/liver,
+		BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
+		BP_BRAIN =    /obj/item/organ/internal/brain,
+		BP_APPENDIX = /obj/item/organ/internal/appendix,
 		BP_EYES =     /obj/item/organ/internal/eyes/taj
 	)
-
 
 	override_limb_types = list(
 		BP_TAIL = /obj/item/organ/external/tail/cat

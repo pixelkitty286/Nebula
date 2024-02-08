@@ -120,7 +120,7 @@
 	)
 
 	autohiss_extra_map = list(
-		"per" = list("pur", "purr", "purrr")//purrfect!
+		"p" = list("prr", "prrr", "prrrr")//purrfect!
 	)
 
 	autohiss_exempt = list(
