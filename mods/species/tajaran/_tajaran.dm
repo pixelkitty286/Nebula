@@ -16,7 +16,7 @@
 	if(bodytype_equip_flags & BODY_FLAG_EXCLUDE)
 		bodytype_equip_flags |= BODY_FLAG_FELINE
 
-/mob/living/carbon/human/tajaran/Initialize(mapload)
+/mob/living/carbon/human/tajaran/Initialize(mapload, species_name, datum/dna/new_dna, decl/bodytype/new_bodytype)
 	. = ..(mapload, SPECIES_TAJARA)
 
 /decl/modpack/tajara

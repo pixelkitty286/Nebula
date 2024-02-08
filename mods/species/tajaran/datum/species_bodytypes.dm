@@ -10,9 +10,9 @@
 	bodytype_flag =        BODY_FLAG_FELINE
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	movement_slowdown = -0.5
-	base_hair_color = "#080808"
-	base_color = "#080808"
-	base_eye_color = "#080808"
+	base_hair_color = "#7B5F35"
+	base_color = "#7B5F35"
+	base_eye_color = "#33CC33"
 	default_h_style = /decl/sprite_accessory/hair/taj
 
 	eye_darksight_range = 7
@@ -24,21 +24,15 @@
 
 
 	has_organ = list(
-		BP_STOMACH =  /obj/item/organ/internal/stomach,
-		BP_HEART =    /obj/item/organ/internal/heart,
-		BP_LUNGS =    /obj/item/organ/internal/lungs,
-		BP_LIVER =    /obj/item/organ/internal/liver,
-		BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
-		BP_BRAIN =    /obj/item/organ/internal/brain,
-		BP_APPENDIX = /obj/item/organ/internal/appendix,
 		BP_EYES =     /obj/item/organ/internal/eyes/taj
 	)
 
 
 	override_limb_types = list(
-		BP_EYES = /obj/item/organ/internal/eyes/taj,
 		BP_TAIL = /obj/item/organ/external/tail/cat
 	)
+
+	base_markings = list(/decl/sprite_accessory/marking/taj/earsout = "#947A53", /decl/sprite_accessory/marking/taj/earsin = "#DCBB89")
 
 	cold_level_1 = 200
 	cold_level_2 = 140
@@ -65,6 +59,10 @@
 	uniform_state_modifier = "_f"
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
+	override_limb_types = list(
+		BP_TAIL = /obj/item/organ/external/tail/cat
+	)
+
 /decl/bodytype/feline/masculine
 	name =                   "masculine"
 	limb_blend =           ICON_ADD
@@ -74,7 +72,11 @@
 	uniform_state_modifier = null
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
+	override_limb_types = list(
+		BP_TAIL = /obj/item/organ/external/tail/cat
+	)
+
 /obj/item/organ/external/tail/cat
 	tail_icon = 'mods/species/tajaran/icons/tail.dmi'
 	tail = "tajtail"
-	tail_blend = ICON_ADD
+	tail_blend = ICON_MULTIPLY
