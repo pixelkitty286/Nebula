@@ -77,6 +77,6 @@
 	)
 
 /obj/item/organ/external/tail/cat
-	tail_icon = 'mods/species/tajaran/icons/tail.dmi'
-	tail = "tajtail"
-	tail_blend = ICON_MULTIPLY
+	tail_icon  = 'mods/species/tajaran/icons/tail.dmi'
+	tail	   = "tajtail"
+	tail_blend = ICON_ADD
