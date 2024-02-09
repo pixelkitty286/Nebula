@@ -87,7 +87,8 @@
 		/decl/species/unathi = list(
 			HUMAN_ONLY_JOBS
 		),
-		/decl/species/tajaran = list(
+		//Borealis edit
+		/decl/species/tajara = list(
 			HUMAN_ONLY_JOBS
 		)
 	)
