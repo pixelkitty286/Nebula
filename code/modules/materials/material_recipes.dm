@@ -11,7 +11,6 @@
 	for(var/recipe_type in subtypesof(base_type))
 		. += new recipe_type(src)
 
-
 /decl/material/proc/generate_recipes(stack_type, reinforce_material)
 
 	if(holographic || phase_at_temperature() != MAT_PHASE_SOLID)
@@ -81,6 +80,7 @@
 			. += new/datum/stack_recipe/rod(src)
 
 		. += new/datum/stack_recipe/fork(src)
+		. += new/datum/stack_recipe/chopsticks(src)
 		. += new/datum/stack_recipe/knife(src)
 		. += new/datum/stack_recipe/bell(src)
 		. += new/datum/stack_recipe/blade(src)

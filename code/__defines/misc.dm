@@ -262,6 +262,10 @@
 #define ICON_STATE_INV   "inventory"
 
 #define hex2num(X) text2num(X, 16)
+/// Returns the hex value of a number given a value assumed to be a base-ten value, padded to a minimum length of 2.
+#define num2hex(num) num2text(num, 2, 16)
+/// Returns the hex value of a number given a value assumed to be a base-ten value, padded to a supplied minimum length.
+#define num2hex_padded(num, len) num2text(num, len, 16)
 
 #define Z_ALL_TURFS(Z) block(locate(1, 1, Z), locate(world.maxx, world.maxy, Z))
 
@@ -314,5 +318,17 @@
 #define LEVEL_ABOVE_PLATING 2
 
 // Defines for fluorescence (/atom/var/fluorescent)
-#define FLUORESCENT_GLOWS   1	// Glows when under flourescent light
-#define FLUORESCENT_GLOWING 2	// Currently glowing due to flourescent light
+/// Glows when under flourescent light
+#define FLUORESCENT_GLOWS   1
+/// Currently glowing due to flourescent light
+#define FLUORESCENT_GLOWING 2
+
+// Flags used for utensil-food interaction.
+/// Solid or semi-solid food; chopsticks, forks.
+#define UTENSIL_FLAG_COLLECT BITFLAG(0)
+/// Soft, liquid or semi-liquid food; soups, stews, pudding.
+#define UTENSIL_FLAG_SCOOP   BITFLAG(1)
+/// Foods that need to be sliced before eating; steak, grapefruit.
+#define UTENSIL_FLAG_SLICE   BITFLAG(2)
+/// Unimplemented; condiments that are collected before being spread on other food.
+#define UTENSIL_FLAG_SPREAD  BITFLAG(3)

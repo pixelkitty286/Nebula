@@ -37,6 +37,9 @@
 	var/inertia_move_delay = 5
 	var/atom/movable/inertia_ignore
 
+	// Marker for alpha mask update process. null == never update, TRUE == currently updating, FALSE == finished updating.
+	var/updating_turf_alpha_mask = null
+
 // This proc determines if the instance is preserved when the process() despawn of crypods occurs.
 /atom/movable/proc/preserve_in_cryopod(var/obj/machinery/cryopod/pod)
 	return FALSE
@@ -469,4 +472,50 @@
 
 /atom/movable/proc/get_object_size()
 	return ITEM_SIZE_NORMAL
+
+/atom/movable/proc/try_burn_wearer(var/mob/living/holder, var/held_slot, var/delay = 0)
+	set waitfor = FALSE
+	if(delay)
+		sleep(delay)
+	if(!held_slot || !istype(holder) || QDELETED(holder) || loc != holder)
+		return
+
+	// TODO: check protective gear
+	// TODO: less simplistic messages and logic
+	var/datum/inventory_slot/slot = held_slot && holder.get_inventory_slot_datum(held_slot)
+	var/check_organ = slot?.requires_organ_tag
+	if(temperature >= holder.get_mob_temperature_threshold(HEAT_LEVEL_3, check_organ))
+		to_chat(holder, SPAN_DANGER("You are burned by \the [src]!"))
+	else if(temperature >= holder.get_mob_temperature_threshold(HEAT_LEVEL_2, check_organ))
+		if(prob(10))
+			to_chat(holder, SPAN_DANGER("\The [src] is uncomfortably hot..."))
+		return
+	else if(temperature <= holder.get_mob_temperature_threshold(COLD_LEVEL_3, check_organ))
+		to_chat(holder, SPAN_DANGER("You are frozen by \the [src]!"))
+	else if(temperature <= holder.get_mob_temperature_threshold(COLD_LEVEL_2, check_organ))
+		if(prob(10))
+			to_chat(holder, SPAN_DANGER("\The [src] is uncomfortably cold..."))
+		return
+	else
+		return
+
+	var/my_size = get_object_size()
+	var/burn_damage = rand(my_size, round(my_size * 1.5))
+	var/obj/item/organ/external/organ = check_organ && holder.get_organ(check_organ)
+	if(istype(organ))
+		organ.take_external_damage(0, burn_damage)
+	else
+		holder.adjustFireLoss(burn_damage)
+	if(held_slot in holder.get_held_item_slots())
+		holder.drop_from_inventory(src)
+	else
+		. = null // We might keep burning them next time.
+
+/atom/movable/proc/update_appearance_flags(add_flags, remove_flags)
+	var/old_appearance = appearance_flags
+	if(add_flags)
+		appearance_flags |= add_flags
+	if(remove_flags)
+		appearance_flags &= ~remove_flags
+	return old_appearance != appearance_flags
 

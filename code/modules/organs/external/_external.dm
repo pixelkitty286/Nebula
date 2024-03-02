@@ -36,9 +36,11 @@
 	var/skin_colour                    // skin colour
 	var/skin_blend = ICON_ADD          // How the skin colour is applied.
 	var/hair_colour                    // hair colour
-	var/list/markings                  // Markings (body_markings) to apply to the icon
 	var/render_alpha = 255
 	var/skip_body_icon_draw = FALSE    // Set to true to skip including this organ on the human body sprite.
+
+	/// Sprite accessories like hair and markings to apply to the organ icon and owner.
+	VAR_PRIVATE/list/_sprite_accessories
 
 	// Wound and structural data.
 	var/wound_update_accuracy = 1      // how often wounds should be updated, a higher number means less often
@@ -105,6 +107,8 @@
 	. = ..()
 	if(. != INITIALIZE_HINT_QDEL && isnull(pain_disability_threshold))
 		pain_disability_threshold = (max_damage * 0.75)
+	if(force_limb_dir && force_limb_dir != SOUTH)
+		set_dir(force_limb_dir)
 
 /obj/item/organ/external/Destroy()
 	//Update the hierarchy BEFORE clearing all the vars and refs
@@ -901,7 +905,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 		if(update_surgery)
 			owner.update_surgery()
 		if (update_damstate())
-			owner.update_damage_icon(TRUE)
+			owner.update_damage_overlays(TRUE)
 
 //Updates brute_damn and burn_damn from wound damages. Updates BLEEDING status.
 /obj/item/organ/external/proc/update_damages()
@@ -948,8 +952,8 @@ Note that amputating the affected organ does in fact remove the infection from t
 	var/n_is = damage_state_text()
 	if (n_is != damage_state)
 		damage_state = n_is
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
 // new damage icon system
 // returns just the brute/burn damage code

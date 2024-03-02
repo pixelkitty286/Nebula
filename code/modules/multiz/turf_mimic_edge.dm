@@ -88,14 +88,14 @@
 	mimic_z = _z? _z : z
 	mimic_x = _x
 	mimic_y = _y
-	refresh_vis_contents()
+	update_vis_contents()
 
 //Prevent ambient completely, we're not a real turf
 /turf/simulated/mimic_edge/set_ambient_light(color, multiplier)
 	return
 /turf/simulated/mimic_edge/update_ambient_light(no_corner_update)
 	return
-/turf/simulated/mimic_edge/update_ambient_light_from_z()
+/turf/simulated/mimic_edge/update_ambient_light_from_z_or_area()
 	return
 /turf/simulated/mimic_edge/lighting_build_overlay(now)
 	return
@@ -164,14 +164,14 @@
 	mimic_z = _z? _z : z
 	mimic_x = _x
 	mimic_y = _y
-	refresh_vis_contents()
+	update_vis_contents()
 
 //Prevent ambient completely, we're not a real turf
 /turf/unsimulated/mimic_edge/set_ambient_light(color, multiplier)
 	return
 /turf/unsimulated/mimic_edge/update_ambient_light(no_corner_update)
 	return
-/turf/unsimulated/mimic_edge/update_ambient_light_from_z()
+/turf/unsimulated/mimic_edge/update_ambient_light_from_z_or_area()
 	return
 /turf/unsimulated/mimic_edge/lighting_build_overlay(now)
 	return
@@ -240,14 +240,14 @@
 	mimic_z = _z? _z : z
 	mimic_x = _x
 	mimic_y = _y
-	refresh_vis_contents()
+	update_vis_contents()
 
 //Prevent ambient completely, we're not a real turf
 /turf/exterior/mimic_edge/set_ambient_light(color, multiplier)
 	return
 /turf/exterior/mimic_edge/update_ambient_light(no_corner_update)
 	return
-/turf/exterior/mimic_edge/update_ambient_light_from_z()
+/turf/exterior/mimic_edge/update_ambient_light_from_z_or_area()
 	return
 /turf/exterior/mimic_edge/lighting_build_overlay(now)
 	return
