@@ -141,7 +141,8 @@
 			var/skill_label = ""
 			if(!user.skill_check(SKILL_CONSTRUCTION, R.difficulty))
 				var/decl/hierarchy/skill/S = GET_DECL(SKILL_CONSTRUCTION)
-				skill_label = "<font color='red'>\[[S.levels[R.difficulty]]]</font>"
+				if(R.difficulty && LAZYACCESS(S?.levels, R.difficulty))
+					skill_label = "<font color='red'>\[[S.levels[R.difficulty]]]</font>"
 			if (can_build)
 				t1 +="[skill_label]<A href='?src=\ref[src];sublist=[recipes_sublist];make=[i];multiplier=1'>[title]</A>"
 			else
@@ -363,14 +364,17 @@
 			stacks |= item
 	for (var/obj/item/stack/item in user?.loc)
 		stacks |= item
+	for (var/obj/item/stack/item in loc)
+		stacks |= item
 	for (var/obj/item/stack/item in stacks)
 		if(item == src || !(can_merge_stacks(item) || item.can_merge_stacks(src)))
 			continue
-		var/transfer = src.transfer_to(item)
+		var/transfer = transfer_to(item)
 		if(user && transfer)
-			to_chat(user, "<span class='notice'>You add a new [item.singular_name] to the stack. It now contains [item.amount] [item.singular_name]\s.</span>")
+			to_chat(user, SPAN_NOTICE("You add a new [item.singular_name] to the stack. It now contains [item.amount] [item.singular_name]\s."))
 		if(!amount)
 			break
+	return !QDELETED(src)
 
 /obj/item/stack/get_storage_cost()	//Scales storage cost to stack size
 	. = ..()
@@ -422,3 +426,12 @@
 	if(amount == 1)
 		return indefinite_article ? "[indefinite_article] [singular_name]" : ADD_ARTICLE(singular_name)
 	return "[amount] [plural_name]"
+
+/obj/item/stack/ProcessAtomTemperature()
+	. = ..()
+	if(QDELETED(src))
+		return
+	matter_per_piece = list()
+	for(var/mat in matter)
+		matter_per_piece[mat] = round(matter[mat] / amount)
+	update_icon()

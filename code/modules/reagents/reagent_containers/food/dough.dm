@@ -26,11 +26,12 @@
 	slice_path = /obj/item/chems/food/doughslice
 	slices_num = 3
 	center_of_mass = @'{"x":16,"y":16}'
+	utensil_flags = UTENSIL_FLAG_COLLECT | UTENSIL_FLAG_SLICE
 
 /obj/item/chems/food/sliceable/flatdough/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 1)
-	reagents.add_reagent(/decl/material/liquid/nutriment,         3)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 1)
+	add_to_reagents(/decl/material/liquid/nutriment,         3)
 
 /obj/item/chems/food/doughslice
 	name = "dough slice"
@@ -44,6 +45,7 @@
 	nutriment_desc = list("dough" = 1)
 	nutriment_amt = 1
 	nutriment_type = /decl/material/liquid/nutriment/bread
+	utensil_flags = UTENSIL_FLAG_COLLECT | UTENSIL_FLAG_SLICE
 
 /obj/item/chems/food/bun
 	name = "bun"

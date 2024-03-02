@@ -113,7 +113,7 @@
 
 	if(flooded)
 		set_flooded(flooded, TRUE, skip_vis_contents_update = TRUE, mapload = mapload)
-	refresh_vis_contents()
+	update_vis_contents()
 
 	return INITIALIZE_HINT_NORMAL
 
@@ -140,6 +140,8 @@
 	if (!changing_turf)
 		PRINT_STACK_TRACE("Improper turf qdel. Do not qdel turfs directly.")
 
+	SSambience.queued -= src
+
 	changing_turf = FALSE
 
 	if (contents.len > !!lighting_overlay)
@@ -161,7 +163,7 @@
 		connections.erase_all()
 
 	if(weather)
-		remove_vis_contents(src, weather.vis_contents_additions)
+		remove_vis_contents(weather.vis_contents_additions)
 		weather = null
 
 	QDEL_NULL(fluid_overlay)
@@ -185,6 +187,9 @@
 	. = get_base_movement_delay(travel_dir, mover)
 	if(weather)
 		. += weather.get_movement_delay(return_air(), travel_dir)
+	// TODO: check user species webbed feet, wearing swimming gear
+	if(reagents?.total_volume > FLUID_PUDDLE)
+		. += (reagents.total_volume > FLUID_SHALLOW) ? 6 : 3
 
 /turf/attack_hand(mob/user)
 	SHOULD_CALL_PARENT(FALSE)
@@ -220,6 +225,12 @@
 			else
 				to_chat(user, SPAN_WARNING("There is nothing to be dug out of \the [src]."))
 			return TRUE
+
+		if(istype(W, /obj/item/storage))
+			var/obj/item/storage/storage = W
+			if(storage.collection_mode)
+				storage.gather_all(src, user)
+				return TRUE
 
 	if(ATOM_IS_OPEN_CONTAINER(W) && W.reagents && reagents?.total_volume >= FLUID_PUDDLE)
 		var/taking = min(reagents.total_volume, REAGENTS_FREE_SPACE(W.reagents))
@@ -429,14 +440,14 @@
 	if(istype(new_weather) && is_outside())
 		if(weather != new_weather)
 			if(weather)
-				remove_vis_contents(src, weather.vis_contents_additions)
+				remove_vis_contents(weather.vis_contents_additions)
 			weather = new_weather
-			add_vis_contents(src, weather.vis_contents_additions)
+			add_vis_contents(weather.vis_contents_additions)
 			. = TRUE
 
 	// We are indoors or there is no local weather system, clear our vis contents.
 	else if(weather)
-		remove_vis_contents(src, weather.vis_contents_additions)
+		remove_vis_contents(weather.vis_contents_additions)
 		weather = null
 		. = TRUE
 
@@ -509,7 +520,7 @@
 	is_outside = new_outside
 	if(!skip_weather_update)
 		update_weather()
-	SSambience.queued += src
+	SSambience.queued |= src
 
 	last_outside_check = OUTSIDE_UNCERTAIN
 	update_external_atmos_participation()
@@ -537,7 +548,7 @@
 	var/datum/gas_mixture/environment = return_air()
 	return environment?.graphic
 
-/turf/proc/get_vis_contents_to_add()
+/turf/get_vis_contents_to_add()
 	var/air_graphic = get_air_graphic()
 	if(length(air_graphic))
 		LAZYADD(., air_graphic)
