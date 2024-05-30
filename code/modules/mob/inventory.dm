@@ -271,6 +271,9 @@
 		return 1 //already unequipped, so success
 	return I.mob_can_unequip(src, slot)
 
+/obj/item/proc/get_any_equipped_slot()
+	return get_equipped_slot() || get_held_slot()
+
 /obj/item/proc/get_equipped_slot()
 	if(!ismob(loc))
 		return null
@@ -284,6 +287,12 @@
 	for(var/slot_str in slots)
 		if(get_equipped_item(slot_str) == I) // slots[slot]._holding == I
 			return slot_str
+
+/obj/item/proc/get_held_slot()
+	if(!ismob(loc))
+		return null
+	var/mob/mob = loc
+	return mob.get_held_slot_for_item(src)
 
 /mob/proc/get_held_slot_for_item(obj/item/I)
 	var/list/slots = get_held_item_slots()
