@@ -4,7 +4,7 @@
 	footstep_type = /decl/footsteps/asteroid
 	icon_state = "0"
 	layer = PLATING_LAYER
-	open_turf_type = /turf/exterior/open
+	open_turf_type = /turf/open
 	turf_flags = TURF_FLAG_BACKGROUND | TURF_IS_HOLOMAP_PATH
 	zone_membership_candidate = TRUE
 	var/base_color
@@ -20,6 +20,11 @@
 	var/decl/material/material
 	/// Whether or not sand/clay has been dug up here.
 	var/dug = FALSE
+	var/reagent_type
+	var/height = 0
+
+/turf/exterior/get_physical_height()
+	return density ? 0 : height
 
 /turf/exterior/can_be_dug()
 	return !density && !is_open()
@@ -68,6 +73,14 @@
 					target_turf.queue_icon_update()
 				else
 					target_turf.update_icon()
+
+	if(reagent_type && height < 0)
+		add_to_reagents(reagent_type, abs(height))
+
+/turf/exterior/on_reagent_change()
+	. = ..()
+	if(reagent_type && height < 0 && reagents && reagents.total_volume < abs(height))
+		add_to_reagents(abs(height) - reagents.total_volume)
 
 /turf/exterior/is_floor()
 	return !density && !is_open()

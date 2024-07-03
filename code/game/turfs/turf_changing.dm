@@ -12,6 +12,7 @@
 	var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
 	if(L)
 		qdel(L)
+
 // Called after turf replaces old one
 /turf/proc/post_change()
 	levelupdate()
@@ -46,7 +47,7 @@
 		var/turf/below = GetBelow(src)
 		if(istype(below) && !isspaceturf(below))
 			var/area/A = get_area(src)
-			N = A?.open_turf || open_turf_type || /turf/simulated/open
+			N = A?.open_turf || open_turf_type || /turf/open
 
 	if (!(atom_flags & ATOM_FLAG_INITIALIZED))
 		return new N(src)
@@ -99,11 +100,8 @@
 		else if(old_fire)
 			qdel(old_fire)
 
-	if(isnull(W.flooded) && old_flooded != W.flooded)
-		if(old_flooded && !W.density)
-			W.make_flooded()
-		else
-			W.make_unflooded()
+	if(old_flooded != W.flooded)
+		set_flooded(old_flooded)
 
 	// Raise appropriate events.
 	W.post_change()

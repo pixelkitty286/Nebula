@@ -73,6 +73,11 @@
 	/// Used by exterior turfs to determine the warming effect of campfires and such.
 	var/list/affecting_heat_sources
 
+	// Fluid flow tracking vars
+	var/last_slipperiness = 0
+	var/last_flow_strength = 0
+	var/last_flow_dir = 0
+	var/atom/movable/fluid_overlay/fluid_overlay
 
 /turf/Initialize(mapload, ...)
 	. = null && ..()	// This weird construct is to shut up the 'parent proc not called' warning without disabling the lint for child types. We explicitly return an init hint so this won't change behavior.
@@ -106,10 +111,9 @@
 	if (z_flags & ZM_MIMIC_BELOW)
 		setup_zmimic(mapload)
 
-	if(flooded && !density)
-		make_flooded(TRUE)
-
-	refresh_vis_contents()
+	if(flooded)
+		set_flooded(flooded, TRUE, skip_vis_contents_update = TRUE, mapload = mapload)
+	update_vis_contents()
 
 	return INITIALIZE_HINT_NORMAL
 
@@ -136,6 +140,8 @@
 	if (!changing_turf)
 		PRINT_STACK_TRACE("Improper turf qdel. Do not qdel turfs directly.")
 
+	SSambience.queued -= src
+
 	changing_turf = FALSE
 
 	if (contents.len > !!lighting_overlay)
@@ -157,8 +163,10 @@
 		connections.erase_all()
 
 	if(weather)
-		remove_vis_contents(src, weather.vis_contents_additions)
+		remove_vis_contents(weather.vis_contents_additions)
 		weather = null
+
+	QDEL_NULL(fluid_overlay)
 
 	..()
 
@@ -179,6 +187,9 @@
 	. = get_base_movement_delay(travel_dir, mover)
 	if(weather)
 		. += weather.get_movement_delay(return_air(), travel_dir)
+	// TODO: check user species webbed feet, wearing swimming gear
+	if(reagents?.total_volume > FLUID_PUDDLE)
+		. += (reagents.total_volume > FLUID_SHALLOW) ? 6 : 3
 
 /turf/attack_hand(mob/user)
 	SHOULD_CALL_PARENT(FALSE)
@@ -215,14 +226,18 @@
 				to_chat(user, SPAN_WARNING("There is nothing to be dug out of \the [src]."))
 			return TRUE
 
-	if(ATOM_IS_OPEN_CONTAINER(W) && W.reagents)
-		var/obj/effect/fluid/F = locate() in src
-		if(F && F.reagents?.total_volume >= FLUID_PUDDLE)
-			var/taking = min(F.reagents?.total_volume, REAGENTS_FREE_SPACE(W.reagents))
-			if(taking > 0)
-				to_chat(user, SPAN_NOTICE("You fill \the [W] with [F.reagents.get_primary_reagent_name()] from \the [src]."))
-				F.reagents.trans_to(W, taking)
+		if(istype(W, /obj/item/storage))
+			var/obj/item/storage/storage = W
+			if(storage.collection_mode)
+				storage.gather_all(src, user)
 				return TRUE
+
+	if(ATOM_IS_OPEN_CONTAINER(W) && W.reagents && reagents?.total_volume >= FLUID_PUDDLE)
+		var/taking = min(reagents.total_volume, REAGENTS_FREE_SPACE(W.reagents))
+		if(taking > 0)
+			to_chat(user, SPAN_NOTICE("You fill \the [W] with [reagents.get_primary_reagent_name()] from \the [src]."))
+			reagents.trans_to(W, taking)
+			return TRUE
 
 	if(istype(W, /obj/item/storage))
 		var/obj/item/storage/S = W
@@ -425,14 +440,14 @@
 	if(istype(new_weather) && is_outside())
 		if(weather != new_weather)
 			if(weather)
-				remove_vis_contents(src, weather.vis_contents_additions)
+				remove_vis_contents(weather.vis_contents_additions)
 			weather = new_weather
-			add_vis_contents(src, weather.vis_contents_additions)
+			add_vis_contents(weather.vis_contents_additions)
 			. = TRUE
 
 	// We are indoors or there is no local weather system, clear our vis contents.
 	else if(weather)
-		remove_vis_contents(src, weather.vis_contents_additions)
+		remove_vis_contents(weather.vis_contents_additions)
 		weather = null
 		. = TRUE
 
@@ -505,7 +520,7 @@
 	is_outside = new_outside
 	if(!skip_weather_update)
 		update_weather()
-	SSambience.queued += src
+	SSambience.queued |= src
 
 	last_outside_check = OUTSIDE_UNCERTAIN
 	update_external_atmos_participation()
@@ -533,14 +548,16 @@
 	var/datum/gas_mixture/environment = return_air()
 	return environment?.graphic
 
-/turf/proc/get_vis_contents_to_add()
+/turf/get_vis_contents_to_add()
 	var/air_graphic = get_air_graphic()
 	if(length(air_graphic))
 		LAZYADD(., air_graphic)
 	if(weather)
 		LAZYADD(., weather)
 	if(flooded)
-		LAZYADD(., global.flood_object)
+		var/flood_object = get_flood_overlay(flooded)
+		if(flood_object)
+			LAZYADD(., flood_object)
 
 /**Whether we can place a cable here
  * If you cannot build a cable will return an error code explaining why you cannot.
@@ -635,3 +652,9 @@
 	else
 		to_chat(AM, SPAN_WARNING("Something blocks the path."))
 	return TRUE
+
+/turf/proc/wet_floor(var/wet_val = 1, var/overwrite = FALSE)
+	return
+
+/turf/proc/unwet_floor(var/check_very_wet = TRUE)
+	return

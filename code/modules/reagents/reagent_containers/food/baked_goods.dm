@@ -16,7 +16,7 @@
 	name = "banana cream pie"
 	desc = "Just like back home, on clown planet! HONK!"
 	icon_state = "pie"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#fbffb8"
 	center_of_mass = @'{"x":16,"y":13}'
 	nutriment_desc = list("pie" = 3, "cream" = 2)
@@ -25,7 +25,7 @@
 
 /obj/item/chems/food/bananapie/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/banana_cream, 5)
+	add_to_reagents(/decl/material/liquid/nutriment/banana_cream, 5)
 
 /obj/item/chems/food/pie/throw_impact(atom/hit_atom)
 	..()
@@ -37,7 +37,7 @@
 	name = "berry clafoutis"
 	desc = "No black birds, this is a good sign."
 	icon_state = "berryclafoutis"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	center_of_mass = @'{"x":16,"y":13}'
 	nutriment_desc = list("sweetness" = 2, "pie" = 3)
 	nutriment_amt = 4
@@ -45,7 +45,7 @@
 
 /obj/item/chems/food/berryclafoutis/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/drink/juice/berry, 5)
+	add_to_reagents(/decl/material/liquid/drink/juice/berry, 5)
 
 /obj/item/chems/food/waffles
 	name = "waffles"
@@ -71,13 +71,13 @@
 
 /obj/item/chems/food/rofflewaffles/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/psychotropics, 8)
+	add_to_reagents(/decl/material/liquid/psychotropics, 8)
 
 /obj/item/chems/food/pancakes
 	name = "pancakes"
 	desc = "Pancakes without blueberries, still delicious."
 	icon_state = "pancakes"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	center_of_mass = @'{"x":15,"y":11}'
 	nutriment_desc = list("pancake" = 8)
 	nutriment_amt = 8
@@ -87,7 +87,7 @@
 	name = "blueberry pancakes"
 	desc = "Pancakes with blueberries, delicious."
 	icon_state = "pancakes"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	center_of_mass = @'{"x":15,"y":11}'
 	nutriment_desc = list("pancake" = 8)
 	nutriment_amt = 8
@@ -97,7 +97,7 @@
 	name = "eggplant parmigiana"
 	desc = "The only good recipe for eggplant."
 	icon_state = "eggplantparm"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#4d2f5e"
 	center_of_mass = @'{"x":16,"y":11}'
 	nutriment_desc = list("cheese" = 3, "eggplant" = 3)
@@ -115,7 +115,7 @@
 
 /obj/item/chems/food/soylentgreen/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 10)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 10)
 
 /obj/item/chems/food/soylenviridians
 	name = "\improper Soylen Virdians"
@@ -132,20 +132,20 @@
 	name = "meat-pie"
 	icon_state = "meatpie"
 	desc = "An old barber recipe, very delicious!"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#948051"
 	center_of_mass = @'{"x":16,"y":13}'
 	bitesize = 2
 
 /obj/item/chems/food/meatpie/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 10)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 10)
 
 /obj/item/chems/food/tofupie
 	name = "tofu-pie"
 	icon_state = "meatpie"
 	desc = "A delicious tofu pie."
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#fffee0"
 	center_of_mass = @'{"x":16,"y":13}'
 	nutriment_desc = list("tofu" = 2, "pie" = 8)
@@ -164,8 +164,8 @@
 
 /obj/item/chems/food/amanita_pie/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/amatoxin,      3)
-	reagents.add_reagent(/decl/material/liquid/psychotropics, 1)
+	add_to_reagents(/decl/material/liquid/amatoxin,      3)
+	add_to_reagents(/decl/material/liquid/psychotropics, 1)
 
 /obj/item/chems/food/plump_pie
 	name = "plump pie"
@@ -182,20 +182,20 @@
 	if(prob(10)) //#TODO: have this depend on cook's skill within the recipe handling instead maybe?
 		name = "exceptional plump pie"
 		desc = "Microwave is taken by a fey mood! It has cooked an exceptional plump pie!"
-		reagents.add_reagent(/decl/material/liquid/regenerator, 5)
+		add_to_reagents(/decl/material/liquid/regenerator, 5)
 
 /obj/item/chems/food/xemeatpie
 	name = "xeno-pie"
 	icon_state = "xenomeatpie"
 	desc = "A delicious meatpie. Probably heretical."
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#43de18"
 	center_of_mass = @'{"x":16,"y":13}'
 	bitesize = 2
 
 /obj/item/chems/food/xemeatpie/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 10)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 10)
 
 /obj/item/chems/food/poppypretzel
 	name = "poppy pretzel"

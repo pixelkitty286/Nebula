@@ -35,7 +35,8 @@
 	var/list/nutriment_desc = list("food" = 1)    // List of flavours and flavour strengths. The flavour strength text is determined by the ratio of flavour strengths in the snack.
 	var/list/eat_sound = 'sound/items/eatfood.ogg'
 	var/filling_color = "#ffffff" //Used by sandwiches.
-	var/trash = null
+	var/trash
+	var/obj/item/plate/plate
 	var/list/attack_products //Items you can craft together. Like bomb making, but with food and less screwdrivers.
 	// Uses format list(ingredient = result_type). The ingredient can be a typepath or a kitchen_tag string (used for mobs or plants)
 
@@ -54,6 +55,8 @@
 /obj/item/chems/food/Initialize()
 	.=..()
 	amount_per_transfer_from_this = bitesize
+	if(ispath(plate))
+		plate = new plate(src)
 
 /obj/item/chems/food/attack_self(mob/user)
 	attack(user, user)
@@ -65,87 +68,49 @@
 	. = ..()
 	if(distance > 1)
 		return
+	if(plate)
+		to_chat(user, SPAN_NOTICE("\The [src] has been arranged on \a [plate]."))
 	if (bitecount==0)
 		return
 	else if (bitecount==1)
-		to_chat(user, "<span class='notice'>\The [src] was bitten by someone!</span>")
+		to_chat(user, SPAN_NOTICE("\The [src] was bitten by someone!"))
 	else if (bitecount<=3)
-		to_chat(user, "<span class='notice'>\The [src] was bitten [bitecount] time\s!</span>")
+		to_chat(user, SPAN_NOTICE("\The [src] was bitten [bitecount] time\s!"))
 	else
-		to_chat(user, "<span class='notice'>\The [src] was bitten multiple times!</span>")
+		to_chat(user, SPAN_NOTICE("\The [src] was bitten multiple times!"))
 
-/obj/item/chems/food/attackby(obj/item/W, mob/living/user)
-	if(!istype(user))
-		return
-	if(istype(W,/obj/item/storage))
-		..()// -> item/attackby()
-		return
+/obj/item/chems/food/attackby(obj/item/W, mob/user)
+
+	if(istype(W, /obj/item/storage))
+		return ..()
+
+	// Plating food.
+	if(istype(W, /obj/item/plate))
+		var/obj/item/plate/plate = W
+		plate.try_plate_food(src, user)
+		return TRUE
+
 	// Eating with forks
-	if(istype(W,/obj/item/kitchen/utensil))
-		var/obj/item/kitchen/utensil/U = W
-		if(U.scoop_food)
-			if(!U.reagents)
-				U.create_reagents(5)
+	if(user.a_intent == I_HELP && do_utensil_interaction(W, user))
+		return TRUE
 
-			if (U.reagents.total_volume > 0)
-				to_chat(user, "<span class='warning'>You already have something on your [U].</span>")
-				return
-
-			user.visible_message( \
-				"\The [user] scoops up some [src] with \the [U]!", \
-				"<span class='notice'>You scoop up some [src] with \the [U]!</span>" \
-			)
-
-			src.bitecount++
-			U.overlays.Cut()
-			U.loaded = "[src]"
-			var/image/I = new(U.icon, "loadedfood")
-			I.color = src.filling_color
-			U.overlays += I
-
-			if(!reagents)
-				PRINT_STACK_TRACE("A snack [type] failed to have a reagent holder when attacked with a [W.type]. It was [QDELETED(src) ? "" : "not"] being deleted.")
-			else
-				reagents.trans_to_obj(U, min(reagents.total_volume,5))
-				if (reagents.total_volume <= 0)
-					qdel(src)
-			return
-
-	if (is_sliceable())
-		//these are used to allow hiding edge items in food that is not on a table/tray
-		var/can_slice_here = isturf(src.loc) && ((locate(/obj/structure/table) in src.loc) || (locate(/obj/machinery/optable) in src.loc) || (locate(/obj/item/storage/tray) in src.loc))
-		var/hide_item = !has_edge(W) || !can_slice_here
-
-		if (hide_item)
-			if (W.w_class >= src.w_class || is_robot_module(W) || istype(W,/obj/item/chems/condiment))
-				return
-			if(!user.try_unequip(W, src))
-				return
-
-			to_chat(user, "<span class='warning'>You slip \the [W] inside \the [src].</span>")
+	// Hiding items inside larger food items.
+	if(user.a_intent != I_HURT && is_sliceable() && W.w_class < w_class && !is_robot_module(W) && !istype(W, /obj/item/chems/condiment))
+		if(user.try_unequip(W, src))
+			to_chat(user, SPAN_NOTICE("You slip \the [W] inside \the [src]."))
 			add_fingerprint(user)
 			W.forceMove(src)
-			return
+		return TRUE
 
-		if (has_edge(W))
-			if (!can_slice_here)
-				to_chat(user, "<span class='warning'>You cannot slice \the [src] here! You need a table or at least a tray to do it.</span>")
-				return
+	// Creating food combinations.
+	if(try_create_combination(W, user))
+		return TRUE
 
-			var/slices_lost = 0
-			if (W.w_class > ITEM_SIZE_NORMAL)
-				user.visible_message("<span class='notice'>\The [user] crudely slices \the [src] with [W]!</span>", "<span class='notice'>You crudely slice \the [src] with your [W]!</span>")
-				slices_lost = rand(1,min(1,round(slices_num/2)))
-			else
-				user.visible_message("<span class='notice'>\The [user] slices \the [src]!</span>", "<span class='notice'>You slice \the [src]!</span>")
+	return ..()
 
-			var/reagents_per_slice = reagents.total_volume/slices_num
-			for(var/i=1 to (slices_num-slices_lost))
-				var/obj/slice = new slice_path (src.loc)
-				reagents.trans_to_obj(slice, reagents_per_slice)
-			qdel(src)
-			return
-
+/obj/item/chems/food/proc/try_create_combination(obj/item/W, mob/user)
+	if(!length(attack_products) || !istype(W) || QDELETED(src) || QDELETED(W))
+		return FALSE
 	var/create_type
 	for(var/key in attack_products)
 		if(ispath(key) && !istype(W, key))
@@ -157,27 +122,25 @@
 			if(G.seed.kitchen_tag && G.seed.kitchen_tag != key)
 				continue
 		create_type = attack_products[key]
-	if (!ispath(create_type))
-		return
-	if(!user.canUnEquip(src))
-		return
-
-	var/obj/item/chems/food/result = new create_type()
+		break
+	if(!ispath(create_type) || (user && (!user.canUnEquip(src) || !user.canUnEquip(W))))
+		return FALSE
 	//If the snack was in your hands, the result will be too
-	if (src in user.get_held_item_slots())
-		user.drop_from_inventory(src)
-		user.put_in_hands(result)
-	else
-		result.dropInto(loc)
-
-	qdel(W)
+	var/was_in_hands = (src in user?.get_held_items())
+	var/my_loc = get_turf(src)
 	qdel(src)
+	qdel(W)
+	var/obj/item/chems/food/result = new create_type(my_loc)
+	if(was_in_hands)
+		user.put_in_hands(result)
 	to_chat(user, SPAN_NOTICE("You make \the [result]!"))
+	return TRUE
 
 /obj/item/chems/food/proc/is_sliceable()
 	return (slices_num && slice_path && slices_num > 0)
 
 /obj/item/chems/food/proc/on_dry(var/atom/newloc)
+	drop_plate(get_turf(newloc))
 	if(dried_type == type)
 		SetName("dried [name]")
 		color = "#a38463"
@@ -188,7 +151,19 @@
 	. = new dried_type(newloc || get_turf(src))
 	qdel(src)
 
+/obj/item/chems/food/proc/drop_plate(var/drop_loc)
+	if(istype(plate))
+		plate.dropInto(drop_loc || loc)
+		plate.make_dirty(src)
+	plate = null
+
+/obj/item/chems/food/physically_destroyed()
+	drop_plate()
+	return ..()
+
 /obj/item/chems/food/Destroy()
+	QDEL_NULL(plate)
+	trash = null
 	if(contents)
 		for(var/atom/movable/something in contents)
 			something.dropInto(loc)
@@ -207,9 +182,22 @@
 	update_icon()
 
 /obj/item/chems/food/on_update_icon()
+	underlays.Cut()
 	. = ..()
 	//Since other things that don't have filling override this, slap it into its own proc to avoid the overhead of scanning through the icon file
 	apply_filling_overlay() //#TODO: Maybe generalise food item icons.
+	// If we have a plate, add it to our icon.
+	if(plate)
+		var/image/I = new
+		I.appearance = plate
+		I.layer = FLOAT_LAYER
+		I.plane = FLOAT_PLANE
+		I.pixel_x = 0
+		I.pixel_y = 0
+		I.pixel_z = 0
+		I.pixel_w = 0
+		I.appearance_flags |= RESET_TRANSFORM|RESET_COLOR
+		underlays += list(I)
 
 /obj/item/chems/food/proc/apply_filling_overlay()
 	if(check_state_in_icon("[icon_state]_filling", icon))
@@ -220,4 +208,4 @@
 	. = ..()
 	SHOULD_CALL_PARENT(TRUE)
 	if(nutriment_amt)
-		reagents.add_reagent(nutriment_type, nutriment_amt, nutriment_desc)
+		add_to_reagents(nutriment_type, nutriment_amt, nutriment_desc)

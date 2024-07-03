@@ -20,7 +20,8 @@
 
 /mob/proc/start_floating()
 
-	is_floating = 1
+	is_floating = TRUE
+	update_turf_alpha_mask()
 
 	var/amplitude = 2 //maximum displacement from original position
 	var/period = 36 //time taken for the mob to go up > down > original position, in deciseconds. Should be multiple of 4
@@ -37,7 +38,8 @@
 /mob/proc/stop_floating()
 	animate(src, pixel_z = default_pixel_z, time = 5, easing = SINE_EASING | EASE_IN) //halt animation
 	//reset the pixel offsets to zero
-	is_floating = 0
+	is_floating = FALSE
+	update_turf_alpha_mask()
 
 /atom/movable/proc/do_attack_animation(atom/A, atom/movable/weapon)
 
@@ -73,6 +75,9 @@
 	sleep(4)
 	reset_offsets()
 
+	if(buckled_mob)
+		buckled_mob.do_attack_animation(A, weapon)
+
 /mob/proc/clear_shown_overlays(var/list/show_to, var/image/I)
 	for(var/client/C in show_to)
 		C.images -= I
@@ -93,10 +98,10 @@
 	I.appearance = weapon
 	I.plane = DEFAULT_PLANE
 	I.layer = A.layer + 0.1
-	I.pixel_x = 0
-	I.pixel_y = 0
-	I.pixel_z = 0
-	I.pixel_w = 0
+	I.pixel_x = -(A.pixel_x)
+	I.pixel_y = -(A.pixel_y)
+	I.pixel_z = -(A.pixel_z)
+	I.pixel_w = -(A.pixel_w)
 
 	// Who can see the attack?
 	var/list/viewing = list()
@@ -113,20 +118,20 @@
 	// Set the direction of the icon animation.
 	var/direction = get_dir(src, A)
 	if(direction & NORTH)
-		I.pixel_y = -16
+		I.pixel_y -= 16
 	else if(direction & SOUTH)
-		I.pixel_y = 16
+		I.pixel_y += 16
 
 	if(direction & EAST)
-		I.pixel_x = -16
+		I.pixel_x -= 16
 	else if(direction & WEST)
-		I.pixel_x = 16
+		I.pixel_x += 16
 
 	if(!direction) // Attacked self?!
-		I.pixel_z = 16
+		I.pixel_z += 16
 
 	// And animate the attack!
-	animate(I, alpha = 175, pixel_x = 0, pixel_y = 0, pixel_z = 0, time = 3)
+	animate(I, alpha = 175, pixel_x = -(A.pixel_x), pixel_y = -(A.pixel_y), pixel_z = -(A.pixel_z), pixel_w = -(A.pixel_w), time = 3)
 
 /mob/proc/spin(spintime, speed)
 	spawn()

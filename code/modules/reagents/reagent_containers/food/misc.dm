@@ -8,8 +8,8 @@
 
 /obj/item/chems/food/badrecipe/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 1)
-	reagents.add_reagent(/decl/material/solid/carbon,             3)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 1)
+	add_to_reagents(/decl/material/solid/carbon,             3)
 
 /obj/item/chems/food/stuffing
 	name = "stuffing"
@@ -44,7 +44,7 @@
 
 /obj/item/chems/food/loadedbakedpotato/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 3)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 3)
 
 /obj/item/chems/food/spacylibertyduff
 	name = "party jelly"
@@ -59,7 +59,7 @@
 
 /obj/item/chems/food/spacylibertyduff/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/psychotropics, 6)
+	add_to_reagents(/decl/material/liquid/psychotropics, 6)
 
 /obj/item/chems/food/amanitajelly
 	name = "amanita jelly"
@@ -74,14 +74,14 @@
 
 /obj/item/chems/food/amanitajelly/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/amatoxin,      6)
-	reagents.add_reagent(/decl/material/liquid/psychotropics, 3)
+	add_to_reagents(/decl/material/liquid/amatoxin,      6)
+	add_to_reagents(/decl/material/liquid/psychotropics, 3)
 
 /obj/item/chems/food/enchiladas
 	name = "enchiladas"
 	desc = "Not to be confused with an echidna, though I don't know how you would."
 	icon_state = "enchiladas"
-	trash = /obj/item/trash/tray
+	plate = /obj/item/plate/tray
 	filling_color = "#a36a1f"
 	center_of_mass = @'{"x":16,"y":13}'
 	nutriment_desc = list("tortilla" = 3, "corn" = 3)
@@ -90,24 +90,24 @@
 
 /obj/item/chems/food/enchiladas/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 6)
-	reagents.add_reagent(/decl/material/liquid/capsaicin, 6)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 6)
+	add_to_reagents(/decl/material/liquid/capsaicin, 6)
 
 /obj/item/chems/food/monkeysdelight
 	name = "monkey's delight"
 	desc = "Eeee Eee!"
 	icon_state = "monkeysdelight"
-	trash = /obj/item/trash/tray
+	plate = /obj/item/plate/tray
 	filling_color = "#5c3c11"
 	center_of_mass = @'{"x":16,"y":13}'
 	bitesize = 6
 
 /obj/item/chems/food/monkeysdelight/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 10)
-	reagents.add_reagent(/decl/material/liquid/drink/juice/banana, 5)
-	reagents.add_reagent(/decl/material/solid/blackpepper,         1)
-	reagents.add_reagent(/decl/material/solid/sodiumchloride,      1)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 10)
+	add_to_reagents(/decl/material/liquid/drink/juice/banana, 5)
+	add_to_reagents(/decl/material/solid/blackpepper,         1)
+	add_to_reagents(/decl/material/solid/sodiumchloride,      1)
 
 /obj/item/chems/food/candiedapple
 	name = "candied apple"
@@ -129,7 +129,7 @@
 
 /obj/item/chems/food/mint/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/drink/syrup/mint, 1)
+	add_to_reagents(/decl/material/liquid/drink/syrup/mint, 1)
 
 /obj/item/chems/food/plumphelmetbiscuit
 	name = "plump helmet biscuit"
@@ -146,14 +146,14 @@
 	if(prob(10))
 		name = "exceptional plump helmet biscuit"
 		desc = "Microwave is taken by a fey mood! It has cooked an exceptional plump helmet biscuit!"
-		reagents.add_reagent(/decl/material/liquid/nutriment, 3)
-		reagents.add_reagent(/decl/material/liquid/regenerator, 5)
+		add_to_reagents(/decl/material/liquid/nutriment, 3)
+		add_to_reagents(/decl/material/liquid/regenerator, 5)
 
 /obj/item/chems/food/appletart
 	name = "golden apple streusel tart"
 	desc = "A tasty dessert that won't make it through a metal detector."
 	icon_state = "gappletart"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#ffff00"
 	center_of_mass = @'{"x":16,"y":18}'
 	nutriment_desc = list("apple" = 8)
@@ -162,7 +162,7 @@
 
 /obj/item/chems/food/appletart/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/solid/metal/gold, 5)
+	add_to_reagents(/decl/material/solid/metal/gold, 5)
 
 /obj/item/chems/food/cracker
 	name = "cracker"
@@ -192,7 +192,7 @@
 
 /obj/item/chems/food/taco/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 3)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 3)
 
 /obj/item/chems/food/pelmen
 	name = "meat pelmen"
@@ -204,7 +204,7 @@
 
 /obj/item/chems/food/pelmen/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 1)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 1)
 
 /obj/item/chems/food/pelmeni_boiled
 	name = "boiled pelmeni"
@@ -216,4 +216,4 @@
 
 /obj/item/chems/food/pelmeni_boiled/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 30)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 30)

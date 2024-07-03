@@ -16,7 +16,7 @@
 	name = "boiled spaghetti"
 	desc = "A plain dish of pasta, just screaming for sauce."
 	icon_state = "spagettiboiled"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#fcee81"
 	center_of_mass = @'{"x":16,"y":10}'
 	nutriment_desc = list("noodles" = 2)
@@ -27,7 +27,7 @@
 	name = "spaghetti & tomato"
 	desc = "Spaghetti and crushed tomatoes."
 	icon_state = "pastatomato"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#de4545"
 	center_of_mass = @'{"x":16,"y":10}'
 	nutriment_desc = list("tomato" = 3, "noodles" = 3)
@@ -36,13 +36,13 @@
 
 /obj/item/chems/food/pastatomato/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/drink/juice/tomato, 10)
+	add_to_reagents(/decl/material/liquid/drink/juice/tomato, 10)
 
 /obj/item/chems/food/nanopasta
 	name = "nanopasta"
 	desc = "Nanomachines, son!"
 	icon_state = "nanopasta"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#535e66"
 	center_of_mass = @'{"x":16,"y":10}'
 	nutriment_amt = 6
@@ -50,13 +50,13 @@
 
 /obj/item/chems/food/nanopasta/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nanitefluid, 10)
+	add_to_reagents(/decl/material/liquid/nanitefluid, 10)
 
 /obj/item/chems/food/meatballspagetti
 	name = "spaghetti & meatballs"
 	desc = "Now thats a nice meatball!"
 	icon_state = "meatballspagetti"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#de4545"
 	center_of_mass = @'{"x":16,"y":10}'
 	nutriment_desc = list("noodles" = 4)
@@ -64,7 +64,7 @@
 	bitesize = 2
 /obj/item/chems/food/meatballspagetti/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 4)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 4)
 
 /obj/item/chems/food/spesslaw
 	name = "spaghetti & too many meatballs"
@@ -78,4 +78,4 @@
 
 /obj/item/chems/food/spesslaw/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 4)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 4)

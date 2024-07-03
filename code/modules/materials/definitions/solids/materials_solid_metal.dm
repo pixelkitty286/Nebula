@@ -204,6 +204,7 @@
 	hitsound = 'sound/weapons/smash.ogg'
 	construction_difficulty = MAT_VALUE_NORMAL_DIY
 	value = 1.1
+	dissolves_in = MAT_SOLVENT_STRONGEST
 	dissolves_into = list(
 		/decl/material/solid/metal/iron = 0.98,
 		/decl/material/solid/carbon = 0.02
@@ -212,7 +213,7 @@
 
 /decl/material/solid/metal/steel/generate_recipes(stack_type, reinforce_material)
 	. = ..()
-	if(!reinforce_material && islist(.))
+	if(!holographic && !reinforce_material && islist(.))
 		if(!ispath(stack_type))
 			. += new/datum/stack_recipe/furniture/closet(src)
 			. += new/datum/stack_recipe/furniture/tank_dispenser(src)
@@ -236,15 +237,7 @@
 /decl/material/solid/metal/steel/holographic
 	name = "holographic steel"
 	uid = "solid_holographic_steel"
-	shard_type = SHARD_NONE
-	conductive = 0
-	hidden_from_codex = TRUE
-	value = 0
-	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
-	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
-
-/decl/material/solid/metal/steel/holographic/get_recipes(stack_type, reinf_mat)
-	return list()
+	holographic = TRUE
 
 /decl/material/solid/metal/stainlesssteel
 	name = "stainless steel"
@@ -266,6 +259,8 @@
 	value = 1.3
 	exoplanet_rarity_plant = MAT_RARITY_UNCOMMON
 	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	dissolves_in = MAT_SOLVENT_IMMUNE
+	dissolves_into = null
 
 /decl/material/solid/metal/aluminium
 	name = "aluminium"
@@ -286,20 +281,13 @@
 
 /decl/material/solid/metal/aluminium/generate_recipes(stack_type, reinforce_material)
 	. = ..()
-	if(!reinforce_material && islist(.) && !ispath(stack_type))
+	if(!holographic && !reinforce_material && islist(.) && !ispath(stack_type))
 		. += new/datum/stack_recipe/grenade(src)
 
 /decl/material/solid/metal/aluminium/holographic
 	name = "holoaluminium"
 	uid = "solid_holographic_aluminium"
-	shard_type = SHARD_NONE
-	conductive = 0
-	hidden_from_codex = TRUE
-	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
-	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
-
-/decl/material/solid/metal/aluminium/holographic/get_recipes(stack_type, reinf_mat)
-	return list()
+	holographic = TRUE
 
 /decl/material/solid/metal/plasteel
 	name = "plasteel"
@@ -324,10 +312,12 @@
 	default_solid_form = /obj/item/stack/material/reinforced
 	exoplanet_rarity_plant = MAT_RARITY_UNCOMMON
 	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	dissolves_in = MAT_SOLVENT_IMMUNE
+	dissolves_into = null
 
 /decl/material/solid/metal/plasteel/generate_recipes(stack_type, reinforce_material)
 	. = ..()
-	if(!reinforce_material && islist(.) && !ispath(stack_type))
+	if(!holographic && !reinforce_material && islist(.) && !ispath(stack_type))
 		. += new/datum/stack_recipe/ai_core(src)
 		. += new/datum/stack_recipe/furniture/crate(src)
 		. += new/datum/stack_recipe/grip(src)
@@ -355,10 +345,12 @@
 	hitsound = 'sound/weapons/smash.ogg'
 	reflectiveness = MAT_VALUE_MATTE
 	default_solid_form = /obj/item/stack/material/reinforced
+	dissolves_in = MAT_SOLVENT_IMMUNE
+	dissolves_into = null
 
 /decl/material/solid/metal/titanium/generate_recipes(stack_type, reinforce_material)
 	. = ..()
-	if(!reinforce_material && islist(.) && !ispath(stack_type))
+	if(!holographic && !reinforce_material && islist(.) && !ispath(stack_type))
 		. += new/datum/stack_recipe/ai_core(src)
 		. += new/datum/stack_recipe/furniture/crate(src)
 		. += new/datum/stack_recipe/grip(src)

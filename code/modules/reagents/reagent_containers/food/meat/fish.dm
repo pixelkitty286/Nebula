@@ -8,13 +8,13 @@
 
 /obj/item/chems/food/fishfingers/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 4)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 4)
 
 /obj/item/chems/food/cubancarp
 	name = "\improper Cuban Carp"
 	desc = "A sandwich that burns your tongue and then leaves it numb!"
 	icon_state = "cubancarp"
-	trash = /obj/item/trash/plate
+	plate = /obj/item/plate
 	filling_color = "#e9adff"
 	center_of_mass = @'{"x":12,"y":5}'
 	nutriment_desc = list("toasted bread" = 3)
@@ -23,8 +23,8 @@
 
 /obj/item/chems/food/cubancarp/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 3)
-	reagents.add_reagent(/decl/material/liquid/capsaicin,         3)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 3)
+	add_to_reagents(/decl/material/liquid/capsaicin,         3)
 
 /obj/item/chems/food/fishandchips
 	name = "fish and chips"
@@ -38,4 +38,4 @@
 
 /obj/item/chems/food/fishandchips/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 3)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 3)

@@ -2,13 +2,6 @@
 	name = "pitchblende"
 	uid = "solid_pitchblende"
 	color = "#917d1a"
-	heating_products = list(
-		/decl/material/solid/metal/uranium = 0.8,
-		/decl/material/solid/slag = 0.2
-	)
-	heating_point = GENERIC_SMELTING_HEAT_POINT
-	heating_sound = null
-	heating_message = null
 	ore_result_amount = 5
 	ore_spread_chance = 10
 	ore_name = "pitchblende"
@@ -20,8 +13,9 @@
 	sparse_material_weight = 8
 	rich_material_weight = 10
 	dissolves_into = list(
-		/decl/material/solid/metal/uranium = 0.5,
-		/decl/material/solid/metal/radium = 0.5
+		/decl/material/solid/metal/uranium = 0.6,
+		/decl/material/solid/metal/radium  = 0.3,
+		/decl/material/solid/slag          = 0.1
 	)
 	ore_type_value = ORE_NUCLEAR
 	ore_data_value = 3
@@ -219,7 +213,7 @@
 	uid = "solid_sand"
 	color = "#e2dbb5"
 	heating_products = list(/decl/material/solid/glass = 1)
-	heating_point = GENERIC_SMELTING_HEAT_POINT
+	heating_point = 2000 CELSIUS
 	heating_sound = null
 	heating_message = null
 	ore_compresses_to = /decl/material/solid/stone/sandstone
@@ -236,18 +230,17 @@
 
 /decl/material/solid/clay
 	name = "clay"
+	codex_name = "raw clay"
 	uid = "solid_clay"
-	color = COLOR_OFF_WHITE
+	color = "#807f7a"
 	ore_name = "clay"
-	ore_icon_overlay = "lump"
-	heating_products = list(/decl/material/solid/stone/ceramic = 1)
-	heating_point = GENERIC_SMELTING_HEAT_POINT
-	heating_sound = null
-	heating_message = null
 	ore_compresses_to = null
-	ore_icon_overlay = "dust"
+	ore_icon_overlay = "lump"
 	value = 0.8
 	default_solid_form = /obj/item/stack/material/lump
+	bakes_into_material = /decl/material/solid/stone/pottery
+	melting_point = null // Clay is already almost a liquid...
+	bakes_into_at_temperature = 1100 CELSIUS // roughly the temperature expected from a kiln
 
 /decl/material/solid/hematite
 	name = "hematite"

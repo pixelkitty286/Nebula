@@ -10,10 +10,11 @@
 	center_of_mass = @'{"x":16,"y":14}'
 	material = /decl/material/solid/organic/meat
 	bitesize = 3
+	utensil_flags = UTENSIL_FLAG_COLLECT | UTENSIL_FLAG_SLICE
 
 /obj/item/chems/food/meat/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/protein, 9)
+	add_to_reagents(/decl/material/liquid/nutriment/protein, 9)
 
 /obj/item/chems/food/meat/syntiflesh
 	name = "synthetic meat"

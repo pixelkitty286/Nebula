@@ -1,4 +1,6 @@
 /decl/material/proc/get_recipes(stack_type, reinf_mat)
+	if(holographic)
+		return list()
 	var/key = "[reinf_mat || "base"]-[stack_type || "general"]"
 	if(!LAZYACCESS(recipes, key))
 		LAZYSET(recipes, key, generate_recipes(stack_type, reinf_mat))
@@ -9,13 +11,15 @@
 	for(var/recipe_type in subtypesof(base_type))
 		. += new recipe_type(src)
 
-
 /decl/material/proc/generate_recipes(stack_type, reinforce_material)
 
-	// By default we don't let anything be crafted with ore, as it's too raw.
+	if(holographic || phase_at_temperature() != MAT_PHASE_SOLID)
+		return list()
+
+	// By default we don't let anything be crafted with ore or logs, as they are too raw.
 	// We make an exception for clay as it is being moulded by hand.
 	. = list()
-	if(ispath(stack_type, /obj/item/stack/material/ore) || phase_at_temperature() != MAT_PHASE_SOLID)
+	if(ispath(stack_type, /obj/item/stack/material/ore) || ispath(stack_type, /obj/item/stack/material/log))
 		return
 
 	// Struts have their own recipe set, so we return early for them.
@@ -30,6 +34,9 @@
 		. += new/datum/stack_recipe/butcher_hook(src)
 		. += new/datum/stack_recipe/furniture/bed(src)
 		return
+
+	if(ispath(stack_type, /obj/item/stack/material/brick) && wall_support_value >= 10)
+		. += new/datum/stack_recipe/turfs/wall/brick(src)
 
 	// We assume a non-ore non-strut stack type is a general type that can use general recipes.
 	if(opacity < 0.6)
@@ -73,6 +80,7 @@
 			. += new/datum/stack_recipe/rod(src)
 
 		. += new/datum/stack_recipe/fork(src)
+		. += new/datum/stack_recipe/chopsticks(src)
 		. += new/datum/stack_recipe/knife(src)
 		. += new/datum/stack_recipe/bell(src)
 		. += new/datum/stack_recipe/blade(src)

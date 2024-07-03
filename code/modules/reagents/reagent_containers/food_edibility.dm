@@ -32,11 +32,22 @@
 		var/mob/living/living_eater = eater
 		living_eater.add_stressor(/datum/stressor/ate_cooked_food, 15 MINUTES)
 
+	var/obj/item/plate_ref = plate
 	var/trash_ref = trash
 	. = ..()
-	if(. && trash_ref)
-		if(ispath(trash_ref, /obj/item))
-			var/obj/item/trash_item = new trash_ref(get_turf(feeder))
-			feeder.put_in_hands(trash_item)
-		else if(istype(trash_ref, /obj/item))
-			feeder.put_in_hands(trash_ref)
+	if(.)
+		if(trash_ref)
+			if(ispath(trash_ref, /obj/item))
+				var/obj/item/trash_item = new trash_ref(get_turf(src))
+				if(feeder)
+					feeder.put_in_hands(trash_item)
+			else if(istype(trash_ref, /obj/item))
+				var/obj/item/trash_item = trash_ref
+				if(!QDELETED(trash_item))
+					trash_item.dropInto(get_turf(src))
+					if(feeder)
+						feeder.put_in_hands(trash_item)
+		if(plate_ref && !QDELETED(plate_ref))
+			plate_ref.dropInto(get_turf(src))
+			if(feeder)
+				feeder.put_in_hands(plate_ref)

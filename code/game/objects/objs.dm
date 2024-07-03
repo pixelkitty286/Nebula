@@ -320,15 +320,46 @@
 	var/decl/material/mat = get_material()
 	return !mat || mat.dissolves_in <= solvent_power
 
-/obj/melt()
+/obj/handle_melting(list/meltable_materials)
+	. = ..()
+	if(QDELETED(src))
+		return
+	if(reagents?.total_volume)
+		reagents.trans_to(loc, reagents.total_volume)
+	dump_contents()
+	return place_melted_product(meltable_materials)
+
+/obj/proc/place_melted_product(list/meltable_materials)
 	if(length(matter))
 		var/datum/gas_mixture/environment = loc?.return_air()
 		for(var/mat in matter)
 			var/decl/material/M = GET_DECL(mat)
 			M.add_burn_product(environment, MOLES_PER_MATERIAL_UNIT(matter[mat]))
 		matter = null
-	new /obj/effect/decal/cleanable/molten_item(src)
+	. = new /obj/effect/decal/cleanable/molten_item(src)
 	qdel(src)
 
 /obj/can_be_injected_by(var/atom/injector)
 	return ATOM_IS_OPEN_CONTAINER(src)
+
+/obj/ProcessAtomTemperature()
+	. = ..()
+	if(QDELETED(src))
+		return
+	// Bake any matter into the cooked form.
+	if(LAZYLEN(matter))
+		var/new_matter
+		var/remove_matter
+		for(var/matter_type in matter)
+			var/decl/material/mat = GET_DECL(matter_type)
+			if(mat.bakes_into_material && !isnull(mat.bakes_into_at_temperature) && temperature >= mat.bakes_into_at_temperature)
+				LAZYINITLIST(new_matter)
+				new_matter[mat.bakes_into_material] += matter[matter_type]
+				LAZYDISTINCTADD(remove_matter, remove_matter)
+		if(LAZYLEN(new_matter))
+			for(var/mat in new_matter)
+				matter[mat] = new_matter[mat]
+		if(LAZYLEN(remove_matter))
+			for(var/mat in remove_matter)
+				matter -= mat
+		UNSETEMPTY(matter)

@@ -1,6 +1,6 @@
 /mob/living/Initialize()
 
-	current_health = get_max_health()
+	current_health            = get_max_health()
 	original_fingerprint_seed = sequential_id(/mob)
 	fingerprint               = md5(num2text(original_fingerprint_seed))
 	original_genetic_seed     = sequential_id(/mob)
@@ -495,8 +495,44 @@ default behaviour is:
 			brain.update_icon()
 	..(repair_brain)
 
-/mob/living/proc/update_damage_icon()
-	return
+/mob/living
+	var/previous_damage_appearance // store what the body last looked like, so we only have to update it if something changed
+	var/static/list/damage_icon_parts = list()
+
+/mob/living/proc/update_damage_overlays(update_icons = TRUE)
+
+	// first check whether something actually changed about damage appearance
+	var/damage_appearance = ""
+	for(var/obj/item/organ/external/O in get_external_organs())
+		damage_appearance += O.damage_state || "00"
+
+	if(damage_appearance == previous_damage_appearance)
+		// nothing to do here
+		return
+
+	previous_damage_appearance = damage_appearance
+	var/decl/bodytype/root_bodytype = get_bodytype()
+	var/image/standing_image = image(root_bodytype.get_damage_overlays(src), icon_state = "00")
+
+	// blend the individual damage states with our icons
+	for(var/obj/item/organ/external/O in get_external_organs())
+		if(!O.damage_state || O.damage_state == "00")
+			continue
+		var/icon/DI
+		var/use_colour = (BP_IS_PROSTHETIC(O) ? SYNTH_BLOOD_COLOR : O.species.get_species_blood_color(src))
+		var/cache_index = "[O.damage_state]/[O.bodytype.type]/[O.icon_state]/[use_colour]/[O.species.name]"
+		if(!(cache_index in damage_icon_parts))
+			var/damage_overlay_icon = O.bodytype.get_damage_overlays(src)
+			if(check_state_in_icon(O.damage_state, damage_overlay_icon))
+				DI = new /icon(damage_overlay_icon, O.damage_state) // the damage icon for whole human
+				DI.Blend(get_limb_mask_for(O), ICON_MULTIPLY)  // mask with this organ's pixels
+				DI.Blend(use_colour, ICON_MULTIPLY)
+			damage_icon_parts[cache_index] = DI || FALSE
+		else
+			DI = damage_icon_parts[cache_index]
+		if(DI)
+			standing_image.overlays += DI
+	set_current_mob_overlay(HO_DAMAGE_LAYER, standing_image, update_icons)
 
 /mob/living/handle_grabs_after_move(var/turf/old_loc, var/direction)
 
@@ -796,23 +832,22 @@ default behaviour is:
 	return (!L || L.can_drown())
 
 /mob/living/handle_drowning()
-	var/turf/T = get_turf(src)
-	if(!can_drown() || !loc.is_flooded(lying))
+	if(!can_drown() || !loc?.is_flooded(lying))
 		return FALSE
+	var/turf/T = get_turf(src)
 	if(!lying && T.above && T.above.is_open() && !T.above.is_flooded() && can_overcome_gravity())
 		return FALSE
 	if(prob(5))
 		var/datum/reagents/metabolism/inhaled = get_inhaled_reagents()
 		var/datum/reagents/metabolism/ingested = get_ingested_reagents()
-		var/obj/effect/fluid/F = locate() in loc
-		to_chat(src, SPAN_DANGER("You choke and splutter as you inhale [(F?.reagents && F.reagents.get_primary_reagent_name()) || "liquid"]!"))
+		to_chat(src, SPAN_DANGER("You choke and splutter as you inhale [T.get_fluid_name()]!"))
 		var/inhale_amount = 0
 		if(inhaled)
 			inhale_amount = rand(2,5)
-			F?.reagents?.trans_to_holder(inhaled, min(F.reagents.total_volume, inhale_amount))
+			T.reagents?.trans_to_holder(inhaled, min(T.reagents.total_volume, inhale_amount))
 		if(ingested)
 			var/ingest_amount = 5 - inhale_amount
-			F?.reagents?.trans_to_holder(ingested, min(F.reagents.total_volume, ingest_amount))
+			reagents?.trans_to_holder(ingested, min(T.reagents.total_volume, ingest_amount))
 
 	T.show_bubbles()
 	return TRUE // Presumably chemical smoke can't be breathed while you're underwater.
@@ -855,7 +890,7 @@ default behaviour is:
 	return null
 
 /mob/living/proc/handle_additional_vomit_reagents(var/obj/effect/decal/cleanable/vomit/vomit)
-	vomit.reagents.add_reagent(/decl/material/liquid/acid/stomach, 5)
+	vomit.add_to_reagents(/decl/material/liquid/acid/stomach, 5)
 
 /mob/living/proc/eyecheck()
 	return FLASH_PROTECTION_NONE
@@ -1162,6 +1197,9 @@ default behaviour is:
 	//We are long dead, or we're junk mobs spawned like the clowns on the clown shuttle
 	return life_tick <= 5 || !timeofdeath || (timeofdeath >= 5 && (world.time-timeofdeath) <= 10 MINUTES)
 
+/mob/living/proc/check_dna()
+	dna?.check_integrity(src)
+
 /mob/living/get_unique_enzymes()
 	return unique_enzymes
 
@@ -1210,12 +1248,12 @@ default behaviour is:
 		var/list/overlays_to_add
 		if(check_state_in_icon(overlay_state, surgery_icon))
 			var/image/flesh = image(icon = surgery_icon, icon_state = overlay_state, layer = -HO_SURGERY_LAYER)
-			flesh.color = E.species.get_flesh_colour(src)
+			flesh.color = E.species.get_species_flesh_color(src)
 			LAZYADD(overlays_to_add, flesh)
 		overlay_state = "[base_state]-blood"
 		if(check_state_in_icon(overlay_state, surgery_icon))
 			var/image/blood = image(icon = surgery_icon, icon_state = overlay_state, layer = -HO_SURGERY_LAYER)
-			blood.color = E.species.get_blood_color(src)
+			blood.color = E.species.get_species_blood_color(src)
 			LAZYADD(overlays_to_add, blood)
 		overlay_state = "[base_state]-bones"
 		if(check_state_in_icon(overlay_state, surgery_icon))
@@ -1311,3 +1349,158 @@ default behaviour is:
 			else
 				CRASH("synthetic get_default_temperature_threshold() called with invalid threshold value.")
 	return ..()
+
+/mob/living/clean(clean_forensics = TRUE)
+
+	SHOULD_CALL_PARENT(FALSE)
+
+	for(var/obj/item/thing in get_held_items())
+		thing.clean()
+
+	var/obj/item/back = get_equipped_item(slot_back_str)
+	if(back)
+		back.clean()
+
+	//flush away reagents on the skin
+	var/datum/reagents/touching_reagents = get_contact_reagents()
+	if(touching_reagents)
+		var/remove_amount = touching_reagents.maximum_volume * reagent_permeability() //take off your suit first
+		touching_reagents.remove_any(remove_amount)
+
+	var/obj/item/mask = get_equipped_item(slot_wear_mask_str)
+	if(mask)
+		mask.clean()
+
+	var/washgloves  = TRUE
+	var/washshoes   = TRUE
+	var/washmask    = TRUE
+	var/washears    = TRUE
+	var/washglasses = TRUE
+
+	var/obj/item/suit = get_equipped_item(slot_wear_suit_str)
+	if(suit)
+		washgloves = !(suit.flags_inv & HIDEGLOVES)
+		washshoes = !(suit.flags_inv & HIDESHOES)
+
+	var/obj/item/head = get_equipped_item(slot_head_str)
+	if(head)
+		washmask = !(head.flags_inv & HIDEMASK)
+		washglasses = !(head.flags_inv & HIDEEYES)
+		washears = !(head.flags_inv & HIDEEARS)
+
+	if(mask)
+		if (washears)
+			washears = !(mask.flags_inv & HIDEEARS)
+		if (washglasses)
+			washglasses = !(mask.flags_inv & HIDEEYES)
+
+	if(head)
+		head.clean()
+
+	if(suit)
+		suit.clean()
+	else
+		var/obj/item/uniform = get_equipped_item(slot_w_uniform_str)
+		if(uniform)
+			uniform.clean()
+
+	if(washgloves)
+		var/obj/item/gloves = get_equipped_item(slot_gloves_str)
+		if(gloves)
+			gloves.clean()
+		else
+			germ_level = 0
+
+	var/obj/item/shoes = get_equipped_item(slot_shoes_str)
+	if(shoes && washshoes)
+		shoes.clean()
+
+	if(mask && washmask)
+		mask.clean()
+
+	if(washglasses)
+		var/obj/item/glasses = get_equipped_item(slot_glasses_str)
+		if(glasses)
+			glasses.clean()
+
+	if(washears)
+		var/obj/item/ear = get_equipped_item(slot_l_ear_str)
+		if(ear)
+			ear.clean()
+		ear = get_equipped_item(slot_r_ear_str)
+		if(ear)
+			ear.clean()
+
+	var/obj/item/belt = get_equipped_item(slot_belt_str)
+	if(belt)
+		belt.clean()
+
+	var/obj/item/gloves = get_equipped_item(slot_gloves_str)
+	if(gloves)
+		gloves.clean()
+		gloves.germ_level = 0
+		for(var/organ_tag in get_held_item_slots())
+			var/obj/item/organ/external/organ = get_organ(organ_tag)
+			if(organ)
+				organ.clean()
+	else
+		germ_level = 0
+	update_equipment_overlay(slot_gloves_str, FALSE)
+
+	if(!get_equipped_item(slot_shoes_str))
+		var/static/list/clean_slots = list(BP_L_FOOT, BP_R_FOOT)
+		for(var/organ_tag in clean_slots)
+			var/obj/item/organ/external/organ = get_organ(organ_tag)
+			if(organ)
+				organ.clean()
+	update_equipment_overlay(slot_shoes_str)
+
+	return TRUE
+
+/mob/living/proc/can_direct_mount(var/mob/user)
+	if(can_buckle && istype(user) && !user.incapacitated() && user == buckled_mob)
+		// TODO: Piloting skillcheck for hands-free moving? Stupid but amusing
+		for(var/obj/item/grab/reins in user.get_held_items())
+			if(istype(reins.current_grab, /decl/grab/simple/control) && reins.get_affecting_mob() == src)
+				return TRUE
+	return FALSE
+
+/mob/living/handle_buckled_relaymove(var/datum/movement_handler/mh, var/mob/mob, var/direction, var/mover)
+	if(can_direct_mount(mob))
+		if(HAS_STATUS(mob, STAT_CONFUSE))
+			direction = turn(direction, pick(90, -90))
+		SelfMove(direction)
+	return MOVEMENT_HANDLED
+
+/mob/living/show_buckle_message(var/mob/buckled, var/mob/buckling)
+	if(buckled == buckling)
+		visible_message(SPAN_NOTICE("\The [buckled] climbs onto \the [src]."))
+	else
+		visible_message(SPAN_NOTICE("\The [buckled] is lifted onto \the [src] by \the [buckling]."))
+
+/mob/living/show_unbuckle_message(var/mob/buckled, var/mob/buckling)
+	if(buckled == buckling)
+		visible_message(SPAN_NOTICE("\The [buckled] steps down from \the [src]."))
+	else
+		visible_message(SPAN_NOTICE("\The [buckled] is pulled off \the [src] by \the [buckling]."))
+
+/mob/living/buckle_mob(mob/living/M)
+	. = ..()
+	if(buckled_mob)
+		buckled_mob.reset_layer()
+		for(var/obj/item/grab/G in buckled_mob.get_held_items())
+			if(G.get_affecting_mob() == src && !istype(G.current_grab, /decl/grab/simple/control))
+				qdel(G)
+
+/mob/living/can_buckle_mob(var/mob/living/dropping)
+	. = ..() && stat == CONSCIOUS && !buckled && dropping.mob_size <= mob_size
+
+/mob/living/refresh_buckled_mob()
+	..()
+	if(buckled_mob)
+		if(dir == SOUTH)
+			buckled_mob.layer = layer - 0.01
+		else
+			buckled_mob.layer = layer + 0.01
+		buckled_mob.plane = plane
+

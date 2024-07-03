@@ -20,7 +20,7 @@
 
 /decl/material/solid/stone/generate_recipes(stack_type, reinforce_material)
 	. = ..()
-	if(!reinforce_material && islist(.) && !ispath(stack_type))
+	if(!holographic && !reinforce_material && islist(.) && !ispath(stack_type))
 		if(wall_support_value >= 10)
 			. += new/datum/stack_recipe/furniture/girder(src)
 		. += new/datum/stack_recipe/furniture/planting_bed(src)
@@ -51,12 +51,22 @@
 		/decl/material/solid/slag    = 0.10,
 	)
 
+/decl/material/solid/stone/pottery
+	name = "fired clay"
+	uid = "solid_pottery"
+	lore_text = "A hard but brittle substance produced by firing clay in a kiln."
+	color = "#cd8f75"
+	melting_point = 1750 // Arbitrary, hotter than the kiln currently reaches.
+
 /decl/material/solid/stone/ceramic
 	name = "ceramic"
 	uid = "solid_ceramic"
-	lore_text = "A hard substance produced by firing clay in a kiln."
+	lore_text = "A very hard, heat-resistant substance produced by firing glazed clay in a kiln."
 	color = COLOR_OFF_WHITE
+	melting_point = 6000 // Arbitrary, very heat-resistant.
 
+	dissolves_in = MAT_SOLVENT_IMMUNE
+	dissolves_into = null
 /decl/material/solid/stone/marble
 	name = "marble"
 	uid = "solid_marble"

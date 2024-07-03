@@ -697,7 +697,7 @@
 			if(statpanel("Turf"))
 				stat(listed_turf)
 				for(var/atom/A in listed_turf)
-					if(!A.mouse_opacity)
+					if(!A.simulated || !A.mouse_opacity)
 						continue
 					if(A.invisibility > see_invisible)
 						continue
@@ -794,7 +794,12 @@
 	return
 
 /mob/proc/get_species_name()
-	return ""
+	SHOULD_CALL_PARENT(TRUE)
+	return "Unknown"
+
+/mob/living/get_species_name()
+	var/decl/species/my_species = get_species()
+	return my_species?.name || ..()
 
 /mob/proc/get_visible_implants(var/class = 0)
 	var/list/visible_implants = list()

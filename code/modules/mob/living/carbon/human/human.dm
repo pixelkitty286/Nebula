@@ -314,10 +314,6 @@
 				return FALSE
 	return ..()
 
-/mob/living/carbon/human/proc/check_dna()
-	dna.check_integrity(src)
-	return
-
 /mob/living/carbon/human/empty_stomach()
 	SET_STATUS_MAX(src, STAT_STUN, 3)
 
@@ -420,23 +416,6 @@
 		verbs += /mob/living/carbon/human/proc/bloody_doodle
 	return 1 //we applied blood to the item
 
-/mob/living/carbon/human/clean_blood(var/clean_feet)
-	. = ..()
-	var/obj/item/gloves = get_equipped_item(slot_gloves_str)
-	if(gloves)
-		gloves.clean()
-		gloves.germ_level = 0
-	else
-		germ_level = 0
-
-	for(var/obj/item/organ/external/organ in get_external_organs())
-		//TODO check that organ is not covered
-		if(clean_feet || (organ.organ_tag in list(BP_L_HAND,BP_R_HAND)))
-			organ.clean()
-	update_equipment_overlay(slot_gloves_str, FALSE)
-	update_equipment_overlay(slot_shoes_str)
-	return TRUE
-
 /mob/living/carbon/human/get_visible_implants(var/class = 0)
 
 	var/list/visible_implants = list()
@@ -499,17 +478,6 @@
 		new_bodytype.create_missing_organs(src, TRUE) // actually rebuild the body
 		apply_bodytype_appearance()
 		force_update_limbs()
-
-		// Check and clear hair.
-		var/set_hairstyle = get_hairstyle()
-		var/decl/sprite_accessory/hair/hairstyle = GET_DECL(set_hairstyle)
-		if(!hairstyle?.accessory_is_available(src, species, new_bodytype))
-			set_hairstyle(new_bodytype.default_h_style, skip_update = TRUE)
-		set_hairstyle = get_facial_hairstyle()
-		var/decl/sprite_accessory/hair/facialhairstyle = GET_DECL(set_hairstyle)
-		if(!facialhairstyle?.accessory_is_available(src, species, new_bodytype))
-			set_facial_hairstyle(new_bodytype.default_f_style, skip_update = TRUE)
-		// TODO: check markings.
 		update_hair()
 		update_eyes()
 		return TRUE
@@ -648,6 +616,21 @@
 		default_pixel_x = initial(pixel_x) + root_bodytype.pixel_offset_x
 		default_pixel_y = initial(pixel_y) + root_bodytype.pixel_offset_y
 		default_pixel_z = initial(pixel_z) + root_bodytype.pixel_offset_z
+
+	for(var/obj/item/organ/external/E in get_external_organs())
+		E.sanitize_sprite_accessories()
+
+	for(var/acc_cat in root_bodytype.default_sprite_accessories)
+		var/decl/sprite_accessory_category/acc_cat_decl = GET_DECL(acc_cat)
+		if(!acc_cat_decl.always_apply_defaults)
+			continue
+		for(var/accessory in root_bodytype.default_sprite_accessories[acc_cat])
+			var/decl/sprite_accessory/accessory_decl = GET_DECL(accessory)
+			var/accessory_colour = root_bodytype.default_sprite_accessories[acc_cat][accessory]
+			for(var/bodypart in accessory_decl.body_parts)
+				var/obj/item/organ/external/O = GET_EXTERNAL_ORGAN(src, bodypart)
+				if(O && O.bodytype == root_bodytype)
+					O.set_sprite_accessory(accessory, accessory_decl.accessory_category, accessory_colour, skip_update = TRUE)
 
 	reset_offsets()
 
@@ -923,7 +906,7 @@
 /mob/living/carbon/human/proc/make_reagent(amount, reagent_type)
 	if(stat == CONSCIOUS)
 		var/limit = max(0, reagents.get_overdose(reagent_type) - REAGENT_VOLUME(reagents, reagent_type))
-		reagents.add_reagent(reagent_type, min(amount, limit))
+		add_to_reagents(reagent_type, min(amount, limit))
 
 //Get fluffy numbers
 /mob/living/carbon/human/proc/get_blood_pressure()
@@ -1018,33 +1001,24 @@
 		return BULLET_IMPACT_METAL
 	return BULLET_IMPACT_MEAT
 
-/mob/living/carbon/human/bullet_impact_visuals(var/obj/item/projectile/P, var/def_zone, var/damage)
-	..()
-	switch(get_bullet_impact_effect_type(def_zone))
-		if(BULLET_IMPACT_MEAT)
-			if(damage && P.damtype == BRUTE)
-				var/hit_dir = get_dir(P.starting, src)
-				var/obj/effect/decal/cleanable/blood/B = blood_splatter(get_step(src, hit_dir), src, 1, hit_dir)
-				if(!QDELETED(B))
-					B.icon_state = pick("dir_splatter_1","dir_splatter_2")
-					var/scale = min(1, round(P.damage / 50, 0.2))
-					B.set_scale(scale)
-				new /obj/effect/temp_visual/bloodsplatter(loc, hit_dir, species.get_blood_color(src))
-
 /mob/living/carbon/human/lose_hair()
-	if(get_bodytype().set_default_hair(src))
-		. = TRUE
 	if(species.handle_additional_hair_loss(src))
 		. = TRUE
 	for(var/obj/item/organ/external/E in get_external_organs())
-		for(var/mark in E.markings)
-			var/decl/sprite_accessory/marking/mark_datum = GET_DECL(mark)
-			if(mark_datum.flags & HAIR_LOSS_VULNERABLE)
-				E.markings -= mark
-				. = TRUE
+		if(E.handle_hair_loss())
+			. = TRUE
 	if(.)
 		update_body()
 		to_chat(src, SPAN_DANGER("You feel a chill and your skin feels lighter..."))
+
+/obj/item/organ/external/proc/handle_hair_loss()
+	for(var/accessory_category in _sprite_accessories)
+		var/list/draw_accessories = _sprite_accessories[accessory_category]
+		for(var/accessory in draw_accessories)
+			var/decl/sprite_accessory/accessory_decl = GET_DECL(accessory)
+			if(accessory_decl.accessory_flags & HAIR_LOSS_VULNERABLE)
+				remove_sprite_accessory(accessory, skip_update = TRUE)
+				. = TRUE
 
 /mob/living/carbon/human/increaseBodyTemp(value)
 	bodytemperature += value
@@ -1115,14 +1089,10 @@
 	var/decl/bodytype/root_bodytype = get_bodytype() // root bodytype is set in set_species
 	if(!get_skin_colour())
 		set_skin_colour(root_bodytype.base_color, skip_update = TRUE)
-	if(!get_hair_colour())
-		set_hair_colour(root_bodytype.base_hair_color, skip_update = TRUE)
-	if(!get_facial_hair_colour())
-		set_facial_hair_colour(root_bodytype.base_hair_color, skip_update = TRUE)
 	if(!get_eye_colour())
 		set_eye_colour(root_bodytype.base_eye_color, skip_update = TRUE)
+	root_bodytype.set_default_sprite_accessories(src)
 
-	root_bodytype.set_default_hair(src, override_existing = TRUE, defer_update_hair = TRUE)
 	if(!blood_type && length(species?.blood_types))
 		blood_type = pickweight(species.blood_types)
 

@@ -626,10 +626,6 @@
 	playsound(target, hitsound, 50, 1, -1)
 	return 1
 
-/obj/item/clean_blood()
-	. = ..()
-	clean()
-
 /obj/item/reveal_blood()
 	if(was_bloodied && !fluorescent)
 		fluorescent = FLUORESCENT_GLOWS
@@ -862,9 +858,10 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		return
 	coating.remove_any(amount)
 	if(coating.total_volume <= MINIMUM_CHEMICAL_VOLUME)
-		clean(0)
+		clean(FALSE)
 
-/obj/item/proc/clean(clean_forensics=TRUE)
+/obj/item/clean(clean_forensics=TRUE)
+	. = ..()
 	QDEL_NULL(coating)
 	blood_overlay = null
 	if(clean_forensics)
@@ -946,3 +943,15 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/handle_loadout_equip_replacement(obj/item/old_item)
 	return
+
+/obj/item/equipped(mob/user, slot)
+	. = ..()
+	// delay for 1ds to allow the rest of the call stack to resolve
+	if(!QDELETED(src) && !QDELETED(user) && user.get_equipped_slot_for_item(src) == slot)
+		try_burn_wearer(user, slot, 1)
+
+/obj/item/ProcessAtomTemperature()
+	if(material && material.bakes_into_material && !isnull(material.bakes_into_at_temperature) && temperature >= material.bakes_into_at_temperature)
+		set_material(material.bakes_into_material)
+	. = ..()
+
