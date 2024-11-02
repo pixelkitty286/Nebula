@@ -5,14 +5,14 @@ A Star pathfinding algorithm
 Returns a list of tiles forming a path from A to B, taking dense objects as well as walls, and the orientation of
 windows along the route into account.
 Use:
-your_list = AStar(start location, end location, adjacent turf proc, distance proc)
+your_list = find_path_astar(start location, end location, adjacent turf proc, distance proc)
 For the adjacent turf proc i wrote:
 /turf/proc/AdjacentTurfs
 And for the distance one i wrote:
 /turf/proc/Distance
 So an example use might be:
 
-src.path_list = AStar(src.loc, target.loc, TYPE_PROC_REF(/turf, AdjacentTurfs), TYPE_PROC_REF(/turf, Distance))
+src.path_list = find_path_astar(src.loc, target.loc, TYPE_PROC_REF(/turf, AdjacentTurfs), TYPE_PROC_REF(/turf, Distance))
 
 Note: The path is returned starting at the END node, so i wrote reverselist to reverse it for ease of use.
 
@@ -60,7 +60,12 @@ length to avoid portals or something i guess?? Not that they're counted right no
 /proc/PathWeightCompare(PathNode/a, PathNode/b)
 	return a.estimated_cost - b.estimated_cost
 
-/proc/AStar(var/start, var/end, adjacent, dist, var/max_nodes, var/max_node_depth = 30, var/min_target_dist = 0, var/min_node_dist, var/id, var/datum/exclude)
+/proc/find_path_astar_async(start, end, adjacent, dist, max_nodes, max_node_depth = 30, min_target_dist = 0, min_node_dist, id, datum/exclude)
+	set waitfor = FALSE
+	return find_path_astar(start, end, adjacent, dist, max_nodes, max_node_depth, min_target_dist, min_node_dist, id, exclude, check_tick = TRUE)
+
+/proc/find_path_astar(start, end, adjacent, dist, max_nodes, max_node_depth = 30, min_target_dist = 0, min_node_dist, id, datum/exclude, check_tick = FALSE)
+
 	var/datum/priority_queue/open = new /datum/priority_queue(/proc/PathWeightCompare)
 	var/list/closed = list()
 	var/list/path
@@ -85,13 +90,11 @@ length to avoid portals or something i guess?? Not that they're counted right no
 				path[index--] = current.position
 			break
 
-		if(min_node_dist && max_node_depth)
-			if(call(current.position, min_node_dist)(end) + current.nodes_traversed >= max_node_depth)
-				continue
+		if(min_node_dist && max_node_depth && (call(current.position, min_node_dist)(end) + current.nodes_traversed >= max_node_depth))
+			continue
 
-		if(max_node_depth)
-			if(current.nodes_traversed >= max_node_depth)
-				continue
+		if(max_node_depth && current.nodes_traversed >= max_node_depth)
+			continue
 
 		for(var/datum/datum in call(current.position, adjacent)(id))
 			if(datum == exclude)
@@ -114,5 +117,10 @@ length to avoid portals or something i guess?? Not that they're counted right no
 
 			if(max_nodes && open.Length() > max_nodes)
 				open.Remove(open.Length())
+
+			if(check_tick)
+				CHECK_TICK
+		if(check_tick)
+			CHECK_TICK
 
 	return path
