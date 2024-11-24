@@ -302,7 +302,7 @@
 "aM" = (
 /obj/item/paper_bin,
 /obj/item/pen,
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/machinery/light_switch{
 	pixel_y = 25
 	},
@@ -479,7 +479,7 @@
 /turf/floor/wood,
 /area/ship/scrap/command/captain)
 "bc" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},

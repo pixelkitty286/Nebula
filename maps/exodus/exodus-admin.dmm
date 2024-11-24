@@ -1440,14 +1440,14 @@
 /turf/unsimulated/floor/steel,
 /area/centcom/holding)
 "aMY" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/amanita_pie,
 /turf/unsimulated/floor/wood,
 /area/centcom/holding)
 "aMZ" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/bigbiteburger,
@@ -1466,13 +1466,13 @@
 /turf/unsimulated/floor/wood,
 /area/centcom/holding)
 "aNc" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /turf/unsimulated/floor/wood,
 /area/centcom/holding)
 "aNh" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/chems/glass/bowl/mapped/stew,
@@ -1483,7 +1483,7 @@
 /turf/unsimulated/floor/lino,
 /area/centcom/holding)
 "aNk" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/book/manual/barman_recipes,
@@ -1491,14 +1491,14 @@
 /turf/unsimulated/floor/lino,
 /area/centcom/holding)
 "aNl" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/machinery/chemical_dispenser/bar_alc/full,
 /turf/unsimulated/floor/lino,
 /area/centcom/holding)
 "aNm" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/machinery/chemical_dispenser/bar_soft/full,
@@ -1536,28 +1536,28 @@
 /turf/floor/tiled/monotile,
 /area/shuttle/escape_shuttle)
 "aNB" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/boiledrice,
 /turf/unsimulated/floor/wood,
 /area/centcom/holding)
 "aNC" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/chems/glass/bowl/mapped/beet,
 /turf/unsimulated/floor/wood,
 /area/centcom/holding)
 "aNI" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/stuffing,
 /turf/unsimulated/floor/wood,
 /area/centcom/holding)
 "aNJ" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/soylenviridians,
@@ -1713,14 +1713,14 @@
 /turf/floor/tiled/techfloor/grid,
 /area/shuttle/escape_shuttle)
 "aPR" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/chems/glass/bowl/mapped/blood,
 /turf/unsimulated/floor/wood,
 /area/centcom/holding)
 "aPS" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/skewer/tofu,
@@ -1730,7 +1730,7 @@
 /turf/unsimulated/wall,
 /area/centcom/holding)
 "aRm" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/poppypretzel,
@@ -1740,7 +1740,7 @@
 /obj/structure/bed/chair/comfy/brown{
 	dir = 1
 	},
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/clothing/pants/slacks/outfit,
@@ -1754,13 +1754,13 @@
 /obj/structure/bed/chair/comfy/brown{
 	dir = 1
 	},
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /turf/unsimulated/floor/lino,
 /area/centcom/holding)
 "bgJ" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /turf/unsimulated/floor/lino,
@@ -1831,7 +1831,7 @@
 /turf/floor/tiled/dark/monotile,
 /area/shuttle/escape_shuttle)
 "bvb" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/spesslaw,
@@ -1845,14 +1845,14 @@
 /turf/floor/tiled,
 /area/shuttle/escape_shuttle)
 "byb" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/candiedapple,
 /turf/unsimulated/floor/wood,
 /area/centcom/holding)
 "bzm" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/chems/glass/bowl/mapped/mushroom,
@@ -1864,7 +1864,7 @@
 /turf/unsimulated/floor/lino,
 /area/tdome/tdomeadmin)
 "bMb" = (
-/obj/structure/table/woodentable{
+/obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/meatsteak,

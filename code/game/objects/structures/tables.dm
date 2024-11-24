@@ -778,6 +778,84 @@
 /obj/structure/table/woodentable_reinforced/ebony/walnut
 	additional_reinf_material = /decl/material/solid/organic/wood/walnut
 
+// Wood laminate tables; chipboard basically.
+// Smooth texture like plastic etc for a less rustic vibe on spacer maps.
+/obj/structure/table/laminatetable
+	icon_state = "solid_preview"
+	color = WOOD_COLOR_GENERIC
+	material = /decl/material/solid/organic/wood/chipboard
+	reinf_material = /decl/material/solid/organic/wood/chipboard
+
+/obj/structure/table/laminatetable/mahogany
+	color = WOOD_COLOR_RICH
+	material =       /decl/material/solid/organic/wood/chipboard/mahogany
+	reinf_material = /decl/material/solid/organic/wood/chipboard/mahogany
+
+/obj/structure/table/laminatetable/maple
+	color = WOOD_COLOR_PALE
+	material =       /decl/material/solid/organic/wood/chipboard/maple
+	reinf_material = /decl/material/solid/organic/wood/chipboard/maple
+
+/obj/structure/table/laminatetable/ebony
+	color = WOOD_COLOR_BLACK
+	material =       /decl/material/solid/organic/wood/chipboard/ebony
+	reinf_material = /decl/material/solid/organic/wood/chipboard/ebony
+
+/obj/structure/table/laminatetable/walnut
+	color = WOOD_COLOR_CHOCOLATE
+	material =       /decl/material/solid/organic/wood/chipboard/walnut
+	reinf_material = /decl/material/solid/organic/wood/chipboard/walnut
+
+/obj/structure/table/laminatetable_reinforced
+	icon_state = "reinf_preview"
+	color = WOOD_COLOR_GENERIC
+	material =                  /decl/material/solid/organic/wood/chipboard
+	reinf_material =            /decl/material/solid/organic/wood/chipboard
+	additional_reinf_material = /decl/material/solid/organic/wood/chipboard
+
+/obj/structure/table/laminatetable_reinforced/walnut
+	color = WOOD_COLOR_CHOCOLATE
+	material =                  /decl/material/solid/organic/wood/chipboard/walnut
+	reinf_material =            /decl/material/solid/organic/wood/chipboard/walnut
+	additional_reinf_material = /decl/material/solid/organic/wood/chipboard/walnut
+
+/obj/structure/table/laminatetable_reinforced/walnut/maple
+	additional_reinf_material = /decl/material/solid/organic/wood/chipboard/maple
+
+/obj/structure/table/laminatetable_reinforced/mahogany
+	color = WOOD_COLOR_RICH
+	material =                  /decl/material/solid/organic/wood/chipboard/mahogany
+	reinf_material =            /decl/material/solid/organic/wood/chipboard/mahogany
+	additional_reinf_material = /decl/material/solid/organic/wood/chipboard/mahogany
+
+/obj/structure/table/laminatetable_reinforced/mahogany/walnut
+	additional_reinf_material = /decl/material/solid/organic/wood/chipboard/walnut
+
+/obj/structure/table/laminatetable_reinforced/ebony
+	color = WOOD_COLOR_BLACK
+	material =                  /decl/material/solid/organic/wood/chipboard/ebony
+	reinf_material =            /decl/material/solid/organic/wood/chipboard/ebony
+	additional_reinf_material = /decl/material/solid/organic/wood/chipboard/ebony
+
+/obj/structure/table/laminatetable_reinforced/ebony/walnut
+	additional_reinf_material = /decl/material/solid/organic/wood/chipboard/walnut
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // A table that doesn't smooth, intended for bedside tables or otherwise standalone tables.
 // TODO: make table legs use material and tabletop use reinf_material
 // theoretically, this could also be made to use the normal table icon system, unlike desks?

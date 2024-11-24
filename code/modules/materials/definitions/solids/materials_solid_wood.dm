@@ -133,3 +133,46 @@
 		/decl/material/liquid/heartstopper = 0.1
 	)
 	value = 1.8
+
+// Used solely to give the old smooth table icons for spacer tables.
+// Easy to work, not very strong or valuable.
+/decl/material/solid/organic/wood/chipboard
+	name               = "pine chipboard"
+	adjective_name     = "pine laminate"
+	uid                = "solid_wood_chipboard_pine"
+	lore_text          = "Also known as particle board, this material is made from various kinds of pine wood chips and resin, with a plastic laminate."
+	bench_icon         = 'icons/obj/structures/benches.dmi'
+	pew_icon           = 'icons/obj/structures/pews.dmi'
+	door_icon_base     = "metal"
+	table_icon_base    = "metal"
+	color              = WOOD_COLOR_GENERIC
+	value              = 1.1
+	default_solid_form = /obj/item/stack/material/sheet
+
+/decl/material/solid/organic/wood/chipboard/maple
+	name               = "maple chipboard"
+	lore_text          = "Also known as particle board, this material is made from various kinds of maple wood chips and resin, with a plastic laminate."
+	adjective_name     = "maple laminate"
+	uid                = "solid_wood_chipboard_maple"
+	color              = WOOD_COLOR_PALE
+
+/decl/material/solid/organic/wood/chipboard/mahogany
+	name               = "mahogany chipboard"
+	lore_text          = "Also known as particle board, this material is made from various kinds of mahogany wood chips and resin, with a plastic laminate."
+	adjective_name     = "mahogany laminate"
+	uid                = "solid_wood_chipboard_mahogany"
+	color              = WOOD_COLOR_RICH
+
+/decl/material/solid/organic/wood/chipboard/ebony
+	name               = "ebony chipboard"
+	lore_text          = "Also known as particle board, this material is made from various kinds of ebony wood chips and resin, with a plastic laminate."
+	adjective_name     = "ebony laminate"
+	uid                = "solid_wood_chipboard_ebony"
+	color              = WOOD_COLOR_BLACK
+
+/decl/material/solid/organic/wood/chipboard/walnut
+	name               = "walnut chipboard"
+	lore_text          = "Also known as particle board, this material is made from various kinds of walnut wood chips and resin, with a plastic laminate."
+	adjective_name     = "walnut laminate"
+	uid                = "solid_wood_chipboard_walnut"
+	color              = WOOD_COLOR_CHOCOLATE

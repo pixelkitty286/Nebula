@@ -350,7 +350,7 @@
 /area/ministation/bridge)
 "bt" = (
 /obj/item/flashlight/lamp/green,
-/obj/structure/table/woodentable/mahogany,
+/obj/structure/table/laminatetable/mahogany,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -497,7 +497,7 @@
 /turf/floor/wood/walnut,
 /area/ministation/bridge)
 "bI" = (
-/obj/structure/table/woodentable/mahogany,
+/obj/structure/table/laminatetable/mahogany,
 /obj/item/modular_computer/tablet/lease/preset/command,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -900,7 +900,7 @@
 /turf/floor/tiled,
 /area/ministation/bridge)
 "dn" = (
-/obj/structure/table/woodentable_reinforced/walnut,
+/obj/structure/table/laminatetable_reinforced/walnut,
 /obj/item/paper_bin,
 /obj/item/pen/retractable,
 /turf/floor/carpet/red,
@@ -3295,7 +3295,7 @@
 /turf/floor,
 /area/ministation/science)
 "ps" = (
-/obj/structure/table/woodentable/ebony,
+/obj/structure/table/laminatetable/ebony,
 /obj/item/paper_bundle,
 /obj/effect/floor_decal/stoneborder{
 	dir = 6
@@ -4129,7 +4129,7 @@
 /turf/floor/lino,
 /area/ministation/hall/s3)
 "wY" = (
-/obj/structure/table/woodentable/ebony,
+/obj/structure/table/laminatetable/ebony,
 /obj/item/pen/fancy,
 /obj/item/box/fancy/crayons,
 /obj/effect/floor_decal/stoneborder{
@@ -5275,7 +5275,7 @@
 /turf/floor/plating,
 /area/ministation/maint/l3central)
 "DD" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/item/stack/material/panel/mapped/plastic/ten,
 /obj/item/stack/material/plank/mapped/wood/ten,
 /obj/item/stack/material/plank/mapped/wood/ten,
@@ -5295,7 +5295,7 @@
 /turf/floor/tiled/white,
 /area/ministation/science)
 "DQ" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/item/pill_bottle/dice,
 /turf/floor/carpet/green,
 /area/ministation/library)
@@ -5335,7 +5335,7 @@
 /turf/floor/plating,
 /area/ministation/maint/l3nw)
 "Ef" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /turf/floor/carpet/green,
 /area/ministation/library)
 "Eg" = (
@@ -5548,7 +5548,7 @@
 /turf/floor/tiled/white,
 /area/ministation/science)
 "FV" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/item/mollusc/clam,
 /obj/machinery/light/small,
 /turf/floor/wood/mahogany,
@@ -5666,7 +5666,7 @@
 /turf/floor/tiled,
 /area/ministation/hall/s3)
 "Hl" = (
-/obj/structure/table/woodentable/ebony,
+/obj/structure/table/laminatetable/ebony,
 /obj/item/paper_bin,
 /obj/effect/floor_decal/stoneborder{
 	dir = 6
@@ -6064,7 +6064,7 @@
 /turf/floor/carpet/green,
 /area/ministation/library)
 "Le" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/item/chems/drinks/cans/waterbottle,
 /turf/floor/carpet/green,
 /area/ministation/library)
@@ -6264,7 +6264,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
-/obj/structure/table/woodentable_reinforced/walnut,
+/obj/structure/table/laminatetable_reinforced/walnut,
 /obj/item/folder,
 /turf/floor/carpet/red,
 /area/ministation/court)
@@ -6597,7 +6597,7 @@
 /turf/floor/tiled,
 /area/ministation/hall/s3)
 "Ov" = (
-/obj/structure/table/woodentable/walnut,
+/obj/structure/table/laminatetable/walnut,
 /obj/machinery/light,
 /turf/floor/wood/yew,
 /area/ministation/court)
@@ -6731,7 +6731,7 @@
 /turf/floor/tiled,
 /area/ministation/hall/s3)
 "Pk" = (
-/obj/structure/table/woodentable/walnut,
+/obj/structure/table/laminatetable/walnut,
 /obj/item/folder/blue,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/floor/wood/yew,
@@ -6763,7 +6763,7 @@
 /turf/floor/tiled,
 /area/ministation/hall/n3)
 "Px" = (
-/obj/structure/table/woodentable/walnut,
+/obj/structure/table/laminatetable/walnut,
 /obj/item/folder/red,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -6843,7 +6843,7 @@
 /turf/floor/tiled,
 /area/ministation/hall/n3)
 "PT" = (
-/obj/structure/table/woodentable_reinforced/walnut,
+/obj/structure/table/laminatetable_reinforced/walnut,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -6974,7 +6974,7 @@
 /turf/floor/tiled,
 /area/ministation/shuttle/outgoing)
 "QD" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/item/book/printable_red,
 /obj/item/pen,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7023,7 +7023,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /turf/floor/wood/mahogany,
 /area/ministation/library)
 "Re" = (
@@ -7271,7 +7271,7 @@
 /turf/floor/tiled,
 /area/ministation/tradehouse_rep)
 "Sf" = (
-/obj/structure/table/woodentable/walnut,
+/obj/structure/table/laminatetable/walnut,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -7375,7 +7375,7 @@
 /turf/floor/plating,
 /area/ministation/maint/l3ne)
 "Tk" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /turf/floor/wood/mahogany,
 /area/ministation/library)
 "Tm" = (
@@ -7424,7 +7424,7 @@
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/obj/structure/table/woodentable/ebony,
+/obj/structure/table/laminatetable/ebony,
 /obj/item/pen,
 /obj/item/pen/blue,
 /obj/item/pen/retractable,
@@ -7502,7 +7502,7 @@
 /turf/floor/tiled,
 /area/ministation/bridge)
 "TI" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/random/cash,
 /obj/item/chems/drinks/cans/waterbottle,
 /turf/floor/carpet/green,
@@ -7735,7 +7735,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/item/knife/kitchen,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -7788,7 +7788,7 @@
 /turf/floor/carpet/red,
 /area/ministation/court)
 "Vw" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/item/deck/cards,
 /turf/floor/carpet/green,
 /area/ministation/library)
@@ -7865,7 +7865,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/table/woodentable,
+/obj/structure/table/laminatetable,
 /obj/machinery/fabricator/book,
 /turf/floor/wood/mahogany,
 /area/ministation/library)
@@ -8584,7 +8584,7 @@
 /turf/floor/wood/mahogany,
 /area/ministation/library)
 "ZZ" = (
-/obj/structure/table/woodentable_reinforced/walnut,
+/obj/structure/table/laminatetable_reinforced/walnut,
 /obj/item/bell,
 /turf/floor/carpet/red,
 /area/ministation/court)

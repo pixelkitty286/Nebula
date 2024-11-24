@@ -1074,7 +1074,7 @@
 /area/ship/trade/disused)
 "hc" = (
 /obj/item/radio,
-/obj/structure/table/woodentable/walnut,
+/obj/structure/table/laminatetable/walnut,
 /turf/floor/wood/walnut,
 /area/ship/trade/disused)
 "hf" = (
@@ -2017,7 +2017,7 @@
 /turf/floor,
 /area/ship/trade/aft_starboard_underside_maint)
 "Qh" = (
-/obj/structure/table/woodentable/mahogany,
+/obj/structure/table/laminatetable/mahogany,
 /obj/item/cell/crap/empty,
 /turf/floor/wood/walnut,
 /area/ship/trade/disused)

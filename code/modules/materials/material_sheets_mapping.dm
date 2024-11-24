@@ -117,4 +117,10 @@ STACK_SUBTYPES(titanium,       "titanium",                      solid/metal/tita
 STACK_SUBTYPES(cotton,         "cotton",                        solid/organic/cloth,         thread,           null)
 STACK_SUBTYPES(dried_gut,      "dried gut",                     solid/organic/leather/gut,   thread,           null)
 
+STACK_SUBTYPES(chipboard_pine,     "pine chipboard",     solid/organic/wood/chipboard,          sheet,         null)
+STACK_SUBTYPES(chipboard_maple,    "maple chipboard",    solid/organic/wood/chipboard/maple,    sheet,         null)
+STACK_SUBTYPES(chipboard_mahogany, "mahogany chipboard", solid/organic/wood/chipboard/mahogany, sheet,         null)
+STACK_SUBTYPES(chipboard_ebony,    "ebony chipboard",    solid/organic/wood/chipboard/ebony,    sheet,         null)
+STACK_SUBTYPES(chipboard_walnut,   "walnut chipboard",   solid/organic/wood/chipboard/walnut,   sheet,         null)
+
 #undef STACK_SUBTYPES
