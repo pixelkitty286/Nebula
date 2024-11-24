@@ -70,70 +70,119 @@
  * Wood
  */
 /obj/item/stack/tile/wood
-	name = "wood floor tile"
-	singular_name = "wood floor tile"
-	desc = "An easy to fit wooden floor tile."
-	icon_state = "tile-wood"
-	color = WOOD_COLOR_GENERIC
-	material = /decl/material/solid/organic/wood
+	name              = "wood floor tile"
+	singular_name     = "wood floor tile"
+	desc              = "An easy-to-fit wooden floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood::color
+	material          = /decl/material/solid/organic/wood
 
 /obj/item/stack/tile/wood/cyborg
-	name = "wood floor tile synthesizer"
-	desc = "A device that makes wood floor tiles."
-	uses_charge = 1
-	charge_costs = list(250)
-	stack_merge_type = /obj/item/stack/tile/wood
-	build_type = /obj/item/stack/tile/wood
-	max_health = ITEM_HEALTH_NO_DAMAGE
+	name              = "wood floor tile synthesizer"
+	desc              = "A device that makes wood floor tiles."
+	uses_charge       = 1
+	charge_costs      = list(250)
+	stack_merge_type  = /obj/item/stack/tile/pine_laminate
+	build_type        = /obj/item/stack/tile/pine_laminate
+	material          = /decl/material/solid/organic/wood/chipboard
+	max_health        = ITEM_HEALTH_NO_DAMAGE
 	is_spawnable_type = FALSE
 
 /obj/item/stack/tile/mahogany
-	name = "mahogany floor tile"
-	singular_name = "mahogany floor tile"
-	desc = "An easy to fit mahogany wood floor tile."
-	icon_state = "tile-wood"
-	color = WOOD_COLOR_RICH
-	material = /decl/material/solid/organic/wood
+	name              = "mahogany floor tile"
+	singular_name     = "mahogany floor tile"
+	desc              = "An easy-to-fit mahogany wood floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/mahogany::color
+	material          = /decl/material/solid/organic/wood/mahogany
 
 /obj/item/stack/tile/maple
-	name = "maple floor tile"
-	singular_name = "maple floor tile"
-	desc = "An easy to fit maple wood floor tile."
-	icon_state = "tile-wood"
-	color = WOOD_COLOR_PALE
-	material = /decl/material/solid/organic/wood
+	name              = "maple floor tile"
+	singular_name     = "maple floor tile"
+	desc              = "An easy-to-fit maple wood floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/maple::color
+	material          = /decl/material/solid/organic/wood/maple
 
 /obj/item/stack/tile/ebony
-	name = "ebony floor tile"
-	singular_name = "ebony floor tile"
-	desc = "An easy to fit ebony floor tile."
-	icon_state = "tile-wood"
-	color = WOOD_COLOR_BLACK
-	material = /decl/material/solid/organic/wood
+	name              = "ebony floor tile"
+	singular_name     = "ebony floor tile"
+	desc              = "An easy-to-fit ebony floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/ebony::color
+	material          = /decl/material/solid/organic/wood/ebony
 
 /obj/item/stack/tile/walnut
-	name = "walnut floor tile"
-	singular_name = "walnut floor tile"
-	desc = "An easy to fit walnut wood floor tile."
-	icon_state = "tile-wood"
-	color = WOOD_COLOR_CHOCOLATE
-	material = /decl/material/solid/organic/wood
+	name              = "walnut floor tile"
+	singular_name     = "walnut floor tile"
+	desc              = "An easy-to-fit walnut wood floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/walnut::color
+	material          = /decl/material/solid/organic/wood/walnut
 
 /obj/item/stack/tile/bamboo
-	name = "bamboo floor tile"
-	singular_name = "bamboo floor tile"
-	desc = "An easy to fit bamboo wood floor tile."
-	icon_state = "tile-wood"
-	color = WOOD_COLOR_PALE2
-	material = /decl/material/solid/organic/wood
+	name              = "bamboo floor tile"
+	singular_name     = "bamboo floor tile"
+	desc              = "An easy-to-fit bamboo wood floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/bamboo::color
+	material          = /decl/material/solid/organic/wood/bamboo
 
 /obj/item/stack/tile/yew
-	name = "yew floor tile"
-	singular_name = "yew floor tile"
-	desc = "An easy to fit yew wood floor tile."
-	icon_state = "tile-wood"
-	color = WOOD_COLOR_YELLOW
-	material = /decl/material/solid/organic/wood
+	name              = "yew floor tile"
+	singular_name     = "yew floor tile"
+	desc              = "An easy-to-fit yew wood floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/yew::color
+	material          = /decl/material/solid/organic/wood/yew
+
+/obj/item/stack/tile/pine_laminate
+	name              = "pine laminate floor tile"
+	singular_name     = "pine laminate floor tile"
+	desc              = "An easy-to-fit pine laminate floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/chipboard::color
+	material          = /decl/material/solid/organic/wood/chipboard
+
+/obj/item/stack/tile/mahogany_laminate
+	name              = "mahogany laminate floor tile"
+	singular_name     = "mahogany laminate floor tile"
+	desc              = "An easy-to-fit mahogany laminate floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/chipboard/mahogany::color
+	material          = /decl/material/solid/organic/wood/chipboard/mahogany
+
+/obj/item/stack/tile/maple_laminate
+	name              = "maple laminate floor tile"
+	singular_name     = "maple laminate floor tile"
+	desc              = "An easy-to-fit maple laminate floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/chipboard/maple::color
+	material          = /decl/material/solid/organic/wood/chipboard/maple
+
+/obj/item/stack/tile/ebony_laminate
+	name              = "ebony laminate floor tile"
+	singular_name     = "ebony laminate floor tile"
+	desc              = "An easy-to-fit ebony laminate floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/chipboard/ebony::color
+	material          = /decl/material/solid/organic/wood/chipboard/ebony
+
+/obj/item/stack/tile/walnut_laminate
+	name              = "walnut laminate floor tile"
+	singular_name     = "walnut laminate floor tile"
+	desc              = "An easy-to-fit walnut laminate floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/chipboard/walnut::color
+	material          = /decl/material/solid/organic/wood/chipboard/walnut
+
+/obj/item/stack/tile/yew_laminate
+	name              = "yew laminate floor tile"
+	singular_name     = "yew laminate floor tile"
+	desc              = "An easy-to-fit yew laminate floor tile."
+	icon_state        = "tile-wood"
+	color             = /decl/material/solid/organic/wood/chipboard/yew::color
+	material          = /decl/material/solid/organic/wood/chipboard/yew
 
 /obj/item/stack/tile/floor
 	name = "steel floor tile"

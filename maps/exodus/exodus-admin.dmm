@@ -1403,7 +1403,7 @@
 /obj/structure/bed/chair/wood/wings{
 	dir = 4
 	},
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aMT" = (
 /obj/machinery/hologram/holopad,
@@ -1444,7 +1444,7 @@
 	dir = 5
 	},
 /obj/item/food/amanita_pie,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aMZ" = (
 /obj/structure/table/laminatetable{
@@ -1454,29 +1454,29 @@
 /obj/machinery/camera/network/crescent{
 	c_tag = "Crescent Bar Center"
 	},
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNa" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
 	},
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNb" = (
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNc" = (
 /obj/structure/table/laminatetable{
 	dir = 5
 	},
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNh" = (
 /obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/chems/glass/bowl/mapped/stew,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNj" = (
 /obj/structure/closet/secure_closet/bar,
@@ -1540,28 +1540,28 @@
 	dir = 5
 	},
 /obj/item/food/boiledrice,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNC" = (
 /obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/chems/glass/bowl/mapped/beet,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNI" = (
 /obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/stuffing,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNJ" = (
 /obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/soylenviridians,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aNK" = (
 /obj/machinery/door/airlock/glass{
@@ -1667,7 +1667,7 @@
 /area/shuttle/escape_shuttle)
 "aPa" = (
 /obj/machinery/hologram/holopad,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aPH" = (
 /obj/machinery/camera/network/crescent{
@@ -1717,14 +1717,14 @@
 	dir = 5
 	},
 /obj/item/chems/glass/bowl/mapped/blood,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aPS" = (
 /obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/food/skewer/tofu,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aRl" = (
 /turf/unsimulated/wall,
@@ -1734,7 +1734,7 @@
 	dir = 5
 	},
 /obj/item/food/poppypretzel,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "aZb" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -1835,7 +1835,7 @@
 	dir = 5
 	},
 /obj/item/food/spesslaw,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "bwE" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1849,14 +1849,14 @@
 	dir = 5
 	},
 /obj/item/food/candiedapple,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "bzm" = (
 /obj/structure/table/laminatetable{
 	dir = 5
 	},
 /obj/item/chems/glass/bowl/mapped/mushroom,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "bDh" = (
 /obj/structure/table,
@@ -1868,11 +1868,11 @@
 	dir = 5
 	},
 /obj/item/food/meatsteak,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "cnP" = (
 /obj/item/stool/padded,
-/turf/unsimulated/floor/wood,
+/turf/unsimulated/floor/laminate,
 /area/centcom/holding)
 "cxx" = (
 /obj/effect/floor_decal/industrial/warning{

@@ -271,7 +271,7 @@
 	pixel_y = 26
 	},
 /obj/machinery/camera/network/security,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/ministation/detective)
 "by" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1264,7 +1264,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/ministation/detective)
 "gL" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -1952,7 +1952,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/ministation/detective)
 "jl" = (
 /obj/machinery/porta_turret{
@@ -6237,7 +6237,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/ministation/detective)
 "zZ" = (
 /obj/structure/bed/chair/comfy/beige{
@@ -6627,7 +6627,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/ministation/detective)
 "BJ" = (
 /obj/machinery/door/firedoor,
@@ -7563,7 +7563,7 @@
 	dir = 1
 	},
 /obj/item/clothing/head/beret/corp/sec,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/ministation/detective)
 "HG" = (
 /obj/structure/table,
@@ -10194,7 +10194,7 @@
 	dir = 4;
 	pixel_x = -23
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/ministation/detective)
 "Wm" = (
 /obj/effect/floor_decal/industrial/warning{

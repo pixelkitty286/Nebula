@@ -657,43 +657,43 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "cn" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/floor/wood/broken/three,
+/turf/floor/laminate/broken/three,
 /area/outpost/abandoned)
 "co" = (
 /obj/structure/table/laminatetable,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "cp" = (
 /obj/structure/table/laminatetable,
 /obj/item/board,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "cq" = (
 /obj/structure/table/laminatetable,
 /obj/random/loot,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "cr" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/floor/wood/broken/two,
+/turf/floor/laminate/broken/two,
 /area/outpost/abandoned)
 "cs" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "ct" = (
 /obj/machinery/door/airlock/centcom,
@@ -739,34 +739,34 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "cI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "cJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/floor/wood/broken/four,
+/turf/floor/laminate/broken/four,
 /area/outpost/abandoned)
 "cK" = (
 /obj/effect/floor_decal/plaque,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "cL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
-/turf/floor/wood/broken,
+/turf/floor/laminate/broken,
 /area/outpost/abandoned)
 "cM" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/outpost/abandoned)
 "cN" = (
 /obj/structure/filing_cabinet/tall,

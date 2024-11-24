@@ -176,3 +176,10 @@
 	adjective_name     = "walnut laminate"
 	uid                = "solid_wood_chipboard_walnut"
 	color              = WOOD_COLOR_CHOCOLATE
+
+/decl/material/solid/organic/wood/chipboard/yew
+	name               = "yew chipboard"
+	lore_text          = "Also known as particle board, this material is made from various kinds of yew wood chips and resin, with a plastic laminate."
+	adjective_name     = "yew laminate"
+	uid                = "solid_wood_chipboard_yew"
+	color              = WOOD_COLOR_YELLOW

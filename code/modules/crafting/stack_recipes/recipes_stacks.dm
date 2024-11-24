@@ -26,6 +26,29 @@
 	result_type         = /obj/item/stack/tile/walnut
 	required_material   = /decl/material/solid/organic/wood/walnut
 
+/decl/stack_recipe/tile/wood/pine_laminate
+	result_type         = /obj/item/stack/tile/pine_laminate
+	required_material   = /decl/material/solid/organic/wood/chipboard
+
+/decl/stack_recipe/tile/wood/mahogany_laminate
+	result_type         = /obj/item/stack/tile/mahogany_laminate
+	required_material   = /decl/material/solid/organic/wood/chipboard/mahogany
+
+/decl/stack_recipe/tile/wood/maple_laminate
+	result_type         = /obj/item/stack/tile/maple_laminate
+	required_material   = /decl/material/solid/organic/wood/chipboard/maple
+
+/decl/stack_recipe/tile/wood/ebony_laminate
+	result_type         = /obj/item/stack/tile/ebony_laminate
+	required_material   = /decl/material/solid/organic/wood/chipboard/ebony
+
+/decl/stack_recipe/tile/wood/walnut_laminate
+	result_type         = /obj/item/stack/tile/walnut
+	required_material   = /decl/material/solid/organic/wood/chipboard/walnut
+
+/decl/stack_recipe/tile/wood/yew_laminate
+	result_type         = /obj/item/stack/tile/yew_laminate
+	required_material   = /decl/material/solid/organic/wood/chipboard/yew
 
 /decl/stack_recipe/tile/steel
 	abstract_type     = /decl/stack_recipe/tile/steel

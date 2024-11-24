@@ -52,6 +52,23 @@
 /turf/unsimulated/floor/wood/broken6
 	icon_state = "wood_broken6"
 
+/turf/unsimulated/floor/wood
+	name = "wooden laminate floor"
+	icon = 'icons/turf/flooring/laminate.dmi'
+	icon_state = "wood0"
+
+/turf/unsimulated/floor/wood/broken
+	icon_state = "wood_broken0"
+
+/turf/unsimulated/floor/wood/broken1
+	icon_state = "wood_broken1"
+
+/turf/unsimulated/floor/wood/broken2
+	icon_state = "wood_broken2"
+
+/turf/unsimulated/floor/wood/broken6
+	icon_state = "wood_broken6"
+
 /turf/unsimulated/floor/vault
 	icon_state = "vault"
 

@@ -4214,7 +4214,7 @@
 	pixel_y = -32;
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "ajm" = (
 /obj/structure/window/reinforced{
@@ -7138,7 +7138,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "apb" = (
 /obj/structure/cable{
@@ -7425,11 +7425,11 @@
 /turf/floor/tiled/steel_grid,
 /area/exodus/security/lobby)
 "apF" = (
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "apG" = (
 /obj/structure/bed/chair/wood/wings,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "apH" = (
 /obj/machinery/hologram/holopad,
@@ -7846,14 +7846,14 @@
 /obj/structure/table/gamblingtable,
 /obj/item/board,
 /obj/item/box/checkers/chess/red,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "aqu" = (
 /obj/structure/table/gamblingtable,
 /obj/item/deck/cards{
 	pixel_y = 4
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "aqv" = (
 /obj/structure/bed/chair{
@@ -7916,7 +7916,7 @@
 /area/exodus/maintenance/dormitory)
 "aqC" = (
 /obj/item/stool/padded,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "aqD" = (
 /turf/wall/r_wall/prepainted,
@@ -8041,7 +8041,7 @@
 "aqP" = (
 /obj/structure/table,
 /obj/item/dice,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "aqQ" = (
 /obj/machinery/light/small{
@@ -8411,7 +8411,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "arx" = (
 /turf/wall/prepainted,
@@ -8472,7 +8472,7 @@
 "arD" = (
 /obj/structure/table/gamblingtable,
 /obj/item/box/checkers/chess,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "arE" = (
 /turf/wall/prepainted,
@@ -8543,7 +8543,7 @@
 /obj/machinery/vending/cigarette{
 	dir = 8
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "arO" = (
 /obj/machinery/door/blast/regular/open{
@@ -8671,7 +8671,7 @@
 /obj/structure/bed/chair/wood/wings{
 	dir = 1
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "asb" = (
 /obj/structure/bed/chair{
@@ -9745,13 +9745,13 @@
 /obj/item/bedsheet/mime,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "auA" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/mime,
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "auB" = (
 /obj/machinery/alarm{
@@ -10026,7 +10026,7 @@
 	pixel_x = -22
 	},
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "avh" = (
 /obj/structure/cable/green{
@@ -10211,7 +10211,7 @@
 	dir = 4
 	},
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "avC" = (
 /obj/effect/floor_decal/corner/grey{
@@ -10554,7 +10554,7 @@
 /turf/floor/plating,
 /area/exodus/maintenance/library)
 "awj" = (
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "awk" = (
 /obj/structure/bed/chair{
@@ -10748,7 +10748,7 @@
 	dir = 5
 	},
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "awG" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
@@ -10922,7 +10922,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "awZ" = (
 /obj/structure/cable{
@@ -11016,7 +11016,7 @@
 	dir = 8
 	},
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "axj" = (
 /obj/machinery/light_switch{
@@ -11026,7 +11026,7 @@
 /obj/structure/bed/padded,
 /obj/item/bedsheet/mime,
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "axk" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -11328,7 +11328,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/personal,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "axT" = (
 /turf/floor/tiled/dark,
@@ -11339,7 +11339,7 @@
 	pixel_x = 24
 	},
 /obj/structure/closet/secure_closet/personal,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "axV" = (
 /obj/structure/cable/green{
@@ -11391,7 +11391,7 @@
 /area/exodus/crew_quarters/fitness)
 "ayc" = (
 /obj/machinery/hologram/holopad,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "ayd" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -12337,7 +12337,7 @@
 	dir = 8
 	},
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "azW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -12388,7 +12388,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "aAc" = (
 /obj/structure/disposalpipe/segment{
@@ -12440,7 +12440,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "aAi" = (
 /obj/structure/cable{
@@ -13345,7 +13345,7 @@
 	pixel_y = 10
 	},
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "aCl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -13679,7 +13679,7 @@
 	dir = 1
 	},
 /obj/structure/curtain/open/bed,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "aCZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13768,7 +13768,7 @@
 /obj/machinery/fabricator/book,
 /obj/item/stack/material/panel/mapped/plastic/ten,
 /obj/item/stack/material/plank/mapped/wood/ten,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aDj" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -13799,7 +13799,7 @@
 /area/exodus/engineering/sublevel_access)
 "aDm" = (
 /obj/structure/reagent_dispensers/beerkeg,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aDn" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -13897,7 +13897,7 @@
 	pixel_y = 9
 	},
 /obj/item/stack/package_wrap,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aDx" = (
 /obj/structure/reagent_dispensers/peppertank{
@@ -14106,7 +14106,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aDW" = (
 /obj/abstract/landmark{
@@ -14231,7 +14231,7 @@
 /obj/machinery/camera/network/civilian_east{
 	c_tag = "Bar Backroom"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aEi" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -14351,7 +14351,7 @@
 /obj/structure/table/laminatetable,
 /obj/item/gun/projectile/shotgun/doublebarrel,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aEw" = (
 /obj/machinery/door/airlock{
@@ -14469,7 +14469,7 @@
 	dir = 4
 	},
 /obj/item/stack/tape_roll/duct_tape,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aEG" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -14562,7 +14562,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aEQ" = (
 /obj/structure/disposalpipe/segment{
@@ -14572,7 +14572,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aER" = (
 /obj/structure/disposalpipe/segment{
@@ -14587,7 +14587,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aES" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -15002,7 +15002,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aFH" = (
 /obj/machinery/network/requests_console{
@@ -15390,11 +15390,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aGp" = (
 /obj/structure/disposalpipe/segment,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aGq" = (
 /obj/machinery/light{
@@ -15582,7 +15582,7 @@
 /obj/item/radio/intercom{
 	pixel_y = 20
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aGN" = (
 /obj/machinery/hologram/holopad,
@@ -16039,7 +16039,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aHI" = (
 /obj/machinery/alarm{
@@ -16362,7 +16362,7 @@
 "aIf" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aIg" = (
 /turf/wall/prepainted,
@@ -16819,7 +16819,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aJl" = (
 /turf/wall/prepainted,
@@ -16866,7 +16866,7 @@
 	pixel_x = -12;
 	pixel_y = 2
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar/cabin)
 "aJt" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -17019,12 +17019,12 @@
 /area/exodus/hallway/secondary/entry/starboard)
 "aJI" = (
 /obj/structure/filing_cabinet,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aJJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aJK" = (
 /obj/machinery/light{
@@ -17054,14 +17054,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aJN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aJO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -17161,7 +17161,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aJX" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -17211,7 +17211,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aKc" = (
 /obj/machinery/power/apc{
@@ -17739,13 +17739,13 @@
 /obj/machinery/camera/network/civilian_east{
 	c_tag = "Library North"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aLj" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aLk" = (
 /obj/structure/table,
@@ -17758,7 +17758,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aLm" = (
 /obj/structure/bed/chair{
@@ -17774,7 +17774,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aLq" = (
 /obj/machinery/light{
@@ -18147,7 +18147,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aMh" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -18166,7 +18166,7 @@
 	pixel_y = 28
 	},
 /obj/machinery/smartfridge/drinks,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aMk" = (
 /obj/machinery/light{
@@ -18221,7 +18221,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aMr" = (
 /obj/structure/closet/secure_closet/freezer/meat,
@@ -18458,7 +18458,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aMQ" = (
 /obj/machinery/light{
@@ -18473,7 +18473,7 @@
 "aMR" = (
 /obj/structure/table/laminatetable,
 /obj/machinery/recharger,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aMS" = (
 /obj/structure/closet/crate,
@@ -18498,7 +18498,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aMV" = (
 /turf/wall/titanium,
@@ -18633,7 +18633,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aNk" = (
 /turf/floor/tiled/steel_grid,
@@ -19127,7 +19127,7 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aOg" = (
 /obj/structure/table/laminatetable,
@@ -19448,7 +19448,7 @@
 /obj/structure/table/laminatetable,
 /obj/structure/disposalpipe/segment,
 /obj/item/deck/cards,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aOM" = (
 /obj/structure/table/laminatetable,
@@ -20221,7 +20221,7 @@
 "aQw" = (
 /obj/machinery/photocopier,
 /obj/structure/table/laminatetable,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aQx" = (
 /obj/structure/hygiene/sink{
@@ -20408,7 +20408,7 @@
 /obj/machinery/door/window/westright{
 	name = "Library Desk Door"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aQU" = (
 /obj/effect/floor_decal/corner/purple/full,
@@ -20771,7 +20771,7 @@
 /obj/structure/bookcase{
 	name = "bookcase (Religious)"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aRL" = (
 /turf/floor/carpet,
@@ -20938,7 +20938,7 @@
 /obj/structure/noticeboard{
 	default_pixel_y = 27
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aSg" = (
 /obj/structure/disposalpipe/segment{
@@ -21161,7 +21161,7 @@
 /area/exodus/quartermaster/miningdock)
 "aSD" = (
 /obj/machinery/computer/modular/preset/cardslot/command,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "aSE" = (
 /obj/machinery/button/access/interior{
@@ -21290,28 +21290,28 @@
 /obj/structure/bed/chair/wood/walnut{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aSQ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aSR" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aSS" = (
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aST" = (
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aSU" = (
 /obj/structure/cable/green{
@@ -21439,13 +21439,13 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aTi" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aTj" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -21461,7 +21461,7 @@
 /obj/structure/bed/chair/wood/walnut{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aTl" = (
 /obj/machinery/conveyor{
@@ -21792,7 +21792,7 @@
 /area/exodus/library)
 "aTX" = (
 /obj/item/stool/bar/padded,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aTY" = (
 /obj/machinery/door/blast/regular/open{
@@ -21847,7 +21847,7 @@
 /obj/machinery/computer/modular/telescreen/preset/generic{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUg" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -21904,14 +21904,14 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/structure/table/laminatetable,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUp" = (
 /turf/wall/r_wall/prepainted,
@@ -21968,7 +21968,7 @@
 	dir = 4
 	},
 /obj/item/stool/bar/padded,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUw" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
@@ -21981,7 +21981,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUy" = (
 /obj/effect/floor_decal/corner/brown/diagonal{
@@ -22024,25 +22024,25 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUE" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUG" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUH" = (
 /obj/machinery/hologram/holopad,
@@ -22052,13 +22052,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUI" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUJ" = (
 /obj/effect/floor_decal/corner/brown/diagonal{
@@ -22166,7 +22166,7 @@
 	pixel_x = -25;
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aUV" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -22223,11 +22223,11 @@
 /obj/structure/bookcase{
 	name = "bookcase (Fiction)"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aVd" = (
 /obj/structure/bookcase/skill_books/random,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aVf" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
@@ -22397,7 +22397,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aVy" = (
 /obj/abstract/landmark{
@@ -22556,7 +22556,7 @@
 /area/exodus/bridge)
 "aVS" = (
 /obj/structure/bed/chair/wood/walnut,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aVT" = (
 /obj/structure/closet/emcloset,
@@ -22582,12 +22582,12 @@
 	icon_state = "1-4"
 	},
 /obj/structure/bed/chair/wood/walnut,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aVX" = (
 /obj/structure/bed/chair/wood/walnut,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aVY" = (
 /obj/structure/cable/green{
@@ -22621,7 +22621,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/bed/chair/wood/walnut,
 /obj/structure/disposalpipe/segment,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aWb" = (
 /obj/machinery/chem_master/condimaster{
@@ -22648,7 +22648,7 @@
 	icon_state = "4-8"
 	},
 /obj/item/stool/bar/padded,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aWe" = (
 /obj/item/chems/condiment/small/peppermill{
@@ -22660,7 +22660,7 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aWf" = (
 /obj/structure/cable/green{
@@ -22697,7 +22697,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/laminatetable,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aWi" = (
 /obj/structure/cable/green{
@@ -22735,13 +22735,13 @@
 /area/exodus/crew_quarters/kitchen)
 "aWl" = (
 /obj/structure/bed/chair/comfy/black,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aWm" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aWn" = (
 /obj/structure/cable/green{
@@ -22829,14 +22829,14 @@
 	c_tag = "Library Central";
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aWz" = (
 /obj/abstract/landmark/start{
 	name = "Librarian"
 	},
 /obj/structure/bed/chair/office/dark,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aWA" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -22887,7 +22887,7 @@
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aWH" = (
 /obj/structure/table/laminatetable,
@@ -22897,7 +22897,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 28
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aWI" = (
 /obj/machinery/door/firedoor,
@@ -23265,7 +23265,7 @@
 /obj/structure/table/laminatetable,
 /obj/item/utensil/fork,
 /obj/item/utensil/fork,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aXA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23277,13 +23277,13 @@
 "aXB" = (
 /obj/structure/table/laminatetable,
 /obj/item/board,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aXD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/laminatetable,
 /obj/item/box/checkers/chess/red,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aXE" = (
 /obj/structure/cable/green{
@@ -23306,7 +23306,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/laminatetable,
 /obj/structure/disposalpipe/segment,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aXG" = (
 /obj/machinery/status_display{
@@ -23315,7 +23315,7 @@
 /obj/machinery/camera/network/command{
 	c_tag = "Bridge Conference Room"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "aXH" = (
 /obj/effect/floor_decal/corner/brown/diagonal{
@@ -23393,7 +23393,7 @@
 "aXP" = (
 /obj/structure/table/gamblingtable,
 /obj/item/box/checkers,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/maintenance/dormitory)
 "aXQ" = (
 /obj/effect/floor_decal/corner/blue/three_quarters{
@@ -23556,7 +23556,7 @@
 /obj/structure/bookcase{
 	name = "bookcase (Adult)"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aYk" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -23570,7 +23570,7 @@
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aYm" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -23625,7 +23625,7 @@
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aYu" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -23680,7 +23680,7 @@
 	c_tag = "Bar West";
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aYz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -23751,7 +23751,7 @@
 "aYF" = (
 /obj/structure/table/laminatetable,
 /obj/item/box/checkers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aYG" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -24121,7 +24121,7 @@
 /area/exodus/crew_quarters/kitchen)
 "aZm" = (
 /obj/structure/table/laminatetable,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aZn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -24150,7 +24150,7 @@
 /obj/structure/table/laminatetable,
 /obj/structure/disposalpipe/segment,
 /obj/item/camera,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aZq" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -24167,7 +24167,7 @@
 /obj/structure/bed/chair/wood/walnut{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aZs" = (
 /obj/machinery/alarm{
@@ -24242,7 +24242,7 @@
 /obj/structure/bed/chair/wood/walnut{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aZB" = (
 /obj/machinery/power/apc{
@@ -24265,7 +24265,7 @@
 "aZD" = (
 /obj/structure/table/laminatetable,
 /obj/item/paper,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aZE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -24275,13 +24275,13 @@
 /obj/structure/bed/chair/wood/walnut{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aZF" = (
 /obj/structure/table/laminatetable,
 /obj/item/camera_film,
 /obj/item/camera_film,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aZG" = (
 /obj/structure/table/laminatetable,
@@ -24293,11 +24293,11 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aZH" = (
 /obj/structure/table/laminatetable,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aZI" = (
 /obj/structure/table/laminatetable,
@@ -24305,7 +24305,7 @@
 	pixel_x = 1;
 	pixel_y = 9
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "aZK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -24315,7 +24315,7 @@
 /obj/structure/bed/chair/wood/walnut{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aZL" = (
 /obj/structure/bed/chair{
@@ -24962,7 +24962,7 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bbe" = (
 /obj/structure/cable/green{
@@ -24989,7 +24989,7 @@
 /obj/item/utensil/fork,
 /obj/item/utensil/fork,
 /obj/item/utensil/fork,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bbh" = (
 /obj/structure/table/marble,
@@ -25012,7 +25012,7 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bbk" = (
 /obj/structure/cable/green{
@@ -25056,7 +25056,7 @@
 "bbo" = (
 /obj/structure/table/laminatetable,
 /obj/item/flame/candle,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bbp" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -25091,7 +25091,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "bbt" = (
 /obj/item/radio/intercom{
@@ -25187,7 +25187,7 @@
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "bbF" = (
 /obj/structure/table,
@@ -25508,7 +25508,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "bcn" = (
 /obj/machinery/computer/guestpass{
@@ -25680,7 +25680,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bcH" = (
 /obj/structure/disposalpipe/segment,
@@ -25739,14 +25739,14 @@
 "bcM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bcN" = (
 /obj/machinery/light,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bcO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -25754,7 +25754,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bcP" = (
 /obj/structure/flora/bush/brflowers,
@@ -26365,13 +26365,13 @@
 /area/exodus/chapel/main)
 "bef" = (
 /obj/machinery/computer/arcade,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "beg" = (
 /obj/machinery/vending/cola{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "beh" = (
 /obj/effect/floor_decal/corner/yellow{
@@ -26392,7 +26392,7 @@
 /obj/structure/bed/chair/wood/walnut{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bej" = (
 /obj/machinery/firealarm{
@@ -26400,7 +26400,7 @@
 	pixel_y = -24
 	},
 /obj/machinery/light,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bek" = (
 /obj/effect/floor_decal/chapel,
@@ -26512,7 +26512,7 @@
 /obj/machinery/vending/coffee{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "bez" = (
 /obj/item/box,
@@ -26533,7 +26533,7 @@
 "beA" = (
 /obj/structure/table/laminatetable,
 /obj/item/pen,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "beB" = (
 /obj/machinery/atmospherics/unary/tank/air{
@@ -26561,7 +26561,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "beE" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -26754,7 +26754,7 @@
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-22"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bfa" = (
 /obj/structure/cable/green{
@@ -26896,7 +26896,7 @@
 /area/exodus/quartermaster/office)
 "bfn" = (
 /obj/machinery/photocopier,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bfo" = (
 /obj/machinery/door/airlock/command{
@@ -26914,7 +26914,7 @@
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bfq" = (
 /obj/machinery/door/firedoor,
@@ -26934,7 +26934,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bfs" = (
 /obj/machinery/light_switch{
@@ -26943,7 +26943,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bft" = (
 /obj/structure/disposalpipe/segment{
@@ -26958,14 +26958,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bfu" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bfv" = (
 /turf/floor/bluegrid,
@@ -26996,7 +26996,7 @@
 	c_tag = "Library South";
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "bfz" = (
 /obj/machinery/power/terminal{
@@ -27028,7 +27028,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bfD" = (
 /obj/structure/disposalpipe/segment{
@@ -27040,13 +27040,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bfE" = (
 /obj/machinery/light_switch{
 	pixel_y = 28
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bfF" = (
 /obj/machinery/ai_status_display{
@@ -27058,7 +27058,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/laminatetable,
 /obj/item/box/checkers/chess,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bfH" = (
 /obj/machinery/status_display{
@@ -27075,11 +27075,11 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bfJ" = (
 /obj/machinery/computer/arcade,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bfK" = (
 /obj/item/radio/intercom{
@@ -27416,7 +27416,7 @@
 	dir = 8
 	},
 /obj/machinery/papershredder,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bgw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -27445,7 +27445,7 @@
 	dir = 8
 	},
 /obj/structure/flora/pottedplant,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bgA" = (
 /obj/machinery/navbeacon/CHW,
@@ -27545,7 +27545,7 @@
 	name = "Security Shutters";
 	pixel_y = 24
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bgN" = (
 /obj/structure/disposalpipe/segment{
@@ -27564,7 +27564,7 @@
 /turf/floor/plating,
 /area/exodus/maintenance/locker)
 "bgO" = (
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bgP" = (
 /turf/floor/carpet,
@@ -27588,7 +27588,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bgT" = (
 /obj/machinery/door/firedoor,
@@ -27673,13 +27673,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bhc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bhd" = (
 /obj/structure/bed/chair/comfy/black{
@@ -27710,13 +27710,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bhh" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-10"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bhi" = (
 /obj/machinery/firealarm{
@@ -28106,7 +28106,7 @@
 "bhV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/papershredder,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bhW" = (
 /obj/structure/cable{
@@ -28297,13 +28297,13 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bip" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "biq" = (
 /obj/machinery/light{
@@ -28346,12 +28346,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "biv" = (
 /obj/structure/table/laminatetable,
 /obj/machinery/faxmachine/mapped,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "biw" = (
 /obj/structure/window/reinforced{
@@ -28386,15 +28386,15 @@
 /area/exodus/bridge)
 "biA" = (
 /obj/machinery/vending/coffee,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "biB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "biC" = (
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "biD" = (
 /obj/structure/window/reinforced,
@@ -28425,7 +28425,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "biH" = (
 /obj/structure/cable{
@@ -29056,14 +29056,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bjM" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bjN" = (
 /obj/structure/extinguisher_cabinet{
@@ -29134,7 +29134,7 @@
 /area/exodus/hallway/primary/starboard)
 "bjT" = (
 /obj/machinery/vending/cigarette,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bjU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -29143,7 +29143,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bjV" = (
 /turf/wall/prepainted,
@@ -29167,7 +29167,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bjY" = (
 /obj/abstract/landmark{
@@ -29536,7 +29536,7 @@
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bkI" = (
 /obj/structure/table/laminatetable,
@@ -29556,7 +29556,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bkJ" = (
 /obj/structure/disposalpipe/segment,
@@ -29571,7 +29571,7 @@
 	pixel_x = 29;
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bkK" = (
 /obj/machinery/door/window{
@@ -29589,7 +29589,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bkM" = (
 /obj/machinery/door/window{
@@ -29622,7 +29622,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bkO" = (
 /obj/machinery/teleport/station,
@@ -29874,7 +29874,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "blt" = (
 /obj/item/radio/intercom{
@@ -29923,7 +29923,7 @@
 /area/exodus/maintenance/atmos_control)
 "bly" = (
 /obj/machinery/vending/coffee,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "blz" = (
 /obj/structure/window/reinforced{
@@ -29997,7 +29997,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "blH" = (
 /obj/structure/table{
@@ -30012,14 +30012,14 @@
 "blI" = (
 /obj/structure/table/laminatetable,
 /obj/item/flashlight/lamp/green,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "blJ" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "blK" = (
 /obj/structure/table/laminatetable,
@@ -30031,7 +30031,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "blL" = (
 /obj/machinery/firealarm{
@@ -30490,7 +30490,7 @@
 	},
 /obj/structure/table/laminatetable,
 /obj/item/box/fancy/donut,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/bridge/meeting_room)
 "bmF" = (
 /obj/machinery/disposal,
@@ -30585,7 +30585,7 @@
 	dir = 8
 	},
 /obj/structure/filing_cabinet,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bmP" = (
 /turf/floor/tiled/dark,
@@ -30599,14 +30599,14 @@
 /obj/machinery/computer/modular/preset/civilian{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bmR" = (
 /obj/structure/table/laminatetable,
 /obj/item/eftpos{
 	eftpos_name = "Captain EFTPOS scanner"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bmS" = (
 /obj/structure/table/laminatetable,
@@ -30618,7 +30618,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/random_multi/single_item/captains_spare_id,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bmT" = (
 /obj/structure/disposalpipe/segment,
@@ -30743,7 +30743,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bng" = (
 /obj/item/book/manual/robotics_cyborgs{
@@ -30923,7 +30923,7 @@
 	pixel_x = 15;
 	pixel_y = 39
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bnx" = (
 /obj/machinery/firealarm{
@@ -31343,7 +31343,7 @@
 /obj/abstract/landmark/start{
 	name = "Captain"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bov" = (
 /obj/structure/morgue{
@@ -31402,7 +31402,7 @@
 "boC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "boD" = (
 /obj/machinery/power/apc{
@@ -31434,7 +31434,7 @@
 /obj/structure/table/laminatetable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "boH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -31960,7 +31960,7 @@
 /obj/random_multi/single_item/captains_spare_id{
 	weight = 10
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bpH" = (
 /obj/structure/table,
@@ -32051,7 +32051,7 @@
 	pixel_x = 29;
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bpO" = (
 /obj/structure/disposaloutlet,
@@ -32422,13 +32422,13 @@
 	dir = 8
 	},
 /obj/random_multi/single_item/captains_spare_id,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bqA" = (
 /obj/machinery/keycard_auth{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bqB" = (
 /obj/structure/cable{
@@ -32444,13 +32444,13 @@
 /area/exodus/maintenance/research_shuttle)
 "bqC" = (
 /obj/machinery/light,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bqD" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bqE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -32865,7 +32865,7 @@
 	icon_state = "right";
 	name = "Captain's Desk Door"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "brw" = (
 /obj/machinery/conveyor{
@@ -33865,7 +33865,7 @@
 /obj/machinery/computer/modular/telescreen/preset/generic{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "btB" = (
 /obj/machinery/button/blast_door{
@@ -39957,7 +39957,7 @@
 /area/exodus/maintenance/cargo)
 "bFM" = (
 /obj/machinery/network/relay,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "bFN" = (
 /obj/structure/disposalpipe/sortjunction/untagged{
@@ -41047,7 +41047,7 @@
 /obj/machinery/computer/modular/preset/cardslot/command{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/captain)
 "bHK" = (
 /obj/structure/extinguisher_cabinet{
@@ -47656,7 +47656,7 @@
 /area/exodus/medical/patient_wing)
 "bUX" = (
 /obj/machinery/vending/cigarette,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bUY" = (
 /obj/structure/bed/chair{
@@ -47702,7 +47702,7 @@
 "bVc" = (
 /obj/structure/table/laminatetable,
 /obj/item/dice,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bVd" = (
 /obj/machinery/door/firedoor,
@@ -47736,7 +47736,7 @@
 "bVf" = (
 /obj/structure/table/laminatetable,
 /obj/item/flashlight/lamp/green,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bVg" = (
 /obj/structure/table/reinforced,
@@ -47959,7 +47959,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bVD" = (
 /obj/structure/table/laminatetable,
@@ -47968,11 +47968,11 @@
 	pixel_x = -2;
 	pixel_y = 7
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bVE" = (
 /obj/structure/bookcase/manuals/engineering,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bVF" = (
 /obj/machinery/hologram/holopad,
@@ -48552,7 +48552,7 @@
 	pixel_x = 29;
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bWS" = (
 /obj/machinery/air_sensor{
@@ -48654,7 +48654,7 @@
 /obj/machinery/computer/modular/telescreen/preset/generic{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bXd" = (
 /obj/machinery/computer/modular/preset/engineering,
@@ -49629,7 +49629,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "bYU" = (
 /obj/structure/cable/green{
@@ -50259,7 +50259,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "cam" = (
 /obj/structure/disposalpipe/segment{
@@ -50461,7 +50461,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/medical/psych)
 "caG" = (
 /obj/structure/table/laminatetable,
@@ -50469,7 +50469,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/medical/psych)
 "caH" = (
 /obj/structure/table/laminatetable,
@@ -50477,7 +50477,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/medical/psych)
 "caI" = (
 /turf/wall/prepainted,
@@ -51012,7 +51012,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/medical/psych)
 "cbQ" = (
 /obj/machinery/alarm{
@@ -51911,7 +51911,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "cdz" = (
 /obj/machinery/firealarm{
@@ -51998,7 +51998,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "cdG" = (
 /obj/structure/cable{
@@ -52109,7 +52109,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "cdR" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -52195,7 +52195,7 @@
 	c_tag = "Engineering Break Room";
 	dir = 8
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "cec" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -52222,7 +52222,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "cef" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -52264,7 +52264,7 @@
 /area/exodus/engineering/engine_eva)
 "cei" = (
 /obj/structure/table/laminatetable,
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/medical/psych)
 "cej" = (
 /turf/wall/prepainted,
@@ -52279,7 +52279,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "cel" = (
 /obj/structure/bed/chair/office/dark{
@@ -52304,7 +52304,7 @@
 	pixel_x = -34;
 	pixel_y = 7
 	},
-/turf/floor/wood,
+/turf/floor/laminate,
 /area/exodus/medical/psych)
 "cem" = (
 /obj/structure/cable/green{
@@ -52312,7 +52312,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "cen" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -53017,7 +53017,7 @@
 /area/exodus/engineering/foyer)
 "cfS" = (
 /obj/structure/closet/secure_closet/personal,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/sleep/bedrooms)
 "cfT" = (
 /obj/machinery/computer/modular/preset/cardslot/command,
@@ -63799,7 +63799,7 @@
 /turf/floor/bluegrid,
 /area/exodus/turret_protected/ai_upload)
 "hLX" = (
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "hOb" = (
 /obj/structure/cable/green{
@@ -64051,7 +64051,7 @@
 /obj/machinery/vending/coffee{
 	dir = 1
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "kVV" = (
 /obj/structure/cable{
@@ -64383,7 +64383,7 @@
 /area/space)
 "qlX" = (
 /obj/machinery/hologram/holopad,
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "qmC" = (
 /obj/effect/floor_decal/corner_steel_grid{
@@ -64936,7 +64936,7 @@
 /obj/machinery/hologram/holopad{
 	holopad_id = "Library Rec Area"
 	},
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/library)
 "wqh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -65012,7 +65012,7 @@
 /turf/floor/tiled/steel_grid,
 /area/exodus/quartermaster/miningdock)
 "xrP" = (
-/turf/floor/wood/walnut,
+/turf/floor/laminate/walnut,
 /area/exodus/engineering/break_room)
 "xFu" = (
 /obj/effect/floor_decal/corner/lime{

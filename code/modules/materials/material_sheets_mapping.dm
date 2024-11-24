@@ -122,5 +122,6 @@ STACK_SUBTYPES(chipboard_maple,    "maple chipboard",    solid/organic/wood/chip
 STACK_SUBTYPES(chipboard_mahogany, "mahogany chipboard", solid/organic/wood/chipboard/mahogany, sheet,         null)
 STACK_SUBTYPES(chipboard_ebony,    "ebony chipboard",    solid/organic/wood/chipboard/ebony,    sheet,         null)
 STACK_SUBTYPES(chipboard_walnut,   "walnut chipboard",   solid/organic/wood/chipboard/walnut,   sheet,         null)
+STACK_SUBTYPES(chipboard_yew,      "yew chipboard",      solid/organic/wood/chipboard/yew,      sheet,         null)
 
 #undef STACK_SUBTYPES

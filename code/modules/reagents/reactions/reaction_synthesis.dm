@@ -200,3 +200,11 @@
 		/decl/material/solid/organic/plastic     = (REAGENT_UNITS_PER_MATERIAL_SHEET / 2)
 	)
 	chipboard_type = /decl/material/solid/organic/wood/chipboard/walnut
+
+/decl/chemical_reaction/synthesis/chipboard/yew
+	name = "Yew Chipboard"
+	required_reagents = list(
+		/decl/material/solid/organic/wood/yew = (REAGENT_UNITS_PER_MATERIAL_SHEET / 2),
+		/decl/material/solid/organic/plastic    = (REAGENT_UNITS_PER_MATERIAL_SHEET / 2)
+	)
+	chipboard_type = /decl/material/solid/organic/wood/chipboard/yew
