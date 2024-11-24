@@ -38,10 +38,6 @@
 	material = /decl/material/solid/organic/wood
 	reinf_material = /decl/material/solid/organic/wood
 
-/obj/structure/table/bench/wooden/chipboard
-	material       = /decl/material/solid/organic/wood/chipboard
-	reinf_material = /decl/material/solid/organic/wood/chipboard
-
 /obj/structure/table/bench/padded
 	icon_state = "padded_preview"
 	material = /decl/material/solid/metal/steel

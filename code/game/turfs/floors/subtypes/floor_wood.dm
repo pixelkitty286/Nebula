@@ -59,7 +59,7 @@
 /turf/floor/laminate
 	name = "wooden laminate floor"
 	icon = 'icons/turf/flooring/laminate.dmi'
-	icon_state = "wood0"
+	icon_state = "wood"
 	color = /decl/material/solid/organic/wood/chipboard::color
 	_flooring = /decl/flooring/laminate
 

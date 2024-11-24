@@ -52,21 +52,21 @@
 /turf/unsimulated/floor/wood/broken6
 	icon_state = "wood_broken6"
 
-/turf/unsimulated/floor/wood
+/turf/unsimulated/floor/laminate
 	name = "wooden laminate floor"
 	icon = 'icons/turf/flooring/laminate.dmi'
-	icon_state = "wood0"
+	icon_state = "wood"
 
-/turf/unsimulated/floor/wood/broken
+/turf/unsimulated/floor/laminate/broken
 	icon_state = "wood_broken0"
 
-/turf/unsimulated/floor/wood/broken1
+/turf/unsimulated/floor/laminate/broken1
 	icon_state = "wood_broken1"
 
-/turf/unsimulated/floor/wood/broken2
+/turf/unsimulated/floor/laminate/broken2
 	icon_state = "wood_broken2"
 
-/turf/unsimulated/floor/wood/broken6
+/turf/unsimulated/floor/laminate/broken6
 	icon_state = "wood_broken6"
 
 /turf/unsimulated/floor/vault

@@ -840,22 +840,6 @@
 /obj/structure/table/laminatetable_reinforced/ebony/walnut
 	additional_reinf_material = /decl/material/solid/organic/wood/chipboard/walnut
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // A table that doesn't smooth, intended for bedside tables or otherwise standalone tables.
 // TODO: make table legs use material and tabletop use reinf_material
 // theoretically, this could also be made to use the normal table icon system, unlike desks?
