@@ -150,7 +150,7 @@
 	color = /decl/material/solid/organic/wood/ebony::color
 
 /obj/structure/cask_rack/large/mapped/Initialize(ml, _mat, _reinf_mat)
-	new /obj/structure/reagent_dispensers/barrel/cask/ebony/water(src)
-	new /obj/structure/reagent_dispensers/barrel/cask/ebony/beer(src)
-	new /obj/structure/reagent_dispensers/barrel/cask/ebony/wine(src)
 	. = ..()
+	try_stack_barrel(new /obj/structure/reagent_dispensers/barrel/cask/ebony/water)
+	try_stack_barrel(new /obj/structure/reagent_dispensers/barrel/cask/ebony/beer)
+	try_stack_barrel(new /obj/structure/reagent_dispensers/barrel/cask/ebony/wine)
