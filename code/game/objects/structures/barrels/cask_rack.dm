@@ -32,7 +32,7 @@
 /obj/structure/cask_rack/receive_mouse_drop(atom/dropping, mob/user, params)
 	. = ..()
 	if(!. && user.Adjacent(src) && dropping.Adjacent(src) && user.Adjacent(dropping))
-		return try_stack_barrel(dropping, user)
+		return try_stack_barrel_timed(dropping, user)
 
 /obj/structure/cask_rack/on_update_icon()
 	. = ..()
@@ -97,13 +97,16 @@
 	if(target && (!isturf(target) || !loc.Adjacent(target))) // TODO: Enter() or CanPass() checks instead of relying on step_towards() below.
 		to_chat(user, SPAN_NOTICE("You cannot move \the [barrel] to \the [target]."))
 		return FALSE
+	if(user && !user.do_skilled(3 SECONDS, SKILL_HAULING, src))
+		to_chat(user, SPAN_NOTICE("You stop moving \the [barrel] off of \the [src]."))
+		return FALSE
 	to_chat(user, SPAN_NOTICE("You move \the [barrel] off \the [src]."))
 	barrel.dropInto(loc)
 	if(target)
 		step_towards(barrel, target)
 	return TRUE
 
-/obj/structure/cask_rack/proc/try_stack_barrel(atom/movable/barrel, mob/user)
+/obj/structure/cask_rack/proc/can_stack_barrel(atom/movable/barrel, mob/user)
 	if(!istype(barrel) || !barrel.simulated || barrel.anchored)
 		return FALSE
 	if(length(contents) >= max_stack)
@@ -111,11 +114,26 @@
 		return FALSE
 	var/list/stackable_types = get_stackable_barrel_types()
 	if(!is_type_in_list(barrel, stackable_types))
-		to_chat(user, SPAN_WARNING("\The [src] is cannot hold \the [barrel]."))
+		to_chat(user, SPAN_WARNING("\The [src] cannot hold \the [barrel]."))
+		return FALSE
+	return TRUE
+
+/obj/structure/cask_rack/proc/try_stack_barrel(atom/movable/barrel, mob/user)
+	if(!can_stack_barrel(barrel, user))
 		return FALSE
 	barrel.forceMove(src)
-	to_chat(user, SPAN_NOTICE("You stack \the [barrel] onto \the [src]."))
 	return TRUE
+
+/obj/structure/cask_rack/proc/try_stack_barrel_timed(atom/movable/barrel, mob/user)
+	if(!can_stack_barrel(barrel, user))
+		return FALSE
+	if(user && !user.do_skilled(3 SECONDS, SKILL_HAULING, src))
+		to_chat(user, SPAN_NOTICE("You stop stacking \the [barrel] onto \the [src]."))
+		return FALSE
+	if(try_stack_barrel(barrel, user))
+		to_chat(user, SPAN_NOTICE("You stack \the [barrel] onto \the [src]."))
+		return TRUE
+	return FALSE
 
 /obj/structure/cask_rack/proc/get_stackable_barrel_types()
 	var/static/list/_stackable_barrel_types = list(
