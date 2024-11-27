@@ -3,8 +3,8 @@
 	banner_type         = /obj/item/banner/sign
 	embroiderable       = FALSE
 	icon                = 'icons/obj/items/banners/sign.dmi'
-	material            = /decl/material/solid/organic/wood
-	color               = /decl/material/solid/organic/wood::color
+	material            = /decl/material/solid/organic/wood/oak
+	color               = /decl/material/solid/organic/wood/oak::color
 	hung_desc           = "The sign is unadorned."
 	colourise_decal     = FALSE
 

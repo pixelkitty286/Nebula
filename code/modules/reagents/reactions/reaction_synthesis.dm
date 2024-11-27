@@ -149,10 +149,10 @@
 
 // Making chipboard out of wood scraps/recycled wood.
 /decl/chemical_reaction/synthesis/chipboard
-	name = "Pine Chipboard"
+	name = "Oak Chipboard"
 	required_reagents = list(
-		/decl/material/solid/organic/wood    = (REAGENT_UNITS_PER_MATERIAL_SHEET / 2),
-		/decl/material/solid/organic/plastic = (REAGENT_UNITS_PER_MATERIAL_SHEET / 2)
+		/decl/material/solid/organic/wood/oak = (REAGENT_UNITS_PER_MATERIAL_SHEET / 2),
+		/decl/material/solid/organic/plastic  = (REAGENT_UNITS_PER_MATERIAL_SHEET / 2)
 	)
 	result_amount = 1
 	mix_message = "The wood particulate binds with the plastic to form laminated chipboard."

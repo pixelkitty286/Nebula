@@ -720,8 +720,8 @@
 /obj/structure/table/woodentable
 	icon_state = "solid_preview"
 	color = WOOD_COLOR_GENERIC
-	material = /decl/material/solid/organic/wood
-	reinf_material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
+	reinf_material = /decl/material/solid/organic/wood/oak
 	parts_type = /obj/item/stack/material/plank
 
 /obj/structure/table/woodentable/mahogany
@@ -747,9 +747,9 @@
 /obj/structure/table/woodentable_reinforced
 	icon_state = "reinf_preview"
 	color = WOOD_COLOR_GENERIC
-	material =                  /decl/material/solid/organic/wood
-	reinf_material =            /decl/material/solid/organic/wood
-	additional_reinf_material = /decl/material/solid/organic/wood
+	material =                  /decl/material/solid/organic/wood/oak
+	reinf_material =            /decl/material/solid/organic/wood/oak
+	additional_reinf_material = /decl/material/solid/organic/wood/oak
 
 /obj/structure/table/woodentable_reinforced/walnut
 	color = WOOD_COLOR_CHOCOLATE

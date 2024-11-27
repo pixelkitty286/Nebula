@@ -7,7 +7,7 @@
 	throw_range = 10
 	w_class = ITEM_SIZE_NORMAL
 	attack_verb = list("mopped", "bashed", "bludgeoned", "whacked")
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 	matter = list(
 		/decl/material/solid/organic/cloth = MATTER_AMOUNT_SECONDARY,
 	)

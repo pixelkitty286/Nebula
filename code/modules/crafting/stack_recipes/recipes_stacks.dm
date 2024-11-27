@@ -7,7 +7,7 @@
 
 /decl/stack_recipe/tile/wood
 	result_type         = /obj/item/stack/tile/wood
-	required_material   = /decl/material/solid/organic/wood
+	required_material   = /decl/material/solid/organic/wood/oak
 
 /decl/stack_recipe/tile/wood/mahogany
 	result_type         = /obj/item/stack/tile/mahogany
@@ -26,8 +26,8 @@
 	result_type         = /obj/item/stack/tile/walnut
 	required_material   = /decl/material/solid/organic/wood/walnut
 
-/decl/stack_recipe/tile/wood/pine_laminate
-	result_type         = /obj/item/stack/tile/pine_laminate
+/decl/stack_recipe/tile/wood/oak_laminate
+	result_type         = /obj/item/stack/tile/oak_laminate
 	required_material   = /decl/material/solid/organic/wood/chipboard
 
 /decl/stack_recipe/tile/wood/mahogany_laminate

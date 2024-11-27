@@ -255,8 +255,8 @@
 	material = /decl/material/solid/gemstone/diamond
 
 /obj/structure/door/wood
-	material = /decl/material/solid/organic/wood
-	color = /decl/material/solid/organic/wood::color
+	material = /decl/material/solid/organic/wood/oak
+	color = /decl/material/solid/organic/wood/oak::color
 
 /obj/structure/door/mahogany
 	material = /decl/material/solid/organic/wood/mahogany
@@ -275,7 +275,7 @@
 	color = /decl/material/solid/organic/wood/walnut::color
 
 /obj/structure/door/wood/saloon
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 	opacity = FALSE
 
 /obj/structure/door/wood/saloon/ebony

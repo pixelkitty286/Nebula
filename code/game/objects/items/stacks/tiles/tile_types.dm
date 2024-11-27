@@ -74,16 +74,16 @@
 	singular_name     = "wood floor tile"
 	desc              = "An easy-to-fit wooden floor tile."
 	icon_state        = "tile-wood"
-	color             = /decl/material/solid/organic/wood::color
-	material          = /decl/material/solid/organic/wood
+	color             = /decl/material/solid/organic/wood/oak::color
+	material          = /decl/material/solid/organic/wood/oak
 
 /obj/item/stack/tile/wood/cyborg
 	name              = "wood floor tile synthesizer"
 	desc              = "A device that makes wood floor tiles."
 	uses_charge       = 1
 	charge_costs      = list(250)
-	stack_merge_type  = /obj/item/stack/tile/pine_laminate
-	build_type        = /obj/item/stack/tile/pine_laminate
+	stack_merge_type  = /obj/item/stack/tile/oak_laminate
+	build_type        = /obj/item/stack/tile/oak_laminate
 	material          = /decl/material/solid/organic/wood/chipboard
 	max_health        = ITEM_HEALTH_NO_DAMAGE
 	is_spawnable_type = FALSE
@@ -136,10 +136,10 @@
 	color             = /decl/material/solid/organic/wood/yew::color
 	material          = /decl/material/solid/organic/wood/yew
 
-/obj/item/stack/tile/pine_laminate
-	name              = "pine laminate floor tile"
-	singular_name     = "pine laminate floor tile"
-	desc              = "An easy-to-fit pine laminate floor tile."
+/obj/item/stack/tile/oak_laminate
+	name              = "oak laminate floor tile"
+	singular_name     = "oak laminate floor tile"
+	desc              = "An easy-to-fit oak laminate floor tile."
 	icon_state        = "tile-wood"
 	color             = /decl/material/solid/organic/wood/chipboard::color
 	material          = /decl/material/solid/organic/wood/chipboard

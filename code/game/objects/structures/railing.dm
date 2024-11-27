@@ -28,7 +28,7 @@
 	density = FALSE
 
 /obj/structure/railing/mapped/wooden
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 	parts_type = /obj/item/stack/material/plank
 	color = WOOD_COLOR_GENERIC
 	paint_color = null

@@ -189,7 +189,7 @@
 	path = /obj/item/fishing_line/high_quality
 
 /datum/fabricator_recipe/chipboard
-	path = /obj/item/stack/material/sheet/mapped/chipboard_pine
+	path = /obj/item/stack/material/sheet/mapped/chipboard_oak
 	category = "Textiles"
 	fabricator_types = list(
 		FABRICATOR_CLASS_GENERAL,
@@ -198,17 +198,17 @@
 
 /datum/fabricator_recipe/chipboard/get_resources()
 	resources = list(
-		/decl/material/solid/organic/wood    = ceil((SHEET_MATERIAL_AMOUNT * FABRICATOR_EXTRA_COST_FACTOR)/2),
-		/decl/material/solid/organic/plastic = ceil((SHEET_MATERIAL_AMOUNT * FABRICATOR_EXTRA_COST_FACTOR)/2)
+		/decl/material/solid/organic/wood/oak = ceil((SHEET_MATERIAL_AMOUNT * FABRICATOR_EXTRA_COST_FACTOR)/2),
+		/decl/material/solid/organic/plastic  = ceil((SHEET_MATERIAL_AMOUNT * FABRICATOR_EXTRA_COST_FACTOR)/2)
 	)
 
 /datum/fabricator_recipe/chipboard
-	path = /obj/item/stack/material/sheet/mapped/chipboard_pine
+	path = /obj/item/stack/material/sheet/mapped/chipboard_oak
 
 /datum/fabricator_recipe/chipboard/get_resources()
 	resources = list(
-		/decl/material/solid/organic/wood    = ceil((SHEET_MATERIAL_AMOUNT * FABRICATOR_EXTRA_COST_FACTOR)/2),
-		/decl/material/solid/organic/plastic = ceil((SHEET_MATERIAL_AMOUNT * FABRICATOR_EXTRA_COST_FACTOR)/2)
+		/decl/material/solid/organic/wood/oak = ceil((SHEET_MATERIAL_AMOUNT * FABRICATOR_EXTRA_COST_FACTOR)/2),
+		/decl/material/solid/organic/plastic  = ceil((SHEET_MATERIAL_AMOUNT * FABRICATOR_EXTRA_COST_FACTOR)/2)
 	)
 
 /datum/fabricator_recipe/chipboard/maple

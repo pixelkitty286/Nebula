@@ -9,8 +9,8 @@
 	build_type         = /obj/item/stack/tile/wood
 	flooring_flags     = TURF_IS_FRAGILE | TURF_REMOVE_SCREWDRIVER
 	footstep_type      = /decl/footsteps/wood
-	color              = /decl/material/solid/organic/wood::color
-	force_material     = /decl/material/solid/organic/wood
+	color              = /decl/material/solid/organic/wood/oak::color
+	force_material     = /decl/material/solid/organic/wood/oak
 	constructed        = TRUE
 	gender             = NEUTER
 	broken_states      = list(
@@ -61,7 +61,7 @@
 	icon_base          = "wood"
 	damage_temperature = T0C+200
 	descriptor         = "sections"
-	build_type         = /obj/item/stack/tile/pine_laminate
+	build_type         = /obj/item/stack/tile/oak_laminate
 	flooring_flags     = TURF_IS_FRAGILE | TURF_REMOVE_SCREWDRIVER
 	footstep_type      = /decl/footsteps/wood
 	color              = /decl/material/solid/organic/wood/chipboard::color

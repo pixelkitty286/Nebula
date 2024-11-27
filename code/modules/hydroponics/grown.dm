@@ -203,7 +203,7 @@
 		seed.thrown_at(src,hit_atom)
 
 var/global/list/_wood_materials = list(
-	/decl/material/solid/organic/wood,
+	/decl/material/solid/organic/wood/oak,
 	/decl/material/solid/organic/wood/mahogany,
 	/decl/material/solid/organic/wood/maple,
 	/decl/material/solid/organic/wood/ebony,

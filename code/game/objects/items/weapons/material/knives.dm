@@ -52,7 +52,7 @@
 	name = "dueling knife"
 	desc = "A length of leather-bound wood studded with razor-sharp teeth. How crude."
 	icon = 'icons/obj/items/weapon/knives/savage.dmi'
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 	material_alteration = MAT_FLAG_ALTERATION_NAME
 	w_class = ITEM_SIZE_NORMAL
 

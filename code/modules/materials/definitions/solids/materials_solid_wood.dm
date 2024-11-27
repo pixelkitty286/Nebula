@@ -1,10 +1,6 @@
 /decl/material/solid/organic/wood
-	name = "oak"
-	uid = "solid_wood"
-	liquid_name = "wood pulp"
-	adjective_name = "oaken"
-	lore_text = "Oak timber is strong yet simple to carve, making it a fine choice for wooden handicrafts."
-	adjective_name = "oaken"
+	name = "wood"
+	abstract_type = /decl/material/solid/organic/wood
 	color = WOOD_COLOR_GENERIC
 	integrity = 75
 	icon_base = 'icons/turf/walls/wood.dmi'
@@ -46,8 +42,16 @@
 	sound_manipulate = 'sound/foley/woodpickup1.ogg'
 	sound_dropped = 'sound/foley/wooddrop1.ogg'
 	compost_value = 0.2
-	temperature_burn_milestone_material = /decl/material/solid/organic/wood
 	paint_verb = "stained"
+	liquid_name = "wood pulp"
+
+/decl/material/solid/organic/wood/oak
+	name = "oak"
+	uid = "solid_wood"
+	adjective_name = "oaken"
+	lore_text = "Oak timber is strong yet simple to carve, making it a fine choice for wooden handicrafts."
+	adjective_name = "oaken"
+	temperature_burn_milestone_material = /decl/material/solid/organic/wood/oak
 
 // Wood is hard but can't really give it an edge.
 /decl/material/solid/organic/wood/can_hold_edge()
@@ -137,10 +141,10 @@
 // Used solely to give the old smooth table icons for spacer tables.
 // Easy to work, not very strong or valuable.
 /decl/material/solid/organic/wood/chipboard
-	name               = "pine chipboard"
-	adjective_name     = "pine laminate"
-	uid                = "solid_wood_chipboard_pine"
-	lore_text          = "Also known as particle board, this material is made from various kinds of pine wood chips and resin, with a plastic laminate."
+	name               = "oak chipboard"
+	adjective_name     = "oak laminate"
+	uid                = "solid_wood_chipboard_oak"
+	lore_text          = "Also known as particle board, this material is made from various kinds of oak wood chips and resin, with a plastic laminate."
 	bench_icon         = 'icons/obj/structures/benches.dmi'
 	pew_icon           = 'icons/obj/structures/pews.dmi'
 	door_icon_base     = "metal"

@@ -4,7 +4,7 @@
 	icon = 'icons/obj/items/stick.dmi'
 	icon_state = ICON_STATE_WORLD
 	w_class = ITEM_SIZE_NORMAL
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 	attack_verb = list("poked", "jabbed")
 	material_alteration = MAT_FLAG_ALTERATION_ALL
 	lock_picking_level = 3

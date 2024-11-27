@@ -6,7 +6,7 @@
 	base_icon = "bench"
 	color = WOOD_COLOR_GENERIC
 	reinf_material = null
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 	obj_flags = 0
 	anchored = TRUE
 	var/connect_neighbors = TRUE

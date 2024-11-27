@@ -3,8 +3,8 @@
 	desc                   = "A sturdy frame suitable for hanging a banner."
 	icon                   = 'icons/obj/structures/banner_frame.dmi'
 	icon_state             = "banner_stand_preview"
-	material               = /decl/material/solid/organic/wood
-	color                  = /decl/material/solid/organic/wood::color
+	material               = /decl/material/solid/organic/wood/oak
+	color                  = /decl/material/solid/organic/wood/oak::color
 	anchored               = TRUE
 	opacity                = FALSE
 	atom_flags             = ATOM_FLAG_CLIMBABLE

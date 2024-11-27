@@ -5,7 +5,7 @@
 /obj/item/fishing_rod
 	name = "fishing rod"
 	desc = "A simple fishing rod with eyelets for stringing a line."
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 	matter = null
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
 	icon = 'icons/obj/fishing_rod.dmi'

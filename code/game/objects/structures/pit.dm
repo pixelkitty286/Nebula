@@ -147,7 +147,7 @@
 	pixel_x                        = 15
 	pixel_y                        = 8
 	anchored                       = TRUE
-	material                       = /decl/material/solid/organic/wood
+	material                       = /decl/material/solid/organic/wood/oak
 	w_class                        = ITEM_SIZE_NORMAL
 	material_alteration            = MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC | MAT_FLAG_ALTERATION_COLOR
 	var/message                    = "Unknown."
@@ -222,7 +222,7 @@
 	desc                = "You're not the first."
 	icon                = 'icons/obj/structures/gravestone.dmi'
 	icon_state          = "wood"
-	material            = /decl/material/solid/organic/wood
+	material            = /decl/material/solid/organic/wood/oak
 	w_class             = ITEM_SIZE_NORMAL
 	material_alteration = MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC | MAT_FLAG_ALTERATION_COLOR
 	var/gravemarker_type = /obj/structure/gravemarker
