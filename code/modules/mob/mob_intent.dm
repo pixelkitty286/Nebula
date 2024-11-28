@@ -28,6 +28,8 @@
 	var/intent_flags = 0
 	/// Descriptive string used in status panel.
 	var/name
+	/// Icon used to draw this intent in the selector.
+	var/icon = 'icons/screen/intents.dmi'
 	/// State used to update intent selector.
 	var/icon_state
 
@@ -37,31 +39,53 @@
 		. += "null or invalid name"
 	if(!istext(icon_state))
 		. += "null or invalid icon_state"
+	if(!icon)
+		. += "null icon"
+	if(icon && istext(icon_state))
+		if(!check_state_in_icon(icon_state, icon))
+			. += "missing icon_state '[icon_state]' from icon '[icon]'"
+		if(!check_state_in_icon("[icon_state]_off", icon))
+			. += "missing icon_state '[icon_state]_off' from icon '[icon]'"
 
 // Basic subtypes.
-/decl/intent/help
-	name             = "help"
-	uid              = "intent_help"
-	intent_flags     = I_FLAG_HELP
-	icon_state       = "intent_help"
-
 /decl/intent/harm
 	name             = "harm"
 	uid              = "intent_harm"
 	intent_flags     = I_FLAG_HARM
 	icon_state       = "intent_harm"
+	sort_order       = 1 // Bottom left of intent selector.
 
 /decl/intent/grab
 	name             = "grab"
 	uid              = "intent_grab"
 	intent_flags     = I_FLAG_GRAB
 	icon_state       = "intent_grab"
+	sort_order       = 2 // Bottom left of the intent selector.
+
+/decl/intent/help
+	name             = "help"
+	uid              = "intent_help"
+	intent_flags     = I_FLAG_HELP
+	icon_state       = "intent_help"
+	sort_order       = 3 // Top left of the intent selector.
 
 /decl/intent/disarm
 	name             = "disarm"
 	uid              = "intent_disarm"
 	intent_flags     = I_FLAG_DISARM
 	icon_state       = "intent_disarm"
+	sort_order       = 4 // Top right of the intent selector.
+
+// Used by nymphs.
+/decl/intent/harm/binary
+	icon             = 'icons/screen/intents_wide.dmi'
+	uid              = "intent_harm_simple"
+	intent_flags     = (I_FLAG_HARM|I_FLAG_DISARM)
+
+/decl/intent/help/binary
+	icon             = 'icons/screen/intents_wide.dmi'
+	uid              = "intent_help_simple"
+	intent_flags     = (I_FLAG_HARM|I_FLAG_GRAB)
 
 /mob
 	/// Decl for current 'intent' of mob; hurt, harm, etc. Initialized by get_intent().
@@ -88,16 +112,22 @@
 /mob/proc/get_intent()
 	RETURN_TYPE(/decl/intent)
 	if(!_a_intent)
-		_a_intent = get_available_intents()[1]
+		_a_intent = get_default_intent()
 	return _a_intent
 
+/mob/proc/get_default_intent()
+	return GET_DECL(I_HELP)
+
 /mob/proc/get_available_intents()
-	var/static/list/available_intents = list(
-		GET_DECL(I_HELP),
-		GET_DECL(I_DISARM),
-		GET_DECL(I_GRAB),
-		GET_DECL(I_HARM)
-	)
+	var/static/list/available_intents
+	if(!available_intents)
+		available_intents = list(
+			GET_DECL(I_HELP),
+			GET_DECL(I_DISARM),
+			GET_DECL(I_GRAB),
+			GET_DECL(I_HARM)
+		)
+		available_intents = sortTim(available_intents, /proc/cmp_decl_sort_value_asc)
 	return available_intents
 
 /mob/proc/cycle_intent(input)
