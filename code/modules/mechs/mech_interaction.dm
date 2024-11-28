@@ -328,7 +328,7 @@
 		user.client.screen -= hud_elements
 		user.client.eye = user
 	if(user in pilots)
-		set_intent(I_HARM)
+		set_intent(I_FLAG_HARM)
 		LAZYREMOVE(pilots, user)
 		UNSETEMPTY(pilots)
 		update_pilots()

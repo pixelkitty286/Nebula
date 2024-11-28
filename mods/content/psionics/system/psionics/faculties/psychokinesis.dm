@@ -1,7 +1,7 @@
 /decl/psionic_faculty/psychokinesis
 	id = PSI_PSYCHOKINESIS
 	name = "Psychokinesis"
-	associated_intent = I_GRAB
+	associated_intent_flag = I_FLAG_GRAB
 	armour_types = list(ARMOR_MELEE, ARMOR_BULLET)
 
 /decl/psionic_power/psychokinesis

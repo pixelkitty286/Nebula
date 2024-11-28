@@ -97,7 +97,7 @@
 	if(check_intent(I_FLAG_HELP) || !attacking_with)
 		return A.attack_animal(src)
 
-	set_intent(I_HARM)
+	set_intent(I_FLAG_HARM)
 	. = A.attackby(attacking_with, src)
 	// attack effects are handled in natural_weapon's apply_hit_effect() instead of here
 	if(!.)

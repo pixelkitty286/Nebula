@@ -4,9 +4,11 @@
 
 /decl/intent/harm/binary/diona
 	icon = 'mods/mobs/dionaea/icons/ui_intent_overlay.dmi'
+	uid = "intent_harm_binary_diona"
 
 /decl/intent/help/binary/diona
 	icon = 'mods/mobs/dionaea/icons/ui_intent_overlay.dmi'
+	uid = "intent_help_binary_diona"
 
 /decl/ui_style/diona
 	name = "Diona"

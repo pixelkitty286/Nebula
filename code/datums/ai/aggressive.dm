@@ -10,7 +10,7 @@
 /datum/mob_controller/aggressive/New()
 	..()
 	if(isliving(body) && !QDELETED(body) && !QDELETED(src))
-		body.set_intent(I_HARM)
+		body.set_intent(I_FLAG_HARM)
 
 /datum/mob_controller/aggressive/set_target(atom/new_target)
 	var/weakref/new_target_ref = weakref(new_target)
@@ -113,7 +113,7 @@
 				SET_STATUS_MAX(victim, STAT_WEAK, 3)
 		return target
 	if(body.Adjacent(target))
-		body.set_intent(I_HARM)
+		body.set_intent(I_FLAG_HARM)
 		body.ClickOn(target)
 		return target
 
@@ -140,7 +140,7 @@
 	// Attack anything on the target turf.
 	var/obj/effect/shield/S = locate(/obj/effect/shield) in targ
 	if(S && S.gen && S.gen.check_flag(MODEFLAG_NONHUMANS))
-		body.set_intent(I_HARM)
+		body.set_intent(I_FLAG_HARM)
 		body.ClickOn(S)
 		return
 
@@ -161,7 +161,7 @@
 	for(var/type in valid_obstacles_by_priority)
 		var/obj/obstacle = locate(type) in targ
 		if(obstacle)
-			body.set_intent(I_HARM)
+			body.set_intent(I_FLAG_HARM)
 			body.ClickOn(obstacle)
 			return
 

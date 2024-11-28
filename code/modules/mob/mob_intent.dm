@@ -2,7 +2,8 @@
 // - Use mob.get_intent() to retrieve the entire decl structure.
 // - Use mob.check_intent(I_FOO) for 1:1 intent type checking.
 // - Use mob.check_intent(I_FLAG_FOO) for 'close enough for government work' flag checking.
-// - Use mob.set_intent(I_FOO) to set intent to a type - does not accept flags.
+// - Use mob.set_intent(I_FOO) to set intent to a type
+// - Use mob.set_intent(I_FLAG_FOO) to set intent to whatever available type has the flag.
 // - Use mob.cycle_intent(INTENT_HOTKEY_LEFT) or mob.cycle_intent(INTENT_HOTKEY_RIGHT) to step up or down the mob intent list.
 // - Override mob.get_available_intents() if you want to change the intents from the default four.
 
@@ -24,7 +25,7 @@
 /decl/intent
 	abstract_type    = /decl/intent
 	decl_flags       = DECL_FLAG_MANDATORY_UID
-	/// Replacing the old usage of I_HURT etc. in attackby() and such. Refer to /mob/proc/check_intent().
+	/// Replacing the old usage of I_HARM etc. in attackby() and such. Refer to /mob/proc/check_intent().
 	var/intent_flags = 0
 	/// Descriptive string used in status panel.
 	var/name
@@ -101,12 +102,21 @@
 			return (intent == resolve_intent(checking_intent))
 
 /mob/proc/set_intent(decl/intent/new_intent)
-	new_intent = resolve_intent(new_intent)
+
+	if(!isnum(new_intent))
+		new_intent = resolve_intent(new_intent)
+	else // Retrieve intent decl based on flag.
+		for(var/decl/intent/intent as anything in get_available_intents())
+			if(intent.intent_flags & new_intent)
+				new_intent = intent
+				break
+
 	if(istype(new_intent) && get_intent() != new_intent)
 		_a_intent = new_intent
 		if(istype(hud_used) && hud_used.action_intent)
 			hud_used.action_intent.update_icon()
 		return TRUE
+
 	return FALSE
 
 /mob/proc/get_intent()
@@ -116,16 +126,16 @@
 	return _a_intent
 
 /mob/proc/get_default_intent()
-	return GET_DECL(I_HELP)
+	return GET_DECL(/decl/intent/help)
 
 /mob/proc/get_available_intents()
 	var/static/list/available_intents
 	if(!available_intents)
 		available_intents = list(
-			GET_DECL(I_HELP),
-			GET_DECL(I_DISARM),
-			GET_DECL(I_GRAB),
-			GET_DECL(I_HARM)
+			GET_DECL(/decl/intent/help),
+			GET_DECL(/decl/intent/disarm),
+			GET_DECL(/decl/intent/grab),
+			GET_DECL(/decl/intent/harm)
 		)
 		available_intents = sortTim(available_intents, /proc/cmp_decl_sort_value_asc)
 	return available_intents

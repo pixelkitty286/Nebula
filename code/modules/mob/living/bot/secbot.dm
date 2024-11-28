@@ -209,9 +209,9 @@
 		return TRUE
 
 	if(isanimal(M))
-		set_intent(I_HARM)
+		set_intent(I_FLAG_HARM)
 	else
-		set_intent(I_GRAB)
+		set_intent(I_FLAG_GRAB)
 
 	stun_baton.use_on_mob(M, src) //robots and turrets aim for center of mass
 	flick(attack_state, src)

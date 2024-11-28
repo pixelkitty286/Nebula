@@ -4,9 +4,11 @@
 
 /decl/intent/harm/binary/ascent
 	icon = 'mods/species/ascent/icons/ui_intent_overlay.dmi'
+	uid = "intent_harm_binary_ascent"
 
 /decl/intent/help/binary/ascent
 	icon = 'mods/species/ascent/icons/ui_intent_overlay.dmi'
+	uid = "intent_help_binary_ascent"
 
 /obj/screen/ascent_nymph_molt
 	name = "molt"

@@ -9,11 +9,11 @@
 	. = ..()
 	for(var/decl/intent/intent as anything in decls_repository.get_decls_of_type_unassociated(/decl/intent)) //Just in case we somehow remove/add a new intent #futureproofing
 		populate_intent(intent)
-	set_phenomenon(add_phenomenon(/datum/phenomenon/communicate), GET_DECL(I_HELP), "shift")
-	set_phenomenon(add_phenomenon(/datum/phenomenon/punish), GET_DECL(I_HELP), "control")
-	set_phenomenon(add_phenomenon(/datum/phenomenon/point), GET_DECL(I_HELP), "controlshift")
-	set_phenomenon(add_phenomenon(/datum/phenomenon/conversion), GET_DECL(I_GRAB), "shift")
-	set_phenomenon(add_phenomenon(/datum/phenomenon/forced_conversion), GET_DECL(I_GRAB), "control")
+	set_phenomenon(add_phenomenon(/datum/phenomenon/communicate), GET_DECL(/decl/intent/disarm), "shift")
+	set_phenomenon(add_phenomenon(/datum/phenomenon/punish), GET_DECL(/decl/intent/help), "control")
+	set_phenomenon(add_phenomenon(/datum/phenomenon/point), GET_DECL(/decl/intent/help), "controlshift")
+	set_phenomenon(add_phenomenon(/datum/phenomenon/conversion), GET_DECL(/decl/intent/grab), "shift")
+	set_phenomenon(add_phenomenon(/datum/phenomenon/forced_conversion), GET_DECL(/decl/intent/grab), "control")
 
 /mob/living/deity/proc/silence(amount)
 	if(!silenced)

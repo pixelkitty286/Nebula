@@ -52,7 +52,7 @@
 	full_name = "Select Help Intent"
 
 /datum/keybinding/mob/select_help_intent/down(client/user)
-	user.mob.set_intent(I_HELP)
+	user.mob.set_intent(I_FLAG_HELP)
 	return TRUE
 
 /datum/keybinding/mob/select_disarm_intent
@@ -61,7 +61,7 @@
 	full_name = "Select Disarm Intent"
 
 /datum/keybinding/mob/select_disarm_intent/down(client/user)
-	user.mob.set_intent(I_DISARM)
+	user.mob.set_intent(I_FLAG_DISARM)
 	return TRUE
 
 /datum/keybinding/mob/select_grab_intent
@@ -70,7 +70,7 @@
 	full_name = "Select Grab Intent"
 
 /datum/keybinding/mob/select_grab_intent/down(client/user)
-	user.mob.set_intent(I_GRAB)
+	user.mob.set_intent(I_FLAG_GRAB)
 	return TRUE
 
 /datum/keybinding/mob/select_harm_intent
@@ -79,7 +79,7 @@
 	full_name = "Select Harm Intent"
 
 /datum/keybinding/mob/select_harm_intent/down(client/user)
-	user.mob.set_intent(I_HARM)
+	user.mob.set_intent(I_FLAG_HARM)
 	return TRUE
 
 /datum/keybinding/mob/cycle_intent_right
