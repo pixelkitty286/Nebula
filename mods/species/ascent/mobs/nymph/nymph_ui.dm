@@ -1,3 +1,4 @@
+/* Commented out due to issues with interactions and combined intent flags.
 /obj/screen/intent/binary/ascent
 	icon = 'mods/species/ascent/icons/ui_intents.dmi'
 	screen_loc = ANYMPH_SCREEN_LOC_INTENT
@@ -9,7 +10,7 @@
 /decl/intent/help/binary/ascent
 	icon = 'mods/species/ascent/icons/ui_intent_overlay.dmi'
 	uid = "intent_help_binary_ascent"
-
+*/
 /obj/screen/ascent_nymph_molt
 	name = "molt"
 	icon = 'mods/species/ascent/icons/ui_molt.dmi'
@@ -53,7 +54,7 @@
 	molt          = new(                                 null, mymob, ui_style, ui_color, ui_alpha)
 	food          = new /obj/screen/food(                null, mymob, ui_style, ui_color, ui_alpha, UI_ICON_NUTRITION)
 	drink         = new /obj/screen/drink(               null, mymob, ui_style, ui_color, ui_alpha, UI_ICON_HYDRATION)
-	action_intent = new /obj/screen/intent/binary/ascent(null)
+	action_intent = new /obj/screen/intent(              null) // Swap to /obj/screen/intent/binary/ascent when interaction code supports it.
 	mymob.healths = new /obj/screen/ascent_nymph_health( null, mymob, ui_style, ui_color, ui_alpha, UI_ICON_HEALTH)
 	src.other = list()
 	src.adding = list(mymob.healths, molt, food, drink, action_intent)

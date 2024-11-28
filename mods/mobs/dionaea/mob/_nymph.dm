@@ -76,6 +76,7 @@
 		heal_damage(OXY, rads, do_update_health = FALSE)
 		heal_damage(TOX, rads)
 
+/*
 /mob/living/simple_animal/alien/diona/get_default_intent()
 	return GET_DECL(/decl/intent/help/binary/diona)
 
@@ -85,6 +86,7 @@
 		GET_DECL(/decl/intent/help/binary/diona)
 	)
 	return available_intents
+*/
 
 /decl/bodytype/diona
 	name = "nymph"
