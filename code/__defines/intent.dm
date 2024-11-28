@@ -1,4 +1,3 @@
-
 // Intent decls for use in set_intent()
 #define I_HELP   /decl/intent/help
 #define I_DISARM /decl/intent/disarm
