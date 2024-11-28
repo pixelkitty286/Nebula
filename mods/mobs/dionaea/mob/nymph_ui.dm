@@ -1,14 +1,5 @@
-/obj/screen/intent/diona_nymph
-	icon_state = "intent_harm"
+/obj/screen/intent/binary/diona
 	screen_loc = DIONA_SCREEN_LOC_INTENT
-
-/obj/screen/intent/diona_nymph/on_update_icon()
-	if(intent == I_HURT || intent == I_GRAB)
-		intent = I_GRAB
-		icon_state = "intent_harm"
-	else
-		intent = I_DISARM
-		icon_state = "intent_help"
 
 /decl/ui_style/diona
 	name = "Diona"
@@ -36,7 +27,7 @@
 	var/ui_color = get_ui_color()
 	var/ui_alpha = get_ui_alpha()
 
-	action_intent = new /obj/screen/intent/diona_nymph(null, mymob, ui_style, ui_color, ui_alpha, UI_ICON_INTENT)
+	action_intent = new /obj/screen/intent/binary/diona(null, mymob, ui_style, ui_color, ui_alpha, UI_ICON_INTENT)
 	mymob.healths = new /obj/screen/diona_health(      null, mymob, ui_style, ui_color, ui_alpha, UI_ICON_HEALTH)
 	src.other = list()
 	src.adding = list(mymob.healths, action_intent)

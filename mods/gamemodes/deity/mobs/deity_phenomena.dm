@@ -85,7 +85,7 @@
 	intent_list[modifiers] = phenomena
 
 /mob/living/deity/proc/get_phenomena(var/shift = 0, var/control = 0)
-	var/list/intent_list = intent_phenomenas[a_intent]
+	var/list/intent_list = intent_phenomenas[get_intent().name]
 	if(intent_list)
 		var/type = ""
 		if(shift)

@@ -25,7 +25,7 @@
 	update_attack_force()
 
 /obj/item/bladed/folding/attack_self(mob/user)
-	if(user.a_intent != I_HELP)
+	if(!user.check_intent(I_FLAG_HELP))
 		set_open(!open, user)
 		return TRUE
 	var/decl/interaction_handler/folding_knife/interaction = GET_DECL(/decl/interaction_handler/folding_knife)

@@ -16,7 +16,7 @@
 	adding += stamina_bar
 
 	// Draw the attack intent dialogue.
-	if(hud_data.has_a_intent)
+	if(hud_data.show_intent_selector)
 		action_intent = new(null, mymob, ui_style, ui_color, ui_alpha, UI_ICON_INTENT)
 		src.adding += action_intent
 		hud_elements |= action_intent

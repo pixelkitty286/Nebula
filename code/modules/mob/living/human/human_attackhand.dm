@@ -126,7 +126,7 @@
 		return TRUE
 
 	// AI driven mobs have a melee telegraph that needs to be handled here.
-	if(user.a_intent == I_HURT && !user.do_attack_windup_checking(src))
+	if(user.check_intent(I_FLAG_HARM) && !user.do_attack_windup_checking(src))
 		return TRUE
 
 	if(!ishuman(user))
@@ -156,15 +156,13 @@
 		to_chat(user, SPAN_DANGER("They are missing that limb!"))
 		return TRUE
 
-	switch(src.a_intent)
-		if(I_HELP)
-			// We didn't see this coming, so we get the full blow
-			rand_damage = 5
-			accurate = 1
-		if(I_HURT, I_GRAB)
-			// We're in a fighting stance, there's a chance we block
-			if(MayMove() && src!=H && prob(20))
-				block = 1
+	// We didn't see this coming, so we get the full blow
+	if(check_intent(I_FLAG_HELP))
+		rand_damage = 5
+		accurate = 1
+	// We're in a fighting stance, there's a chance we block
+	else if(check_intent(I_FLAG_HARM|I_FLAG_GRAB) && MayMove() && src != H && prob(20))
+		block = 1
 
 	if (LAZYLEN(user.grabbed_by))
 		// Someone got a good grip on them, they won't be able to do much damage
@@ -240,7 +238,7 @@
 /mob/living/human/attack_hand(mob/user)
 
 	remove_cloaking_source(species)
-	if(user.a_intent != I_GRAB)
+	if(!user.check_intent(I_FLAG_GRAB))
 		for (var/obj/item/grab/grab as anything in user.get_active_grabs())
 			if(grab.assailant == user && grab.affecting == src && grab.resolve_openhand_attack())
 				return TRUE
@@ -434,6 +432,6 @@
 	// Dexterity ect. should be checked in these procs regardless,
 	// but unarmed attacks that don't require hands should still
 	// have the ability to be used.
-	if(!(. = ..()) && !get_active_held_item_slot() && a_intent == I_HURT && isliving(A))
+	if(!(. = ..()) && !get_active_held_item_slot() && check_intent(I_FLAG_HARM) && isliving(A))
 		var/mob/living/victim = A
 		return victim.default_hurt_interaction(src)

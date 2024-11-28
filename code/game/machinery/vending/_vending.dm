@@ -141,7 +141,7 @@
 		return 1
 
 /obj/machinery/vending/receive_mouse_drop(atom/dropping, mob/user, params)
-	if(!(. = ..()) && isitem(dropping) && istype(user) && user.a_intent == I_HELP && CanPhysicallyInteract(user))
+	if(!(. = ..()) && isitem(dropping) && istype(user) && user.check_intent(I_FLAG_HELP) && CanPhysicallyInteract(user))
 		return attempt_to_stock(dropping, user)
 
 /obj/machinery/vending/attackby(obj/item/W, mob/user)
@@ -183,7 +183,7 @@
 	if((. = component_attackby(W, user)))
 		return
 
-	if((user.a_intent == I_HELP) && attempt_to_stock(W, user))
+	if((user.check_intent(I_FLAG_HELP)) && attempt_to_stock(W, user))
 		return TRUE
 
 	if((obj_flags & OBJ_FLAG_ANCHORABLE) && (IS_WRENCH(W) || IS_HAMMER(W)))

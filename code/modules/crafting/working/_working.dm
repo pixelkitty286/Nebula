@@ -51,7 +51,7 @@
 
 /obj/structure/working/attackby(obj/item/W, mob/user)
 
-	if(user.a_intent == I_HURT)
+	if(user.check_intent(I_FLAG_HARM))
 		return ..()
 
 	if(working)
@@ -74,7 +74,7 @@
 
 /obj/structure/working/attack_hand(mob/user)
 
-	if(user.a_intent == I_HURT)
+	if(user.check_intent(I_FLAG_HARM))
 		return ..()
 
 	if(working)

@@ -82,7 +82,7 @@
 	return TRUE
 
 /obj/structure/noticeboard/attack_hand(var/mob/user)
-	if(user.a_intent == I_HURT)
+	if(user.check_intent(I_FLAG_HARM))
 		return ..()
 	interact(user)
 	return TRUE

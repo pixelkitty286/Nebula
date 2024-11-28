@@ -218,7 +218,7 @@ WOOD_RAILING_SUBTYPE(yew)
 		to_chat(user, SPAN_WARNING("You need a better grip to do that!"))
 		return TRUE
 
-	if(user.a_intent == I_HURT && ishuman(victim))
+	if(user.check_intent(I_FLAG_HARM) && ishuman(victim))
 		visible_message(SPAN_DANGER("\The [user] slams \the [victim]'s face against \the [src]!"))
 		playsound(loc, 'sound/effects/grillehit.ogg', 50, 1)
 		var/blocked = victim.get_blocked_ratio(BP_HEAD, BRUTE, damage = 8)

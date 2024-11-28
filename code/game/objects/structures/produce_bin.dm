@@ -25,7 +25,7 @@
 
 /obj/structure/produce_bin/attackby(obj/item/bag, mob/user)
 
-	if(user.a_intent == I_HURT)
+	if(user.check_intent(I_FLAG_HARM))
 		return ..()
 
 	if(bag.storage)

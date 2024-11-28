@@ -115,7 +115,7 @@
 /obj/machinery/papershredder/attackby(var/obj/item/used_item, var/mob/user)
 	//Silently skip tools, and things we don't have the dexterity to use
 	if(!has_extension(used_item, /datum/extension/tool) && used_item.user_can_attack_with(user, silent = TRUE))
-		var/trying_to_smack = !(used_item.item_flags & ITEM_FLAG_NO_BLUDGEON) && user && user.a_intent == I_HURT
+		var/trying_to_smack = !(used_item.item_flags & ITEM_FLAG_NO_BLUDGEON) && user && user.check_intent(I_FLAG_HARM)
 		if(used_item.storage)
 			empty_bin(user, used_item)
 			return TRUE
