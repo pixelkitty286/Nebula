@@ -16,6 +16,14 @@
 	var/list/decals
 	var/trim_color
 
+/obj/item/banner/Initialize(ml, material_key)
+	for(var/decal in decals)
+		if(ispath(decal))
+			var/decl/banner_symbol/decal_decl = GET_DECL(decal)
+			decals[decal_decl] = decals[decal]
+			decals -= decal
+	. = ..()
+
 var/global/list/banner_type_to_symbols = list()
 /obj/item/banner/proc/get_available_decals()
 	. = global.banner_type_to_symbols[banner_type]
