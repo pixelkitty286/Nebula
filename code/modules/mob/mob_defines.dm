@@ -70,9 +70,6 @@
 	*/
 	var/obj/screen/zone_selector/zone_sel = null
 
-	/// Cursor icon used when holding shift over things.
-	var/examine_cursor_icon = 'icons/effects/mouse_pointers/examine_pointer.dmi'
-
 	var/damageoverlaytemp = 0
 	var/obj/machinery/machine = null
 
