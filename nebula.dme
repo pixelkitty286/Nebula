@@ -2456,6 +2456,8 @@
 #include "code\modules\games\cards_cag.dm"
 #include "code\modules\games\spaceball_cards.dm"
 #include "code\modules\games\tarot.dm"
+#include "code\modules\gemstones\_gemstone.dm"
+#include "code\modules\gemstones\gemstone_cuts.dm"
 #include "code\modules\genetics\_gene.dm"
 #include "code\modules\genetics\plants\_gene_plant.dm"
 #include "code\modules\genetics\plants\_plant_trait.dm"
