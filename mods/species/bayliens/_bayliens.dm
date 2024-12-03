@@ -1,7 +1,12 @@
-#define SPECIES_SKRELL   "Skrell"
-#define SPECIES_TAJARA   "Tajara"
-#define SPECIES_LIZARD   "Unathi"
-#define SPECIES_ADHERENT "Adherent"
+#define SPECIES_SKRELL    "Skrell"
+#define SPECIES_TAJARA    "Tajara"
+#define SPECIES_LIZARD    "Unathi"
+#define SPECIES_ADHERENT  "Adherent"
+
+#define BODYTYPE_FELINE   "feline body"
+#define BODYTYPE_ADHERENT "adherent body"
+
+#define BODY_EQUIP_FLAG_FELINE BITFLAG(7)
 
 /decl/modpack/bayliens
 	name = "Baystation 12 Aliens"
