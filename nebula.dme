@@ -1230,6 +1230,7 @@
 #include "code\game\objects\items\stacks\medical\medical_resin.dm"
 #include "code\game\objects\items\stacks\medical\medical_splint.dm"
 #include "code\game\objects\items\stacks\tiles\tile_types.dm"
+#include "code\game\objects\items\stacks\tiles\tile_types_wooden.dm"
 #include "code\game\objects\items\weapons\AI_modules.dm"
 #include "code\game\objects\items\weapons\autopsy.dm"
 #include "code\game\objects\items\weapons\balls.dm"
