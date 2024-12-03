@@ -83,7 +83,7 @@
 		return
 
 	var/obj/O = get_inserted()
-	if(user)
+	if(user && loc.Adjacent(user)) // Check adjacency in case this is called via UI stuff from a distance.
 		user.put_in_hands(O)
 		to_chat(user, SPAN_NOTICE("You remove \the [O] from \the [src]."))
 	else
