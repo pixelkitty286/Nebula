@@ -2377,7 +2377,7 @@
 /turf/floor/tiled/techfloor/grid,
 /area/map_template/colony/engineering)
 "fe" = (
-/obj/structure/table/woodentable_reinforced,
+/obj/structure/table/wood/reinforced,
 /obj/structure/flora/pottedplant/smallcactus{
 	pixel_y = 12
 	},
@@ -2704,7 +2704,7 @@
 /turf/floor/laminate/walnut,
 /area/map_template/colony/messhall)
 "fI" = (
-/obj/structure/table/woodentable_reinforced,
+/obj/structure/table/wood/reinforced,
 /obj/item/box/fancy/donut,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -6711,7 +6711,7 @@
 /turf/floor/tiled/techfloor,
 /area/map_template/colony)
 "mS" = (
-/obj/structure/table/woodentable_reinforced,
+/obj/structure/table/wood/reinforced,
 /obj/effect/floor_decal/techfloor{
 	dir = 6
 	},

@@ -31,7 +31,7 @@
 /turf/wall/natural/random/ministation,
 /area/space)
 "ai" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/pool,
 /area/ministation/dorms)
 "ak" = (
@@ -1727,7 +1727,7 @@
 /turf/floor/reinforced/airmix,
 /area/ministation/atmospherics)
 "gF" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -3756,7 +3756,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -7267,7 +7267,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/table/laminatetable_reinforced/walnut/maple,
+/obj/structure/table/laminate/reinforced/walnut/maple,
 /turf/floor/laminate,
 /area/ministation/engine)
 "EN" = (
@@ -7277,7 +7277,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/table/laminatetable_reinforced/walnut/maple,
+/obj/structure/table/laminate/reinforced/walnut/maple,
 /obj/item/chems/chem_disp_cartridge/coffee{
 	name = "coffee canister"
 	},
@@ -7289,7 +7289,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/table/laminatetable_reinforced/walnut/maple,
+/obj/structure/table/laminate/reinforced/walnut/maple,
 /turf/floor/laminate,
 /area/ministation/engine)
 "EP" = (
@@ -7317,7 +7317,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 9
@@ -7405,7 +7405,7 @@
 "Fc" = (
 /obj/item/wrench,
 /obj/item/clothing/gloves/insulated,
-/obj/structure/table/laminatetable_reinforced/walnut/maple,
+/obj/structure/table/laminate/reinforced/walnut/maple,
 /turf/floor/laminate,
 /area/ministation/engine)
 "Fd" = (
@@ -7414,7 +7414,7 @@
 	},
 /obj/item/stack/tape_roll/barricade_tape/atmos,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/table/laminatetable_reinforced/walnut/maple,
+/obj/structure/table/laminate/reinforced/walnut/maple,
 /obj/item/chems/spray/cleaner,
 /turf/floor/laminate,
 /area/ministation/engine)
@@ -7424,7 +7424,7 @@
 	},
 /obj/item/chems/drinks/glass2/coffeecup/metal,
 /obj/item/chems/drinks/glass2/coffeecup/metal,
-/obj/structure/table/laminatetable_reinforced/walnut/maple,
+/obj/structure/table/laminate/reinforced/walnut/maple,
 /obj/item/chems/drinks/glass2/coffeecup/tall,
 /turf/floor/laminate,
 /area/ministation/engine)
@@ -11756,7 +11756,7 @@
 /turf/floor/tiled,
 /area/ministation/cargo)
 "Ro" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/clothing/mask/snorkel,
 /obj/item/clothing/mask/snorkel,
 /obj/machinery/light{
@@ -12544,7 +12544,7 @@
 /turf/space,
 /area/space)
 "Ua" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/clothing/mask/snorkel,
 /obj/item/clothing/mask/snorkel,
 /turf/floor/pool,
@@ -13830,7 +13830,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/autoname,
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/poster,
 /obj/item/pen,
 /turf/floor/laminate/walnut,

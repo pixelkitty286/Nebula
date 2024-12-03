@@ -1,0 +1,2 @@
+/obj/structure/table/woodentable/@SUBTYPES : /obj/structure/table/wood/@SUBTYPES{@OLD}
+/obj/structure/table/woodentable_reinforced/@SUBTYPES : /obj/structure/table/wood/reinforced/@SUBTYPES{@OLD}

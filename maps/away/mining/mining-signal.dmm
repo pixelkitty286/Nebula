@@ -667,18 +667,18 @@
 /turf/floor/laminate/broken/three,
 /area/outpost/abandoned)
 "co" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
 /turf/floor/laminate,
 /area/outpost/abandoned)
 "cp" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/board,
 /turf/floor/laminate,
 /area/outpost/abandoned)
 "cq" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/loot,
 /turf/floor/laminate,
 /area/outpost/abandoned)
@@ -773,7 +773,7 @@
 /turf/floor/carpet/blue,
 /area/outpost/abandoned)
 "cO" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/loot,
 /turf/floor/carpet/blue,
 /area/outpost/abandoned)
@@ -975,13 +975,13 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/loot,
 /turf/floor/carpet,
 /area/outpost/abandoned)
 "dx" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/carpet,
 /area/outpost/abandoned)
 "dy" = (
@@ -994,7 +994,7 @@
 /area/outpost/abandoned)
 "dz" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/loot,
 /turf/floor/carpet/broken,
 /area/outpost/abandoned)
@@ -1002,7 +1002,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/carpet,
 /area/outpost/abandoned)
 "dC" = (
@@ -1100,7 +1100,7 @@
 /turf/wall/titanium,
 /area/outpost/abandoned)
 "dR" = (
-/obj/structure/table/laminatetable{
+/obj/structure/table/laminate{
 	icon_state = "solid_flip0"
 	},
 /turf/floor/carpet/blue,

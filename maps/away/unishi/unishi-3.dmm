@@ -896,7 +896,7 @@
 /turf/floor/laminate,
 /area/unishi/lounge)
 "cH" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/cell/crap,
 /obj/item/stock_parts/circuitboard/gyrotron_control,
 /obj/item/paper_bin,
@@ -910,7 +910,7 @@
 /turf/space,
 /area/space)
 "cJ" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/trash/raisins,
 /obj/item/pizzabox/margherita,
 /obj/random/advdevice,
@@ -920,7 +920,7 @@
 /turf/floor/tiled,
 /area/unishi/living)
 "cK" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/dice,
 /obj/item/deck/cards,
 /obj/item/pen/fancy,
@@ -928,14 +928,14 @@
 /turf/floor/laminate,
 /area/unishi/lounge)
 "cL" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/board,
 /obj/item/book/manual/mass_spectrometry,
 /obj/item/book/fluff/stasis,
 /turf/floor/tiled,
 /area/unishi/living)
 "cM" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
@@ -1024,7 +1024,7 @@
 /turf/floor/tiled,
 /area/unishi/living)
 "cY" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/trash/raisins,
 /obj/item/book/manual/nuclear,
 /turf/floor/tiled,
@@ -1091,7 +1091,7 @@
 /turf/floor/tiled,
 /area/unishi/kitchen)
 "dg" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/trash/candy,
 /obj/machinery/recharger,
 /turf/floor/tiled,
@@ -1268,7 +1268,7 @@
 /turf/floor/tiled,
 /area/unishi/living)
 "dD" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/cane/fancy/sword,
 /obj/item/clothing/suit/radiation,
 /turf/floor/tiled,
@@ -1441,7 +1441,7 @@
 /turf/floor/tiled,
 /area/unishi/living)
 "eb" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/poster,
 /obj/item/grooming/comb/colorable/random,
 /obj/random/advdevice,
@@ -1641,7 +1641,7 @@
 /turf/floor/laminate,
 /area/unishi/living)
 "eB" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
@@ -1720,7 +1720,7 @@
 /turf/floor/laminate,
 /area/unishi/living)
 "eJ" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/grooming/brush,
 /obj/item/cosmetics/lipstick/black,
 /obj/item/cosmetics/lipstick/green,
@@ -1780,7 +1780,7 @@
 /turf/floor/laminate,
 /area/unishi/living)
 "eS" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/pen/fancy,
 /obj/random/drinkbottle,
 /turf/floor/laminate,
@@ -1796,7 +1796,7 @@
 /turf/floor/laminate,
 /area/unishi/living)
 "eV" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/paper_bin,
 /turf/floor/laminate,
 /area/unishi/living)

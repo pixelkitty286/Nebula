@@ -854,26 +854,26 @@
 /turf/floor/plating,
 /area/lar_maria/atmos)
 "cD" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "cE" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/smokes,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "cF" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/toy,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "cG" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/box/glowsticks,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "cH" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/smokes,
 /obj/random/drinkbottle,
 /turf/floor/laminate,
@@ -1482,7 +1482,7 @@
 /turf/floor/tiled,
 /area/lar_maria/office)
 "eC" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/paper_bin,
 /obj/item/pen/blue,
 /turf/floor/tiled,
@@ -1498,18 +1498,18 @@
 /turf/floor/tiled,
 /area/lar_maria/office)
 "eF" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/box/handcuffs,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "eG" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/smokes,
 /obj/random/snack,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "eH" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/box/beakers,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
@@ -1588,7 +1588,7 @@
 /turf/floor/tiled,
 /area/lar_maria/office)
 "eU" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/tiled,
 /area/lar_maria/office)
 "eV" = (
@@ -1812,29 +1812,29 @@
 /turf/floor/tiled,
 /area/lar_maria/office)
 "fF" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/cane/aluminium,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "fG" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/clothing/head/soft/zhp_cap,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "fH" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/drinkbottle,
 /obj/random/contraband,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "fI" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/toolbox,
 /obj/item/scalpel,
 /turf/floor/laminate,
 /area/lar_maria/dorms)
 "fJ" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/snack,
 /turf/floor/laminate,
 /area/lar_maria/dorms)

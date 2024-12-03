@@ -2562,7 +2562,7 @@
 /turf/floor/laminate,
 /area/errant_pisces/rooms)
 "gw" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	level = 2
 	},
@@ -2742,7 +2742,7 @@
 /turf/floor/tiled,
 /area/errant_pisces/dorms)
 "gZ" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/laminate,
 /area/errant_pisces/rooms)
 "ha" = (
@@ -2752,7 +2752,7 @@
 /turf/floor/laminate,
 /area/errant_pisces/rooms)
 "hb" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/paper_bin,
 /obj/item/flashlight/lamp,
 /turf/floor/laminate,
@@ -2769,7 +2769,7 @@
 /turf/floor/laminate,
 /area/errant_pisces/rooms)
 "he" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/ashtray,
 /obj/random/smokes,
 /turf/floor/laminate,
@@ -2941,7 +2941,7 @@
 	name = "south bump";
 	pixel_y = -24
 	},
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/smokes,
 /obj/structure/cable/green,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -5784,7 +5784,7 @@
 /turf/floor/laminate,
 /area/errant_pisces/bridge)
 "pn" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/laminate,
 /area/errant_pisces/bridge)
 "po" = (
@@ -5870,7 +5870,7 @@
 /turf/floor/laminate,
 /area/errant_pisces/bridge)
 "pC" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/toy,
 /turf/floor/laminate,
 /area/errant_pisces/bridge)

@@ -1293,7 +1293,7 @@
 /turf/floor/plating,
 /area/casino/casino_storage)
 "dQ" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/box/fancy/cigar{
 	pixel_y = 5
 	},
@@ -1317,7 +1317,7 @@
 /turf/floor/plating,
 /area/casino/casino_storage)
 "dS" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/toolbox/mechanical,
 /obj/item/stack/cable_coil,
 /turf/floor/plating,
@@ -2244,7 +2244,7 @@
 /turf/floor/tiled,
 /area/casino/casino_mainfloor)
 "gu" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/clothing/mask/smokable/pipe,
 /obj/machinery/light{
 	dir = 1
@@ -2253,7 +2253,7 @@
 /turf/floor/carpet,
 /area/casino/casino_mainfloor)
 "gv" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/box/fancy/cigar,
 /obj/item/box/fancy/cigar{
 	pixel_y = 5
@@ -2726,13 +2726,13 @@
 /turf/floor/carpet,
 /area/casino/casino_mainfloor)
 "ia" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/plate,
 /obj/item/utensil/fork,
 /turf/floor/carpet,
 /area/casino/casino_mainfloor)
 "ib" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/carpet,
 /area/casino/casino_mainfloor)
 "ic" = (
@@ -2855,13 +2855,13 @@
 /turf/floor/carpet,
 /area/casino/casino_mainfloor)
 "iq" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/plate,
 /obj/item/food/applepie,
 /turf/floor/carpet,
 /area/casino/casino_mainfloor)
 "ir" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/plate,
 /obj/item/food/bigbiteburger,
 /turf/floor/carpet,
@@ -3048,7 +3048,7 @@
 /turf/floor/tiled,
 /area/casino/casino_kitchen)
 "iR" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/plate,
 /obj/item/utensil/spoon,
 /turf/floor/carpet,
@@ -3385,7 +3385,7 @@
 /turf/floor/carpet,
 /area/casino/casino_mainfloor)
 "jJ" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/ashtray,
 /obj/item/food/cubancarp,
 /turf/floor/carpet,
@@ -3463,7 +3463,7 @@
 /turf/floor/tiled,
 /area/casino/casino_mainfloor)
 "jU" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/plate,
 /obj/item/food/waffles,
 /obj/item/chems/drinks/cans/iced_tea,
@@ -3631,7 +3631,7 @@
 /turf/floor/tiled,
 /area/casino/casino_mainfloor)
 "kt" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/pizzabox/meat,
 /turf/floor/carpet,
 /area/casino/casino_mainfloor)
@@ -4219,14 +4219,14 @@
 /turf/floor/laminate,
 /area/casino/casino_private_vip)
 "lZ" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/box/fancy/cigar{
 	pixel_y = 5
 	},
 /turf/floor/laminate,
 /area/casino/casino_private_vip)
 "ma" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/ashtray,
 /obj/random/drinkbottle,
 /turf/floor/laminate,
@@ -4281,7 +4281,7 @@
 /turf/floor/tiled/white,
 /area/casino/casino_patron_bathroom)
 "mj" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/item/chems/drinks/bottle/agedwhiskey,
 /obj/item/clothing/mask/smokable/cigarette/cigar/havana,
 /obj/item/clothing/mask/smokable/cigarette/cigar/havana,
@@ -4328,12 +4328,12 @@
 /turf/floor/laminate,
 /area/casino/casino_private_vip)
 "mq" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/drinkbottle,
 /turf/floor/laminate,
 /area/casino/casino_private_vip)
 "mr" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /turf/floor/laminate,
 /area/casino/casino_private_vip)
 "ms" = (
@@ -4348,7 +4348,7 @@
 /turf/floor/laminate,
 /area/casino/casino_private_vip)
 "mu" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/drinkbottle,
 /obj/random/coin,
 /obj/random/coin,
@@ -4368,7 +4368,7 @@
 /turf/floor/laminate,
 /area/casino/casino_private1)
 "mx" = (
-/obj/structure/table/laminatetable,
+/obj/structure/table/laminate,
 /obj/random/drinkbottle,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1

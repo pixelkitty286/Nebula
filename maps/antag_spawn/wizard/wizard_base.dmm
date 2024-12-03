@@ -6,7 +6,7 @@
 /turf/unsimulated/wall,
 /area/map_template/wizard_station)
 "ac" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/backpack/cultpack,
 /turf/floor/carpet,
 /area/map_template/wizard_station)
@@ -21,7 +21,7 @@
 	},
 /area/map_template/wizard_station)
 "af" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/backpack/satchel/grey/withwallet,
 /turf/floor/carpet,
 /area/map_template/wizard_station)
@@ -42,7 +42,7 @@
 /turf/floor/carpet,
 /area/map_template/wizard_station)
 "ak" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/flashlight/lamp/green{
 	on = 0;
 	pixel_x = -3;
@@ -52,7 +52,7 @@
 /turf/floor/carpet,
 /area/map_template/wizard_station)
 "al" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/dice,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
@@ -62,12 +62,12 @@
 /turf/floor/carpet,
 /area/map_template/wizard_station)
 "an" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/dice/d20,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
 "ao" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/backpack/satchel/grey/withwallet,
 /obj/item/clothing/glasses/eyepatch/monocle,
 /turf/floor/carpet,
@@ -79,12 +79,12 @@
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
 "aq" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/food/chawanmushi,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
 "ar" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/abstract/landmark{
 	name = "Teleport-Scroll"
 	},
@@ -92,7 +92,7 @@
 /turf/floor/carpet,
 /area/map_template/wizard_station)
 "as" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/megaphone,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
@@ -100,12 +100,12 @@
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
 "au" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/cash/c1,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
 "av" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/machinery/chemical_dispenser/bar_soft/full,
 /obj/item/radio/intercom/wizard{
 	dir = 8;
@@ -197,7 +197,7 @@
 /turf/unsimulated/floor/freezer,
 /area/map_template/wizard_station)
 "aL" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/radio/intercom/wizard{
 	dir = 4;
 	pixel_x = -22
@@ -215,7 +215,7 @@
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
 "aO" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/box/cups,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
@@ -228,7 +228,7 @@
 /turf/unsimulated/floor/lino,
 /area/map_template/wizard_station)
 "aQ" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/bag/cash,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
@@ -241,7 +241,7 @@
 /turf/unsimulated/floor/lino,
 /area/map_template/wizard_station)
 "aS" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/box/candles,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
@@ -273,7 +273,7 @@
 /turf/unsimulated/floor/freezer,
 /area/map_template/wizard_station)
 "aY" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/box/fancy/donut,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
@@ -316,7 +316,7 @@
 /turf/unsimulated/floor/freezer,
 /area/map_template/wizard_station)
 "bg" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /obj/item/chems/glass/bowl/mapped/meatball,
 /turf/unsimulated/floor/laminate,
 /area/map_template/wizard_station)
@@ -414,7 +414,7 @@
 /turf/unsimulated/floor/cult,
 /area/map_template/wizard_station)
 "by" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wood,
 /turf/unsimulated/floor/cult,
 /area/map_template/wizard_station)
 "bz" = (
