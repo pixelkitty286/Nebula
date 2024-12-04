@@ -1,0 +1,6 @@
+author: ophelia
+changes:
+  - {tweak: 'You can now put any disk into the research design database or research
+      design console, but only the correct disk type (tech disk or design disk) will
+      function.'}
+delete-after: true
