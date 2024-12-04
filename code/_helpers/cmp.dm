@@ -155,3 +155,6 @@
 			return -1 // goes after
 		return cmp_skill_asc(a, GET_DECL(b.prerequisites[1]))
 	return cmp_name_or_type_asc(a, b)
+
+/proc/cmp_priority_list(list/A, list/B)
+	return A["priority"] - B["priority"]
