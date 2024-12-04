@@ -60,6 +60,17 @@
 	crafting_extra_cost_factor = 1.1 // less material is lost because it's relatively simple
 	difficulty                 = MAT_VALUE_NORMAL_DIY // Slightly easier than making clothing.
 
+/decl/stack_recipe/textiles/leather/sack
+	result_type                = /obj/item/bag/sack
+	difficulty                 = MAT_VALUE_HARD_DIY
+
+/decl/stack_recipe/textiles/leather/backpack
+	result_type                = /obj/item/backpack/crafted/backpack
+	difficulty                 = MAT_VALUE_VERY_HARD_DIY
+
+/decl/stack_recipe/textiles/leather/backpack/haversack
+	result_type                = /obj/item/backpack/crafted
+
 /decl/stack_recipe/textiles/leather/waterskin
 	result_type           = /obj/item/chems/waterskin/crafted
 	required_material     = /decl/material/solid/organic/leather
