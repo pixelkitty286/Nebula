@@ -11,6 +11,9 @@
 /decl/stack_recipe/woven/basket
 	result_type       = /obj/item/basket
 
+/decl/stack_recipe/woven/large_basket
+	result_type       = /obj/item/basket/large
+
 /decl/stack_recipe/woven/banner
 	result_type       = /obj/item/banner/woven
 
