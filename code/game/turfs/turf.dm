@@ -395,11 +395,13 @@
 				L.Add(t)
 	return L
 
-/turf/proc/contains_dense_objects()
+/turf/proc/contains_dense_objects(exceptions)
 	if(density)
 		return 1
 	for(var/atom/A in src)
 		if(A.density && !(A.atom_flags & ATOM_FLAG_CHECKS_BORDER))
+			if(exceptions && (exceptions == A || (A in exceptions)))
+				continue
 			return 1
 	return 0
 
@@ -863,3 +865,5 @@
 
 /turf/take_vaporized_reagent(reagent, amount)
 	return assume_gas(reagent, round(amount / REAGENT_UNITS_PER_GAS_MOLE))
+
+/turf/proc/is_purged()
