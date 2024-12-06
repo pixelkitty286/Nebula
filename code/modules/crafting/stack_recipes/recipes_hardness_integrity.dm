@@ -52,6 +52,10 @@
 /decl/stack_recipe/hardness/integrity/furniture/bench/pew/single
 	result_type        = /obj/structure/bed/chair/bench/pew/single
 
+/decl/stack_recipe/hardness/integrity/furniture/bench/lounge
+	result_type        = /obj/structure/bed/chair/bench/lounge
+	difficulty         = MAT_VALUE_VERY_HARD_DIY
+
 /decl/stack_recipe/hardness/integrity/furniture/closet
 	result_type        = /obj/structure/closet
 
