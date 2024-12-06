@@ -2630,7 +2630,6 @@
 #include "code\modules\item_effects\item_effect_charges.dm"
 #include "code\modules\item_effects\item_effect_debug.dm"
 #include "code\modules\item_effects\item_effect_item.dm"
-#include "code\modules\item_worth\_helpers.dm"
 #include "code\modules\keybindings\_defines.dm"
 #include "code\modules\keybindings\_keybindings.dm"
 #include "code\modules\keybindings\admin.dm"
