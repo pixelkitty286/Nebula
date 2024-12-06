@@ -5,7 +5,7 @@
 	icon_state = "densecrate"
 	density = TRUE
 	atom_flags = ATOM_FLAG_CLIMBABLE
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 
 /obj/structure/largecrate/Initialize()
 	. = ..()

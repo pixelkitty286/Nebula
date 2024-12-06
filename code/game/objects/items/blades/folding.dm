@@ -8,7 +8,7 @@
 	guard_material            = null
 	slot_flags                = null
 	material                  = /decl/material/solid/metal/bronze
-	hilt_material             = /decl/material/solid/organic/wood
+	hilt_material             = /decl/material/solid/organic/wood/oak
 	_base_attack_force        = 5
 
 	var/open                  = FALSE

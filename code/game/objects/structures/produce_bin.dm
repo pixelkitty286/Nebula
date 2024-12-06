@@ -5,8 +5,8 @@
 	icon_state = ICON_STATE_WORLD
 	anchored = TRUE
 	density = TRUE
-	color = /decl/material/solid/organic/wood::color
-	material = /decl/material/solid/organic/wood
+	color = /decl/material/solid/organic/wood/oak::color
+	material = /decl/material/solid/organic/wood/oak
 	material_alteration = MAT_FLAG_ALTERATION_ALL
 	storage = /datum/storage/produce_bin
 

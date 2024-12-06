@@ -4,7 +4,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "spirit_board"
 	density = TRUE
-	material = /decl/material/solid/organic/wood
+	material = /decl/material/solid/organic/wood/oak
 	var/next_use = 0
 	var/planchette = "A"
 	var/lastuser = null

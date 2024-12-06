@@ -6,7 +6,7 @@
 
 	w_class             = ITEM_SIZE_HUGE
 	attack_verb         = list("bludgeoned", "whacked", "disciplined", "thrashed")
-	material            = /decl/material/solid/organic/wood
+	material            = /decl/material/solid/organic/wood/oak
 	material_alteration = MAT_FLAG_ALTERATION_ALL
 	base_parry_chance   = 30
 	_base_attack_force = 3

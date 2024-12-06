@@ -5,7 +5,7 @@
 	icon_state                  = ICON_STATE_WORLD
 	w_class                     = ITEM_SIZE_TINY
 	origin_tech                 = @'{"materials":1}'
-	material                    = /decl/material/solid/organic/wood
+	material                    = /decl/material/solid/organic/wood/oak
 
 	/// Parameters for lighting when lit.
 	var/lit_light_range         = 1
