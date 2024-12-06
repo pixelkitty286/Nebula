@@ -168,7 +168,7 @@
 
 /obj/structure/table/attackby(obj/item/W, mob/user, click_params)
 
-	if(user.a_intent == I_HURT && W.is_special_cutting_tool())
+	if(user.check_intent(I_FLAG_HARM) && W.is_special_cutting_tool())
 		spark_at(src.loc, amount=5)
 		playsound(src.loc, 'sound/weapons/blade1.ogg', 50, 1)
 		user.visible_message(SPAN_DANGER("\The [src] was sliced apart by \the [user]!"))
@@ -202,7 +202,7 @@
 			return TRUE
 
 	if(istype(W, /obj/item/deck)) //playing cards
-		if(user.a_intent == I_GRAB)
+		if(user.check_intent(I_FLAG_GRAB))
 			var/obj/item/deck/D = W
 			if(!length(D.cards))
 				to_chat(user, "There are no cards in the deck.")

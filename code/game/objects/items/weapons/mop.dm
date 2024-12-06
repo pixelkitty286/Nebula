@@ -58,7 +58,7 @@
 			return
 
 		var/trans_amt = FLUID_QDEL_POINT
-		if(user.a_intent == I_HURT)
+		if(user.check_intent(I_FLAG_HARM))
 			trans_amt = round(FLUID_PUDDLE * 0.25)
 			user.visible_message(SPAN_DANGER("\The [user] begins to aggressively mop \the [T]!"))
 		else

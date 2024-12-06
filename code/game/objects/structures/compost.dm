@@ -90,7 +90,7 @@ var/global/const/COMPOST_WORM_HUNGER_FACTOR = MINIMUM_CHEMICAL_VOLUME
 
 /obj/structure/reagent_dispensers/compost_bin/attackby(obj/item/W, mob/user)
 
-	if(user.a_intent == I_HURT)
+	if(user.check_intent(I_FLAG_HARM))
 		return ..()
 
 	if(W.storage)

@@ -63,7 +63,7 @@
 	return ..()
 
 /obj/item/stick/use_on_mob(mob/living/target, mob/living/user, animate = TRUE)
-	if(user != target && user.a_intent == I_HELP)
+	if(user != target && user.check_intent(I_FLAG_HELP))
 		//Playful poking is its own thing
 		user.visible_message(
 			SPAN_NOTICE("\The [user] pokes \the [target] with \the [src]."),

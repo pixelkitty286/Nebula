@@ -94,8 +94,6 @@
 	var/bodytemperature = 310.055	//98.7 F
 
 	var/shakecamera = 0
-	var/a_intent = I_HELP//Living
-
 	var/decl/move_intent/move_intent = /decl/move_intent/walk
 	var/list/move_intents = list(/decl/move_intent/walk)
 
