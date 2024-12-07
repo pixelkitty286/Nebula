@@ -205,9 +205,9 @@
 		if(!other.can_manually_light)
 			other.light(user)
 
-/obj/item/flame/attackby(obj/item/W, mob/user)
+/obj/item/flame/attackby(obj/item/used_item, mob/user)
 
-	if(!user.check_intent(I_FLAG_HARM) && !can_manually_light && (W.isflamesource() || W.get_heat() > T100C))
+	if(!user.check_intent(I_FLAG_HARM) && !can_manually_light && (used_item.isflamesource() || used_item.get_heat() > T100C))
 		light(user)
 		return TRUE
 
