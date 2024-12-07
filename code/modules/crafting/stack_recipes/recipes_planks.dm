@@ -227,3 +227,7 @@
 	result_type            = /obj/structure/divider
 	difficulty             = MAT_VALUE_HARD_DIY
 
+/decl/stack_recipe/planks/furniture/armor_stand
+	result_type            = /obj/structure/armor_stand
+	difficulty             = MAT_VALUE_NORMAL_DIY
+

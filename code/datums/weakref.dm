@@ -15,14 +15,15 @@
 
 /weakref
 	var/ref
+	var/name // Useful for input() on lists of weakrefs.
 
 	// Handy info for debugging
-	var/tmp/ref_name
+	var/tmp/name
 	var/tmp/ref_type
 
 /weakref/New(datum/D)
 	ref = "\ref[D]"
-	ref_name = "[D]"
+	name = "[D]"
 	ref_type = D.type
 
 /weakref/Destroy()
@@ -38,7 +39,7 @@
 	return null
 
 /weakref/get_log_info_line()
-	return "[ref_name] ([ref_type]) ([ref]) (WEAKREF)"
+	return "[name] ([ref_type]) ([ref]) (WEAKREF)"
 
 /weakref/CanClone()
 	return FALSE //Pass weakref as references since they're unique per atom instance
