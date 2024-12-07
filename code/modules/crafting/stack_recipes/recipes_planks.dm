@@ -222,3 +222,8 @@
 /decl/stack_recipe/planks/furniture/gravemarker
 	result_type            = /obj/item/gravemarker
 	difficulty             = MAT_VALUE_NORMAL_DIY
+
+/decl/stack_recipe/planks/furniture/divider
+	result_type            = /obj/structure/divider
+	difficulty             = MAT_VALUE_HARD_DIY
+
