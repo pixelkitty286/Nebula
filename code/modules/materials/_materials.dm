@@ -363,6 +363,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	/// If an item has a null paint_verb, it automatically sets it based on material.
 	var/paint_verb = "painted"
 
+	/// Chance of a natural wall made of this material dropping a gemstone, if the gemstone_types list is populated.
+	var/gemstone_chance = 5
+	/// Assoc weighted list of gemstone material types to weighting.
+	var/list/gemstone_types
+
 // Placeholders for light tiles and rglass.
 /decl/material/proc/reinforce(var/mob/user, var/obj/item/stack/material/used_stack, var/obj/item/stack/material/target_stack, var/use_sheets = 1)
 	if(!used_stack.can_use(use_sheets))
