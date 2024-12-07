@@ -6,6 +6,9 @@
 	abstract_type = /obj/item
 	temperature_sensitive = TRUE
 
+	/// Set to prefix name with this string ('woven' for 'woven basket' etc)
+	var/name_prefix
+
 	/// Set to false to skip state checking and never draw an icon on the mob (except when held)
 	var/draw_on_mob_when_equipped = TRUE
 
