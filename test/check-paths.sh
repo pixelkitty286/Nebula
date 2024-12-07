@@ -47,7 +47,7 @@ exactly 3 "unmarked globally scoped variables" '^(/|)var/(?!global)' -P
 exactly 0 "global-marked member variables" '\t(/|)var.*/global/.+' -P
 exactly 0 "static-marked globally scoped variables" '^(/|)var.*/static/.+' -P
 exactly 1 "direct usage of decls_repository.get_decl()" 'decls_repository\.get_decl\(' -P
-exactly 20 "direct loc set" '(\t|;|\.)loc\s*=(?!=)' -P
+exactly 19 "direct loc set" '(\t|;|\.)loc\s*=(?!=)' -P
 exactly 0 "magic number mouse opacity set" 'mouse_opacity\s*=\s*[0-2]' -P
 exactly 1 "magic number density set" '\bdensity\s*=\s*[01]' -P
 exactly 0 "magic number anchored set" '\banchored\s*=\s*[01]' -P
