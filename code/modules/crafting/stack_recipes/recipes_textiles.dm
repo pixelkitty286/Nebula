@@ -7,9 +7,15 @@
 	crafting_extra_cost_factor = 1.5 // measure twice, cut once; material is lost. todo: produce scraps?
 	abstract_type              = /decl/stack_recipe/textiles
 
+/decl/stack_recipe/textiles/rug
+	result_type                = /obj/structure/rug/crafted
+	one_per_turf               = TRUE
+	on_floor                   = TRUE
+	category                   = "furniture"
+
 /decl/stack_recipe/textiles/cloak
-	result_type           = /obj/item/clothing/suit/cloak/hide
-	category              = "clothing"
+	result_type                = /obj/item/clothing/suit/cloak/hide
+	category                   = "clothing"
 
 /decl/stack_recipe/textiles/banner
 	name                       = "banner"
@@ -60,9 +66,9 @@
 	category              = "clothing"
 
 /decl/stack_recipe/textiles/leather/bedroll
-	result_type = /obj/item/bedroll
-	difficulty  = MAT_VALUE_NORMAL_DIY // Slightly easier than making clothing.
-	category    = "bedding"
+	result_type           = /obj/item/bedroll
+	difficulty            = MAT_VALUE_NORMAL_DIY // Slightly easier than making clothing.
+	category              = "bedding"
 
 /decl/stack_recipe/textiles/leather/shoes
 	result_type           = /obj/item/clothing/shoes/craftable
