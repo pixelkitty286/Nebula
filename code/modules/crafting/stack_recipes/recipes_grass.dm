@@ -8,6 +8,12 @@
 		return FALSE
 	return ..()
 
+/decl/stack_recipe/woven/rug
+	result_type                = /obj/structure/rug/crafted
+	one_per_turf               = TRUE
+	on_floor                   = TRUE
+	category                   = "furniture"
+
 /decl/stack_recipe/woven/basket
 	result_type       = /obj/item/basket
 

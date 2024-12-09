@@ -1480,6 +1480,7 @@
 #include "code\game\objects\structures\racks.dm"
 #include "code\game\objects\structures\railing.dm"
 #include "code\game\objects\structures\rubble.dm"
+#include "code\game\objects\structures\rug.dm"
 #include "code\game\objects\structures\safe.dm"
 #include "code\game\objects\structures\seaweed.dm"
 #include "code\game\objects\structures\showcase.dm"
