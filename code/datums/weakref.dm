@@ -14,16 +14,13 @@
 	return D.weakref
 
 /weakref
-	var/ref
-	var/name // Useful for input() on lists of weakrefs.
-
-	// Handy info for debugging
-	var/tmp/name
-	var/tmp/ref_type
+	var/ref          //- Actual datum ref.
+	var/name         //- Useful for input() on lists of weakrefs.
+	var/tmp/ref_type //- Handy info for debugging
 
 /weakref/New(datum/D)
-	ref = "\ref[D]"
-	name = "[D]"
+	ref      = "\ref[D]"
+	name     = "[D]"
 	ref_type = D.type
 
 /weakref/Destroy()

@@ -34,8 +34,9 @@
 	. = ..()
 	if(. || !LAZYLEN(gear_to_slot))
 		return
+	var/weakref/removed_item_ref
 	if(LAZYLEN(gear_to_slot) == 1)
-		var/weakref/removed_item_ref = gear_to_slot[1]
+		removed_item_ref = gear_to_slot[1]
 	else
 		removed_item_ref = input(user, "Which piece of equipment would you like to remove?", "Armor Stand") as null|anything in gear_to_slot
 		if(!CanPhysicallyInteract(user) || QDELETED(src) || QDELETED(user) || !(removed_item_ref in gear_to_slot))
