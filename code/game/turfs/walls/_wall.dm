@@ -18,7 +18,7 @@ var/global/list/wall_fullblend_objects = list(
 
 /turf/wall
 	name = "wall"
-	desc = "A huge chunk of metal used to seperate rooms."
+	desc = "A huge chunk of metal used to separate rooms."
 	icon = 'icons/turf/walls/_previews.dmi'
 	icon_state = "solid"
 	opacity = TRUE
