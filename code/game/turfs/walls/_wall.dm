@@ -51,6 +51,8 @@ var/global/list/wall_fullblend_objects = list(
 	var/handle_structure_blending = TRUE
 	var/min_dismantle_amount = 2
 	var/max_dismantle_amount = 2
+	/// The reinforcement icon to use. Set in update_material() based on reinf_material.
+	var/reinf_icon
 
 	/// Icon to use if shutter state is non-null.
 	var/shutter_icon = 'icons/turf/walls/shutter.dmi'
