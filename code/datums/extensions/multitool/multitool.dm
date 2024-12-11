@@ -13,7 +13,7 @@
 		popup.set_content(html)
 		popup.open()
 	else
-		close_window(usr)
+		close_window(user)
 
 /datum/extension/interactive/multitool/proc/get_interact_window(var/obj/item/multitool/M, var/mob/user)
 	return
@@ -36,7 +36,7 @@
 
 /datum/extension/interactive/multitool/extension_act(href, href_list, var/mob/user)
 	if(..())
-		close_window(usr)
+		close_window(user)
 		return TRUE
 
 	var/obj/item/multitool/M = user.get_multitool()
