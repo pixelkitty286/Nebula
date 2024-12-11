@@ -88,7 +88,7 @@
 /decl/config/toggle/continuous_rounds
 	uid = "continuous_rounds"
 	desc = list(
-		"Remove the # to make rounds which end instantly to continue until the shuttle is called or the station is nuked.",
+		"Remove the # to make rounds which end instantly continue until the shuttle is called or the station is nuked.",
 		"Malf and Rev will let the shuttle be called when the antags/protags are dead."
 	)
 
