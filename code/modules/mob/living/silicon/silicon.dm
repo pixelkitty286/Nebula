@@ -368,7 +368,7 @@
 	if(istype(W) && user.try_unequip(W))
 		W.forceMove(src)
 		stock_parts += W
-		to_chat(usr, "<span class='notice'>You install the [W.name].</span>")
+		to_chat(user, "<span class='notice'>You install the [W.name].</span>")
 		return TRUE
 
 /mob/living/silicon/proc/try_stock_parts_removal(obj/item/W, mob/user)
