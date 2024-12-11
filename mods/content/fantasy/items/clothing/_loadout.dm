@@ -309,6 +309,18 @@
 		"white wine" =  /decl/material/liquid/ethanol/wine/premium,
 	))
 
+/decl/loadout_option/fantasy/utility/crutch
+	name = "crutch"
+	path = /obj/item/crutch/wooden/padded
+	available_materials = list(
+		/decl/material/solid/organic/wood/oak,
+		/decl/material/solid/organic/wood/mahogany,
+		/decl/material/solid/organic/wood/maple,
+		/decl/material/solid/organic/wood/ebony,
+		/decl/material/solid/organic/wood/walnut
+	)
+	uid = "gear_fantasy_crutch"
+
 /decl/loadout_option/fantasy/eyes
 	abstract_type = /decl/loadout_option/fantasy/eyes
 	slot = slot_glasses_str
