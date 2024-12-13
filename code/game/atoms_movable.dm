@@ -40,6 +40,9 @@
 	// Marker for alpha mask update process. null == never update, TRUE == currently updating, FALSE == finished updating.
 	var/updating_turf_alpha_mask = null
 
+	// Damage type from using or throwing this atom.
+	var/atom_damage_type = BRUTE
+
 // This proc determines if the instance is preserved when the process() despawn of crypods occurs.
 /atom/movable/proc/preserve_in_cryopod(var/obj/machinery/cryopod/pod)
 	return FALSE
