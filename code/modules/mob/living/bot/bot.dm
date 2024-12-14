@@ -95,7 +95,7 @@
 		if(access_scanner.allowed(user) && !open)
 			locked = !locked
 			to_chat(user, "<span class='notice'>Controls are now [locked ? "locked." : "unlocked."]</span>")
-			Interact(usr)
+			Interact(user)
 		else if(open)
 			to_chat(user, "<span class='warning'>Please close the access panel before locking it.</span>")
 		else
@@ -105,7 +105,7 @@
 		if(!locked)
 			open = !open
 			to_chat(user, "<span class='notice'>Maintenance panel is now [open ? "opened" : "closed"].</span>")
-			Interact(usr)
+			Interact(user)
 		else
 			to_chat(user, "<span class='notice'>You need to unlock the controls first.</span>")
 		return TRUE

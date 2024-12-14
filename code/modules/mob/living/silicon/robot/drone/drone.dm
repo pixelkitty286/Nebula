@@ -178,7 +178,7 @@
 			if(!get_config_value(/decl/config/toggle/on/allow_drone_spawn) || emagged || should_be_dead()) //It's dead, Dave.
 				to_chat(user, "<span class='danger'>The interface is fried, and a distressing burned smell wafts from the robot's interior. You're not rebooting this one.</span>")
 				return TRUE
-			if(!allowed(usr))
+			if(!allowed(user))
 				to_chat(user, "<span class='danger'>Access denied.</span>")
 				return TRUE
 			var/decl/pronouns/pronouns = user.get_pronouns()
@@ -193,7 +193,7 @@
 			SPAN_DANGER("\The [user] swipes [pronouns.his] ID card through \the [src], attempting to shut it down."), \
 			SPAN_DANGER("You swipe your ID card through \the [src], attempting to shut it down."))
 		if(!emagged)
-			if(allowed(usr))
+			if(allowed(user))
 				shut_down()
 			else
 				to_chat(user, SPAN_DANGER("Access denied."))

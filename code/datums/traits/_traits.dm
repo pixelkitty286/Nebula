@@ -236,6 +236,8 @@
 			result += trait.get_trait_selection_data(caller, ticked_traits, (recurse_level+1), ignore_children_if_unticked)
 	return result
 
+/// Shows `show_to` a browser window describing the character setup traits taken by `src`.
+/// `show_to` must be non-null.
 /mob/proc/get_trait_data(var/mob/show_to)
 
 	var/list/traits = get_traits()
@@ -262,7 +264,7 @@
 		if(printed_cat)
 			dat += "<hr>"
 
-	var/datum/browser/popup = new((show_to || usr), "trait_summary_\ref[src]", "Aspect Summary")
+	var/datum/browser/popup = new(show_to, "trait_summary_\ref[src]", "Aspect Summary")
 	popup.set_content(jointext(dat, null))
 	popup.open()
 

@@ -271,8 +271,8 @@ var/global/datum/matchmaker/matchmaker = new()
 			var/list/relations = matchmaker.get_relationships(mind)
 			for(var/datum/relation/R in relations)
 				R.finalize()
-			show_browser(usr,null, "window=relations")
+			show_browser(src,null, "window=relations")
 		else
-			show_browser(usr,null, "window=relations")
+			show_browser(src,null, "window=relations")
 		return TOPIC_HANDLED
 	return ..()

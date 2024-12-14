@@ -36,7 +36,7 @@
 	if(!..())
 		return 0
 
-	usr.visible_message("<b>[src]</b> points to <a href='byond://?src=\ref[A];look_at_me=1'>[A]</a>")
+	visible_message("<b>[src]</b> points to <a href='byond://?src=\ref[A];look_at_me=1'>[A]</a>")
 	return 1
 
 /*one proc, four uses
@@ -657,7 +657,7 @@ default behaviour is:
 	if(length(selectable_postures) == 1)
 		selected_posture = selectable_postures[1]
 	else
-		selected_posture = input(usr, "Which posture do you wish to adopt?", "Change Posture", current_posture) as null|anything in selectable_postures
+		selected_posture = input(src, "Which posture do you wish to adopt?", "Change Posture", current_posture) as null|anything in selectable_postures
 		if(!selected_posture || length(get_available_postures()) <= 1 || incapacitated(INCAPACITATION_KNOCKOUT) || !canClick())
 			return
 		if(current_posture == selected_posture || !(selected_posture in get_selectable_postures()))
@@ -1063,7 +1063,7 @@ default behaviour is:
 				if(user.mob_size >= exosuit.body.min_pilot_size && user.mob_size <= exosuit.body.max_pilot_size)
 					exosuit.enter(src)
 				else
-					to_chat(usr, SPAN_WARNING("You cannot pilot a exosuit of this size."))
+					to_chat(user, SPAN_WARNING("You cannot pilot a exosuit of this size."))
 				return TRUE
 	. = ..()
 
