@@ -23,6 +23,8 @@
 
 	//Handle temperature/pressure differences between body and environment
 	handle_environment(loc.return_air())
+	if(QDELETED(src)) // Destroyed by fire or pressure damage in handle_environment()
+		return PROCESS_KILL
 	handle_regular_status_updates() // Status & health update, are we dead or alive etc.
 	handle_stasis()
 

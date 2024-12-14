@@ -2,12 +2,6 @@
 // Selectable traits are basically skills + stats + feats all rolled into one. You get to choose a
 // certain number of them at character generation and they will alter some interactions with the world.
 
-/hook/startup/proc/initialize_trait_trees()
-	// Precache/build trait trees.
-	for(var/decl/trait/trait in decls_repository.get_decls_of_type_unassociated(/decl/trait))
-		trait.build_references()
-	return 1
-
 /mob/living
 	var/list/traits
 
@@ -170,7 +164,7 @@
 	if(ispath(parent))
 		parent = GET_DECL(parent)
 
-	if(abstract_type != type && category)
+	if(category)
 		var/datum/trait_category/trait_category = global.trait_categories[category]
 		if(!istype(trait_category))
 			trait_category = new(category)
