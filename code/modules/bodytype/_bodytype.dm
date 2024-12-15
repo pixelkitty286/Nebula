@@ -81,6 +81,8 @@ var/global/list/bodytypes_by_category = list()
 	var/antaghud_offset_x    = 0
 	/// Used to offset the antagHUD indicator for wide or tall mobs.
 	var/antaghud_offset_y    = 0
+	/// Amount to shift eyes on the Y axis to correct for non-32px height. Used downstream, do not remove.
+	var/eye_offset           = 0
 	/// Used to apply flags like WIDE_LOAD to nonstandard mobs.
 	var/z_flags              = 0
 	/// Amount to shift overlays when lying. TODO: check if this is still needed with KEEP_TOGETHER
