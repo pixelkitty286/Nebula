@@ -1,5 +1,5 @@
 /decl/interaction_handler/dip_item
-	name = "Dip Into"
+	name = "Dip Held Item In"
 	interaction_flags = INTERACTION_NEEDS_PHYSICAL_INTERACTION | INTERACTION_NEVER_AUTOMATIC
 
 /decl/interaction_handler/dip_item/is_possible(atom/target, mob/user, obj/item/prop)
@@ -17,7 +17,7 @@
 	return TRUE
 
 /decl/interaction_handler/fill_from
-	name = "Fill From"
+	name = "Fill Held Item From"
 	interaction_flags = INTERACTION_NEEDS_PHYSICAL_INTERACTION | INTERACTION_NEVER_AUTOMATIC
 
 /decl/interaction_handler/fill_from/is_possible(atom/target, mob/user, obj/item/prop)
@@ -25,7 +25,9 @@
 		return
 	if(target.reagents?.total_volume < FLUID_PUDDLE)
 		return FALSE
-	if(!istype(prop) || (!isitem(target) && !istype(target, /obj/structure/reagent_dispensers)))
+	if(!istype(prop) || prop.reagents?.maximum_volume <= 0)
+		return FALSE
+	if(!isitem(target) && !istype(target, /obj/structure/reagent_dispensers))
 		return FALSE
 	return target.can_be_poured_from(user, prop) && prop.can_be_poured_into(user, target)
 
@@ -34,12 +36,11 @@
 		var/obj/item/vessel = target
 		return vessel.standard_pour_into(user, prop)
 	if(istype(target, /obj/structure/reagent_dispensers))
-		// Reagent dispensers have some wonky assumptions due to old UX around filling/emptying so we skip the atom flags check.
-		return prop.standard_dispenser_refill(user, target, skip_container_check = TRUE)
+		return prop.standard_dispenser_refill(user, target)
 	return FALSE
 
 /decl/interaction_handler/empty_into
-	name = "Pour Into"
+	name = "Empty Held Item Into"
 	interaction_flags = INTERACTION_NEEDS_PHYSICAL_INTERACTION | INTERACTION_NEVER_AUTOMATIC
 
 /decl/interaction_handler/empty_into/is_possible(atom/target, mob/user, obj/item/prop)
@@ -59,7 +60,7 @@
 	interaction_flags = INTERACTION_NEEDS_PHYSICAL_INTERACTION | INTERACTION_NEVER_AUTOMATIC
 
 /decl/interaction_handler/wash_hands/is_possible(atom/target, mob/user, obj/item/prop)
-	. = ..() && !istype(prop) && target?.reagents?.has_reagent(/decl/material/liquid/water, 150)
+	. = ..() && target?.reagents?.has_reagent(/decl/material/liquid/water, 150)
 	if(.)
 		for(var/hand_slot in user.get_held_item_slots())
 			var/obj/item/organ/external/organ = user.get_organ(hand_slot)
@@ -107,7 +108,7 @@
 	interaction_flags = INTERACTION_NEEDS_PHYSICAL_INTERACTION | INTERACTION_NEVER_AUTOMATIC
 
 /decl/interaction_handler/drink/is_possible(atom/target, mob/user, obj/item/prop)
-	return ..() && !istype(prop) && target.can_drink_from(user)
+	return ..() && ATOM_IS_OPEN_CONTAINER(target) && target?.reagents?.total_volume && user.check_has_mouth() && !istype(target, /obj/item)
 
 /decl/interaction_handler/drink/invoked(atom/target, mob/user, obj/item/prop)
 

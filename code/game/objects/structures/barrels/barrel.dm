@@ -31,23 +31,6 @@
 	if(. == INITIALIZE_HINT_NORMAL && storage)
 		return INITIALIZE_HINT_LATELOAD //  we want to grab our turf contents.
 
-// Overrides due to wonky reagent_dispeners opencontainer flag handling.
-/obj/structure/reagent_dispensers/barrel/can_be_poured_from(mob/user, atom/target)
-	return (reagents?.maximum_volume > 0)
-/obj/structure/reagent_dispensers/barrel/can_be_poured_into(mob/user, atom/target)
-	return (reagents?.maximum_volume > 0)
-// Override to skip open container check.
-/obj/structure/reagent_dispensers/barrel/can_drink_from(mob/user)
-	return reagents?.total_volume && user.check_has_mouth()
-
-/obj/structure/reagent_dispensers/barrel/get_alt_interactions(mob/user)
-	. = ..()
-	if(reagents?.total_volume >= FLUID_PUDDLE)
-		LAZYADD(., /decl/interaction_handler/dip_item)
-		LAZYADD(., /decl/interaction_handler/fill_from)
-	if(user?.get_active_held_item())
-		LAZYADD(., /decl/interaction_handler/empty_into)
-
 /obj/structure/reagent_dispensers/barrel/LateInitialize(mapload, ...)
 	..()
 	if(mapload)
