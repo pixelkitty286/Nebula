@@ -815,6 +815,7 @@
 	name = "Show Turf Contents"
 	expected_user_type = /mob
 	interaction_flags = 0
+	examine_desc = "list everything on $TARGET_THEM$"
 
 /decl/interaction_handler/show_turf_contents/invoked(atom/target, mob/user, obj/item/prop)
 	target.show_atom_list_for_turf(user, get_turf(target))
@@ -827,6 +828,7 @@
 
 /decl/interaction_handler/dig/trench
 	name = "Dig Trench"
+	examine_desc = "dig a trench"
 
 /decl/interaction_handler/dig/trench/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
@@ -841,6 +843,7 @@
 
 /decl/interaction_handler/dig/pit
 	name = "Dig Pit"
+	examine_desc = "dig a pit"
 
 /decl/interaction_handler/dig/pit/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
@@ -850,6 +853,7 @@
 
 /decl/interaction_handler/dig/farm
 	name = "Dig Farm Plot"
+	examine_desc = "dig a farm plot"
 
 /decl/interaction_handler/dig/farm/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
