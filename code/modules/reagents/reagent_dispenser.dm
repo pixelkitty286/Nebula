@@ -10,6 +10,7 @@
 	matter                            = list(/decl/material/solid/metal/steel = MATTER_AMOUNT_SECONDARY)
 	max_health                        = 100
 	tool_interaction_flags            = TOOL_INTERACTION_DECONSTRUCT
+
 	var/wrenchable                    = TRUE
 	var/unwrenched                    = FALSE
 	var/tmp/volume                    = 1000
