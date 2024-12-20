@@ -1,0 +1,4 @@
+author: Penelope Haze
+changes:
+  - {tweak: Makes weather effects slightly more transparent.}
+delete-after: true
