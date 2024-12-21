@@ -20,7 +20,7 @@
 	var/requires_organ_tag
 	var/quick_equip_priority = 0 // Higher priority means it will be checked first. If null, will not be considered for quick equip.
 	/// What depth of fluid is necessary for an item in this slot to be considered submerged?
-	var/fluid_height = FLUID_SHALLOW
+	var/fluid_height = FLUID_SHALLOW // we're treating FLUID_SHALLOW as waist level, basically
 
 	var/mob_overlay_layer
 	var/alt_mob_overlay_layer
