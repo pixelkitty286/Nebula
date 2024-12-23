@@ -32,6 +32,10 @@
 	. = ..()
 	if(reagents?.total_volume)
 		add_overlay(overlay_image(icon, "[icon_state]-fluid", reagents.get_color(), (RESET_COLOR | RESET_ALPHA)))
+	if(istype(reinf_material)) // reinf_material -> roof and posts, at this point in time
+		var/image/roof_image = overlay_image(icon, "[icon_state]-roof", reinf_material.color, RESET_COLOR | RESET_ALPHA | KEEP_APART)
+		roof_image.pixel_y = 16 // we have to use 32x32 sprites but want this to be, effectively, 48x32
+		add_overlay(roof_image)
 
 /obj/structure/reagent_dispensers/well/on_reagent_change()
 	if(!(. = ..()))
@@ -63,6 +67,9 @@
 
 /obj/structure/reagent_dispensers/well/mapped
 	auto_refill = /decl/material/liquid/water
+
+/obj/structure/reagent_dispensers/well/mapped/covered
+	reinf_material = /decl/material/solid/organic/wood/walnut
 
 /obj/structure/reagent_dispensers/well/wall_fountain
 	name            = "wall fountain"
