@@ -37,9 +37,6 @@
 		reagent_volumes[T] = volume
 		var/decl/material/R = T
 		reagent_names += initial(R.name)
-
-/obj/item/chems/borghypo/Initialize()
-	. = ..()
 	START_PROCESSING(SSobj, src)
 
 /obj/item/chems/borghypo/Destroy()

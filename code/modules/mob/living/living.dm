@@ -1524,6 +1524,13 @@ default behaviour is:
 				qdel(grab)
 	if(istype(ai))
 		ai.on_buckled(M)
+	reset_layer()
+	update_icon()
+
+/mob/living/unbuckle_mob()
+	. = ..()
+	reset_layer()
+	update_icon()
 
 /mob/living/try_make_grab(mob/living/user, defer_hand = FALSE)
 	. = ..()
@@ -1890,16 +1897,6 @@ default behaviour is:
 		else if(!item.needs_attack_dexterity || slot.dexterity >= item.needs_attack_dexterity)
 			return TRUE
 	return FALSE
-
-/mob/living/buckle_mob(mob/living/M)
-	. = ..()
-	reset_layer()
-	update_icon()
-
-/mob/living/unbuckle_mob()
-	. = ..()
-	reset_layer()
-	update_icon()
 
 /mob/living/proc/flee(atom/target, upset = FALSE)
 	var/static/datum/automove_metadata/_flee_automove_metadata = new(
