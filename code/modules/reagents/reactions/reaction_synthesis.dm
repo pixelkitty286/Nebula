@@ -130,7 +130,7 @@
 	required_reagents = list(
 		/decl/material/solid/carbon/ashes         = 5,
 		/decl/material/liquid/water               = 5,
-		/decl/material/liquid/nutriment/plant_oil = 10
+		/decl/material/liquid/nutriment/oil/plant = 10
 	)
 	result_amount = 1
 	mix_message = "The solution thickens and solidifies."
