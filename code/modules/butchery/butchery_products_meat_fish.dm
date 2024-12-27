@@ -16,7 +16,7 @@
 	slice_num                      = 3
 	butchery_data                  = /decl/butchery_data/animal/fish
 	allergen_flags                 = ALLERGEN_FISH
-	var/oil_type                   = /decl/material/liquid/nutriment/oil/fish
+	var/oil_type                   = /decl/material/liquid/oil/fish
 	var/oil_amount                 = 2
 
 /obj/item/food/butchery/meat/fish/oily

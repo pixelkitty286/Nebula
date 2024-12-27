@@ -54,8 +54,8 @@
 	sound_env = CAVE
 	area_flags = AREA_FLAG_IS_BACKGROUND
 	fishing_results = list(
-		/mob/living/simple_animal/aquatic/fish/cave    = 13
-		/mob/living/simple_animal/aquatic/fish/lantern = 7
+		/mob/living/simple_animal/aquatic/fish/large/cave    = 13,
+		/mob/living/simple_animal/aquatic/fish/large/lantern = 7,
 		/obj/item/mollusc                              = 5,
 		/obj/item/mollusc/barnacle/fished              = 5,
 		/obj/item/mollusc/clam/fished/pearl            = 3,
