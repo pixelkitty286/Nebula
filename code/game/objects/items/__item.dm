@@ -378,7 +378,7 @@
 	return ..(user, distance, "", jointext(desc_comp, "<br/>"))
 
 /obj/item/check_mousedrop_adjacency(var/atom/over, var/mob/user)
-	. = (loc == user && istype(over, /obj/screen/inventory)) || ..()
+	. = (loc == user && istype(over, /obj/screen)) || ..()
 
 /obj/item/handle_mouse_drop(atom/over, mob/user, params)
 
@@ -1114,9 +1114,6 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 	else if(current_size > STAGE_ONE)
 		step_towards(src,S)
 	else ..()
-
-/obj/item/check_mousedrop_adjacency(var/atom/over, var/mob/user)
-	. = (loc == user && istype(over, /obj/screen)) || ..()
 
 // Supplied during loadout gear tweaking.
 /obj/item/proc/set_custom_name(var/new_name)

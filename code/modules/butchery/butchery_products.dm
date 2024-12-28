@@ -63,12 +63,6 @@
 	else
 		return ..()
 
-/obj/item/food/butchery/get_dried_product()
-	. = ..()
-	if(meat_name && istype(., /obj/item/food/jerky))
-		var/obj/item/food/jerky/jerk = .
-		jerk.set_meat_name(meat_name)
-
 /obj/item/food/butchery/get_drying_state(var/obj/rack)
 	return "meat"
 

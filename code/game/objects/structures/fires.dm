@@ -244,9 +244,6 @@
 /obj/structure/fire_source/isflamesource()
 	return (lit == FIRE_LIT)
 
-/obj/structure/fire_source/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
-	return ..() || (istype(mover) && mover.checkpass(PASS_FLAG_TABLE))
-
 /obj/structure/fire_source/proc/burn_material(var/decl/material/mat, var/amount)
 	var/effective_burn_temperature = get_effective_burn_temperature()
 	. = mat.get_burn_products(amount, effective_burn_temperature)
@@ -491,7 +488,7 @@
 	try_light(1000)
 
 /obj/structure/fire_source/CanPass(atom/movable/mover, turf/target, height, air_group)
-	. = ..()
+	. = ..() || mover?.checkpass(PASS_FLAG_TABLE)
 	if(. && lit && ismob(mover))
 		var/mob/M = mover
 		if(M.client && !M.current_posture?.prone && !MOVING_QUICKLY(M))
