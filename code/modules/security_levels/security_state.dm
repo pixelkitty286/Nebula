@@ -32,13 +32,13 @@
 
 	// Setup the high security level
 	if(!(high_security_level in all_security_levels))
-		high_security_level = all_security_levels[all_security_levels.len - 1]
+		high_security_level = all_security_levels[max(1, all_security_levels.len - 1)]
 	high_security_level = GET_DECL(high_security_level)
 
 	// Setup the highest standard security level
 	if(highest_standard_security_level || isnull(highest_standard_security_level))
 		if(!(highest_standard_security_level in all_security_levels))
-			highest_standard_security_level = all_security_levels[all_security_levels.len - 1]
+			highest_standard_security_level = all_security_levels[max(1, all_security_levels.len - 1)]
 		highest_standard_security_level = GET_DECL(highest_standard_security_level)
 	else
 		highest_standard_security_level = null
