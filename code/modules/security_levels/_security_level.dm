@@ -1,5 +1,5 @@
 /decl/security_level
-	var/icon
+	var/icon = 'icons/misc/security_state.dmi'
 	var/name
 
 	// These values are primarily for station alarms and status displays, and which light colors and overlays to use

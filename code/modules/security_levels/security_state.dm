@@ -1,5 +1,7 @@
 /decl/security_state
 	abstract_type = /decl/security_state
+	/// Whether or not security level information should be shown to new players on login.
+	var/show_on_login = TRUE
 	// When defining any of these values type paths should be used, not instances. Instances will be acquired in /New()
 
 	var/decl/security_level/severe_security_level // At which security level (and higher) the use of nuclear fission devices and other extreme measures are allowed. Defaults to the last entry in all_security_levels if unset.

@@ -10,7 +10,6 @@
 /// An abstract security level type that supports announcements on level change.
 /decl/security_level/default
 	abstract_type = /decl/security_level/default
-	icon = 'icons/misc/security_state.dmi'
 
 	var/static/datum/announcement/priority/security/security_announcement_up = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/misc/notice1.ogg'))
 	var/static/datum/announcement/priority/security/security_announcement_down = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/misc/notice1.ogg'))
@@ -91,3 +90,16 @@
 /decl/security_level/default/code_delta/switching_up_to()
 	security_announcement_delta.Announce("The self-destruct mechanism has been engaged. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.", "Attention! Delta security level reached!")
 	notify_station()
+
+// The following are dummy states and levels to soft-disable security levels on some maps.
+/// A security state used for maps that don't have security levels exposed to players.
+/decl/security_state/none
+	all_security_levels = list(
+		/decl/security_level/none
+	)
+
+/// A dummy security level with no effects.
+/decl/security_level/none
+	name = "none"
+	// Since currently we're required to have an alarm_appearance, we just use a blank one.
+	alarm_appearance = /datum/alarm_appearance
