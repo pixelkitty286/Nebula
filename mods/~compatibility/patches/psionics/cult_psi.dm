@@ -1,3 +1,7 @@
+// Make psion blood usable for soulstone synthesis.
+/decl/chemical_reaction/synthesis/soulstone/donor_is_magic(mob/living/donor)
+	return ..() || !!donor?.get_ability_handler(/datum/ability_handler/psionics)
+
 // Make soulstones interact with psionics.
 /obj/item/soulstone/disrupts_psionics()
 	. = !full ? src : FALSE
