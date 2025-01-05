@@ -795,7 +795,7 @@
 /turf/get_alt_interactions(mob/user)
 	. = ..()
 	LAZYADD(., /decl/interaction_handler/show_turf_contents)
-	var/obj/item/held = user?.get_active_held_item()
+	var/obj/item/held = user ? (user.get_active_held_item() || user.get_usable_hand_slot_organ()) : null
 	if(!istype(held))
 		return
 	if(IS_SHOVEL(held))
