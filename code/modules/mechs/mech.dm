@@ -157,10 +157,13 @@
 	hud_elements.Cut()
 
 	for(var/hardpoint in hardpoints)
-		qdel(hardpoints[hardpoint])
+		var/obj/item/equipment = hardpoints[hardpoint] // cache before removal
+		remove_system(hardpoint, null, force = TRUE)
+		QDEL_NULL(equipment)
 	hardpoints.Cut()
 
 	QDEL_NULL(access_card)
+	QDEL_NULL(radio)
 	QDEL_NULL(arms)
 	QDEL_NULL(legs)
 	QDEL_NULL(head)
