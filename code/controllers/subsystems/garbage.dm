@@ -37,7 +37,7 @@ SUBSYSTEM_DEF(garbage)
 	//Queue
 	var/list/queues
 
-	#ifdef TESTING
+	#ifdef REFTRACKING_ENABLED
 	var/list/reference_find_on_fail = list()
 	#endif
 
@@ -155,7 +155,7 @@ SUBSYSTEM_DEF(garbage)
 			++gcedlasttick
 			++totalgcs
 			pass_counts[level]++
-			#ifdef TESTING
+			#ifdef REFTRACKING_ENABLED
 			reference_find_on_fail -= ref(D) //It's deleted we don't care anymore.
 			#endif
 			if (MC_TICK_CHECK)
@@ -167,10 +167,11 @@ SUBSYSTEM_DEF(garbage)
 
 		switch (level)
 			if (GC_QUEUE_CHECK)
-				#ifdef TESTING
+				#ifdef REFTRACKING_ENABLED
 				// Decides how many refs to look for (potentially)
 				// Based off the remaining and the ones we can account for
 				var/remaining_refs = refcount(D) - REFS_WE_EXPECT
+				var/refID = ref(D)
 				if(reference_find_on_fail[refID])
 					D.find_references(remaining_refs)
 				#ifdef GC_FAILURE_HARD_LOOKUP
@@ -279,7 +280,7 @@ SUBSYSTEM_DEF(garbage)
 /datum/qdel_item/New(mytype)
 	name = "[mytype]"
 
-#ifdef TESTING
+#ifdef REFTRACKING_ENABLED
 /proc/qdel_and_find_ref_if_fail(datum/D, force = FALSE)
 	SSgarbage.reference_find_on_fail["\ref[D]"] = TRUE
 	qdel(D, force)
@@ -337,7 +338,7 @@ SUBSYSTEM_DEF(garbage)
 					return
 				// Returning LETMELIVE after being told to force destroy
 				// indicates the objects Destroy() does not respect force
-				#ifdef TESTING
+				#ifdef REFTRACKING_ENABLED
 				if(!I.no_respect_force)
 					PRINT_STACK_TRACE("WARNING: [D.type] has been force deleted, but is \
 						returning an immortal QDEL_HINT, indicating it does \
@@ -353,18 +354,19 @@ SUBSYSTEM_DEF(garbage)
 				SSgarbage.HardQueue(D)
 			if (QDEL_HINT_HARDDEL_NOW)	//qdel should assume this object won't gc, and hard del it post haste.
 				SSgarbage.HardDelete(D)
-			if (QDEL_HINT_FINDREFERENCE)//qdel will, if TESTING is enabled, display all references to this object, then queue the object for deletion.
+			if (QDEL_HINT_FINDREFERENCE)//qdel will, if REFTRACKING_ENABLED is enabled, display all references to this object, then queue the object for deletion.
 				SSgarbage.Queue(D)
-				#ifdef TESTING
-				D.find_references()
+				#ifdef REFTRACKING_ENABLED
+				var/remaining_refs = refcount(D) - REFS_WE_EXPECT
+				D.find_references(remaining_refs)
 				#endif
 			if (QDEL_HINT_IFFAIL_FINDREFERENCE)
 				SSgarbage.Queue(D)
-				#ifdef TESTING
+				#ifdef REFTRACKING_ENABLED
 				SSgarbage.reference_find_on_fail["\ref[D]"] = TRUE
 				#endif
 			else
-				#ifdef TESTING
+				#ifdef REFTRACKING_ENABLED
 				if(!I.no_hint)
 					PRINT_STACK_TRACE("WARNING: [D.type] is not returning a qdel hint. It is being placed in the queue. Further instances of this type will also be queued.")
 				#endif
@@ -373,7 +375,7 @@ SUBSYSTEM_DEF(garbage)
 	else if(D.gc_destroyed == GC_CURRENTLY_BEING_QDELETED)
 		CRASH("[D.type] destroy proc was called multiple times, likely due to a qdel loop in the Destroy logic")
 
-#ifdef TESTING
+#ifdef REFTRACKING_ENABLED
 
 /datum/verb/find_refs()
 	set category = "Debug"
@@ -389,6 +391,7 @@ SUBSYSTEM_DEF(garbage)
 
 /datum/proc/find_references(references_to_clear = INFINITY)
 	running_find_references = type
+	src.references_to_clear = references_to_clear
 	if(usr && usr.client)
 		if(usr.client.running_find_references)
 			testing("CANCELLED search for references to a [usr.client.running_find_references].")
@@ -529,7 +532,7 @@ SUBSYSTEM_DEF(garbage)
 				var/ignore_ref = FALSE
 				var/list/queues = SSgarbage.queues
 				for(var/list/queue in queues)
-					if(potential_cache in queue)
+					if(X in queue)
 						ignore_ref = TRUE
 						break
 				if(ignore_ref)

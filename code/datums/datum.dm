@@ -10,7 +10,7 @@
 	/// Used to avoid unnecessary refstring creation in Destroy().
 	var/tmp/has_state_machine = FALSE
 
-#ifdef TESTING
+#ifdef REFTRACKING_ENABLED
 	var/tmp/running_find_references
 	/// When was this datum last touched by a reftracker?
 	/// If this value doesn't match with the start of the search
