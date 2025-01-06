@@ -157,8 +157,9 @@
 	hud_elements.Cut()
 
 	for(var/hardpoint in hardpoints)
-		var/obj/item/equipment = hardpoints[hardpoint] // cache before removal
-		remove_system(hardpoint, null, force = TRUE)
+		var/obj/item/mech_equipment/equipment = hardpoints[hardpoint]
+		if(istype(equipment))
+			equipment.uninstalled()
 		QDEL_NULL(equipment)
 	hardpoints.Cut()
 
