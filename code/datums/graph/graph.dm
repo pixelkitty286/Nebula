@@ -35,6 +35,8 @@
 /datum/graph/proc/Connect(var/datum/node/node, var/list/neighbours, var/queue = TRUE)
 	SHOULD_NOT_SLEEP(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
+	if(QDELETED(src))
+		CRASH("Attempted to connect node [node] to a qdeleted graph!")
 	if(!istype(neighbours))
 		neighbours = list(neighbours)
 	if(!length(neighbours))
