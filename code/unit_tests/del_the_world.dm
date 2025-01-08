@@ -81,7 +81,7 @@
 			garbage_queue_processed = TRUE
 			break
 
-		var/list/oldest_packet = filter_queue[1]
+		var/list/oldest_packet = check_queue[1]
 		//Pull out the time we inserted at
 		var/qdeld_at = oldest_packet[GC_QUEUE_ITEM_GCD_DESTROYED]
 		//If we've found a packet that got del'd later then we finished, then all our shit has been processed
