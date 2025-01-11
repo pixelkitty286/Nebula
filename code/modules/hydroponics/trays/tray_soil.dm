@@ -19,6 +19,11 @@
 
 	var/obj/item/stack/material/brick/reinforced_with
 
+/obj/machinery/portable_atmospherics/hydroponics/soil/get_alt_interactions(var/mob/user)
+	. = ..()
+	LAZYREMOVE(., global._reagent_interactions)
+	LAZYADD(., /decl/interaction_handler/empty_into)
+
 /obj/machinery/portable_atmospherics/hydroponics/soil/Initialize()
 
 	. = ..()

@@ -21,12 +21,9 @@
 		if(!istype(choice) || QDELETED(user) || QDELETED(src))
 			return TRUE
 		// This is not ideal but I don't want to pass a callback through here as a param and call it. :(
-		if(check_alt_interactions)
-			if(!(choice.type in get_alt_interactions(user)))
-				return TRUE
-		else
-			if(!(choice.type in get_standard_interactions(user)))
-				return TRUE
+		var/list/new_interactions = check_alt_interactions ? get_alt_interactions(user) : get_standard_interactions(user)
+		if(!(choice.type in new_interactions))
+			return TRUE
 		if(!choice.is_possible(src, user, user.get_active_held_item()))
 			return TRUE
 
