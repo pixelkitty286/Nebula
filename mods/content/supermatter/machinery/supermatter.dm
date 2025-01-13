@@ -99,7 +99,7 @@ var/global/list/supermatter_delam_accent_sounds = list(
 				SPAN_DANGER("As \the [source] slowly stops resonating, you find your skin covered in new radiation burns."), 1,\
 				SPAN_DANGER("The unearthly ringing subsides and you notice you have new radiation burns."), 2)
 		else
-			M.show_message(SPAN_DANGER("You hear an uneartly ringing and notice your skin is covered in fresh radiation burns."), 2)
+			M.show_message(SPAN_DANGER("You hear an unearthly ringing and notice your skin is covered in fresh radiation burns."), 2)
 	var/rads = 500
 	SSradiation.radiate(source, rads)
 
@@ -116,6 +116,7 @@ var/global/list/supermatter_delam_accent_sounds = list(
 		/decl/material/solid/exotic_matter = MATTER_AMOUNT_PRIMARY,
 		/decl/material/solid/metal/steel =   MATTER_AMOUNT_REINFORCEMENT
 	)
+	w_class = ITEM_SIZE_LARGE_STRUCTURE
 
 	var/nitrogen_retardation_factor = 0.15 // Higher == N2 slows reaction more
 	var/thermal_release_modifier = 10000   // Higher == more heat released during reaction
@@ -696,6 +697,7 @@ var/global/list/supermatter_delam_accent_sounds = list(
 	desc = "A strangely translucent and iridescent crystal that looks like it used to be part of a larger structure. <span class='danger'>You get headaches just from looking at it.</span>"
 	icon = 'icons/obj/supermatter_32.dmi'
 	icon_state = "supermatter_shard"
+	w_class = ITEM_SIZE_STRUCTURE
 
 	warning_point = 50
 	emergency_point = 400
@@ -708,6 +710,7 @@ var/global/list/supermatter_delam_accent_sounds = list(
 
 /obj/machinery/power/supermatter/medium
 	icon = 'icons/obj/supermatter_32.dmi'
+	w_class = (ITEM_SIZE_STRUCTURE + ITEM_SIZE_LARGE_STRUCTURE) / 2 // halfway between a shard and a normal SM
 
 /obj/machinery/power/supermatter/shard/announce_warning() //Shards don't get announcements
 	return

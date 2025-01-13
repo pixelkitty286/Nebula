@@ -5,7 +5,7 @@
 /datum/computer_file/program/supermatter_monitor
 	filename = "supmon"
 	filedesc = "Supermatter Monitoring"
-	nanomodule_path = /datum/nano_module/program/supermatter_monitor/
+	nanomodule_path = /datum/nano_module/program/supermatter_monitor
 	program_icon_state = "smmon_0"
 	program_key_state = "tech_key"
 	program_menu_icon = "notice"
@@ -215,3 +215,20 @@
 			if(S.uid == newuid)
 				active = S
 		return 1
+
+// Add this to the software list for borgs
+/obj/item/robot_module/engineering/grant_software()
+	software |= /datum/computer_file/program/supermatter_monitor
+	return ..()
+
+/obj/item/robot_module/flying/repair/grant_software()
+	software |= /datum/computer_file/program/supermatter_monitor
+	return ..()
+
+/obj/machinery/computer/modular/telescreen/preset/engineering/Initialize(mapload, d, populate_parts)
+	default_software |= /datum/computer_file/program/supermatter_monitor
+	return ..()
+
+/obj/machinery/computer/modular/preset/engineering/Initialize(mapload, d, populate_parts)
+	default_software |= /datum/computer_file/program/supermatter_monitor
+	return ..()

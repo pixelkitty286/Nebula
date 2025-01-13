@@ -35,11 +35,12 @@
 	icon = 'icons/misc/beach.dmi'
 	icon_state = "coconuts"
 
+// This isn't modularized because I hate modularizing layer defines. Bite me.
 /obj/effect/overlay/bluespacify
 	name = "subspace"
 	icon = 'icons/turf/space.dmi'
 	icon_state = "bluespacify"
-	layer = SUPERMATTER_WALL_LAYER
+	layer = SUBSPACE_WALL_LAYER
 
 /obj/effect/overlay/wallrot
 	name = "wallrot"
