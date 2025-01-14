@@ -797,22 +797,18 @@
 /turf/get_alt_interactions(mob/user)
 	. = ..()
 	LAZYADD(., /decl/interaction_handler/show_turf_contents)
-	if(user)
-		var/obj/item/held = user.get_active_held_item() || user.get_usable_hand_slot_organ()
-		if(istype(held))
-			if(reagents?.total_volume >= FLUID_PUDDLE)
-				LAZYADD(., /decl/interaction_handler/dip_item)
-				LAZYADD(., /decl/interaction_handler/fill_from)
-			LAZYADD(., /decl/interaction_handler/empty_into)
-			if(IS_SHOVEL(held))
-				if(can_dig_pit(held.material?.hardness))
-					LAZYDISTINCTADD(., /decl/interaction_handler/dig/pit)
-				if(can_dig_trench(held.material?.hardness))
-					LAZYDISTINCTADD(., /decl/interaction_handler/dig/trench)
-			if(IS_PICK(held) && can_dig_trench(held.material?.hardness, using_tool = TOOL_PICK))
-				LAZYDISTINCTADD(., /decl/interaction_handler/dig/trench)
-			if(IS_HOE(held) && can_dig_farm(held.material?.hardness))
-				LAZYDISTINCTADD(., /decl/interaction_handler/dig/farm)
+	var/obj/item/held = user ? (user.get_active_held_item() || user.get_usable_hand_slot_organ()) : null
+	if(!istype(held))
+		return
+	if(IS_SHOVEL(held))
+		if(can_dig_pit(held.material?.hardness))
+			LAZYADD(., /decl/interaction_handler/dig/pit)
+		if(can_dig_trench(held.material?.hardness))
+			LAZYADD(., /decl/interaction_handler/dig/trench)
+	if(IS_PICK(held) && can_dig_trench(held.material?.hardness, using_tool = TOOL_PICK))
+		LAZYADD(., /decl/interaction_handler/dig/trench)
+	if(IS_HOE(held) && can_dig_farm(held.material?.hardness))
+		LAZYADD(., /decl/interaction_handler/dig/farm)
 
 /turf/proc/can_show_footsteps()
 	return simulated
@@ -821,6 +817,7 @@
 	name = "Show Turf Contents"
 	expected_user_type = /mob
 	interaction_flags = 0
+	examine_desc = "list everything on $TARGET_THEM$"
 
 /decl/interaction_handler/show_turf_contents/invoked(atom/target, mob/user, obj/item/prop)
 	target.show_atom_list_for_turf(user, get_turf(target))
@@ -833,6 +830,7 @@
 
 /decl/interaction_handler/dig/trench
 	name = "Dig Trench"
+	examine_desc = "dig a trench"
 
 /decl/interaction_handler/dig/trench/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
@@ -847,6 +845,7 @@
 
 /decl/interaction_handler/dig/pit
 	name = "Dig Pit"
+	examine_desc = "dig a pit"
 
 /decl/interaction_handler/dig/pit/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
@@ -856,6 +855,7 @@
 
 /decl/interaction_handler/dig/farm
 	name = "Dig Farm Plot"
+	examine_desc = "dig a farm plot"
 
 /decl/interaction_handler/dig/farm/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
