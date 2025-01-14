@@ -1,0 +1,6 @@
+author: MistakeNot4892
+changes:
+  - {tweak: The way you interact with barrels and well has been significantly reworked;
+      clicking with a bucket or tool should give a list of options to pick from. Please
+      report bugs with this on the tracker.}
+delete-after: true
