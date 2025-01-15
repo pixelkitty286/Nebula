@@ -45,6 +45,8 @@ var/global/list/bodytypes_by_category = list()
 	var/associated_gender
 	/// Appearance/display related features.
 	var/appearance_flags     = 0
+	// Preview in prefs positioning. If null, uses defaults set on a static list in preferences.dm.
+	var/list/character_preview_screen_locs
 	/// What noun is used when filing your nails?
 	var/nail_noun
 	/// What tech levels should limbs of this type use/need?
